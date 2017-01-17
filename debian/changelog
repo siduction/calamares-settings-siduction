@@ -1,5 +1,18 @@
-calamares-settings-debian (9.0-1) unstable; urgency=medium
+calamares-settings-siduction (9.0-3) unstable; urgency=medium
 
+  * basic siduction settings
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 17 Jan 2017 18:10:16 -0500
+
+calamares-settings-siduction (9.0-2) unstable; urgency=medium
+
+  * removed source-final
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 17 Jan 2017 16:26:03 -0500
+
+calamares-settings-siduction (9.0-1) unstable; urgency=medium
+
+  [ Jonathan Carter ]
   * Initial release (Closes: #847766)
 
- -- Jonathan Carter <jcarter@linux.com>  Mon, 12 Dec 2016 10:03:21 +0200
+ -- Alf Gaida <agaida@siduction.org>  Tue, 17 Jan 2017 15:48:54 -0500

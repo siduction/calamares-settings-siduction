@@ -1,5 +1,0 @@
----
-type:       "job"
-name:       "sources-installtime"
-interface:  "process"
-command:    "/usr/sbin/sources-installtime"
