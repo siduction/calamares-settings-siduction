@@ -1,0 +1,6 @@
+---
+type:       "job"
+name:       "unmount-media-chroot"
+interface:  "process"
+command:    "/usr/sbin/unmount-media-chroot"
+chroot:     false

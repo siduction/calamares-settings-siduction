@@ -1,0 +1,5 @@
+---
+type:       "job"
+name:       "sources-final"
+interface:  "process"
+command:    "/usr/sbin/sources-final"

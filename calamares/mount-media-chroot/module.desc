@@ -1,0 +1,6 @@
+---
+type:       "job"
+name:       "mount-media-chroot"
+interface:  "process"
+command:    "/usr/sbin/mount-media-chroot"
+chroot:     false

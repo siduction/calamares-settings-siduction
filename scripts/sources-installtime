@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Note: relies on installation media being mounted on /media/usb
+
+CHROOT=$(mount | grep proc | grep calamares | awk '{print $3}' | sed -e "s#/proc##g")
+
+/bin/echo "#Installer" > $CHROOT/etc/apt/sources.list
+/bin/echo "deb file:///media/installer stretch main" >> $CHROOT/etc/apt/sources.list
+
+chroot $CHROOT /usr/bin/apt-get update
+exit 0

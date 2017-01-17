@@ -1,0 +1,5 @@
+calamares-settings-debian (9.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #847766)
+
+ -- Jonathan Carter <jcarter@linux.com>  Mon, 12 Dec 2016 10:03:21 +0200
