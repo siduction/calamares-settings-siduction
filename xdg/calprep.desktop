@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Exec=pkexec /usr/bin/calprep
+Name=CalamaresPreparation
+

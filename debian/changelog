@@ -1,8 +1,14 @@
-calamares-settings-siduction (9.0-3) unstable; urgency=medium
+calamares-settings-siduction (9.0-5) unstable; urgency=medium
+
+  * added preparation
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 18 Jan 2017 17:04:52 -0500
+
+calamares-settings-siduction (9.0-4) unstable; urgency=medium
 
   * basic siduction settings
 
- -- Alf Gaida <agaida@siduction.org>  Tue, 17 Jan 2017 18:10:16 -0500
+ -- Alf Gaida <agaida@siduction.org>  Tue, 17 Jan 2017 18:33:23 -0500
 
 calamares-settings-siduction (9.0-2) unstable; urgency=medium
 
