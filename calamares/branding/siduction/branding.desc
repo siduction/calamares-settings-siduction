@@ -14,8 +14,8 @@ strings:
     releaseNotesUrl:     https://news.siduction.org/category/release-notes
 
 images:
-    productLogo:         "debian-logo.png"
-    productIcon:         "debian-logo.png"
+    productLogo:         "siduction-logo.png"
+    productIcon:         "siduction-logo.png"
     productWelcome:      "welcome.png"
 
 slideshow:               "show.qml"

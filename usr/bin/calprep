@@ -6,11 +6,8 @@
 #set -e
 
 
-if [ ! -d /calamares ]; then
+if [ ! -d /tmp/calamares ]; then
     # Mountpoint anlegen
-    mkdir -p /calamares
-    mount -t overlay  -o relatime,lowerdir=/fll/siduction,upperdir=/fll/cow/upper,workdir=/fll/cow/work /calamares
-
-    # initrd fixen
-    update-initram -c -k all
+    mkdir -p /tmp/calamares
+    mount --bind / /tmp/calamares
 fi
