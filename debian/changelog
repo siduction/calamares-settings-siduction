@@ -1,8 +1,15 @@
-calamares-settings-siduction (9.0-13) unstable; urgency=medium
+calamares-settings-siduction (9.0-15) unstable; urgency=medium
+
+  * fixes #2 copy sddm-*.conf
+  * fixes #3 regenerate snakeoil certificate
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 20:56:03 +0100
+
+calamares-settings-siduction (9.0-14) unstable; urgency=medium
 
   * Removed modules/README.md - conflicts with calamares
 
- -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 18:18:15 +0100
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 18:27:30 +0100
 
 calamares-settings-siduction (9.0-12) unstable; urgency=medium
 

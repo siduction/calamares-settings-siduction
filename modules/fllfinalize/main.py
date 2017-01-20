@@ -27,8 +27,13 @@ def run():
     :return:
     """
 
-    return_code = target_env_call(["update-grub"])
+    # copy sddm-*.conf --> sddm.conf
+    return_code = target_env_call(["cp -a /etc/sddm-*.conf sddm.conf"])
     if return_code != 0:
-        return "Failed to run update-grub on the target", "The exit code was {}".format(return_code)
+        return "Failed to copy /etc/sddm-*.conf to sddm.conf on the target", "The exit code was {}".format(return_code)
 
+    # regenerate default snakeoil with new hostname
+    return_code = target_env_call(["make-ssl-cert generate-default-snakeoil --force-overwrite"])
+    if return_code != 0:
+        return "Failed to regenerate snakeoil certificate  on the target", "The exit code was {}".format(return_code)
 
