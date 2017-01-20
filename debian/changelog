@@ -1,3 +1,10 @@
+calamares-settings-siduction (9.0-16) unstable; urgency=medium
+
+  * move fllfinalize lower, directly before fllinitramfs
+  * hopefully fix copy sddm.conf
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 21:14:48 +0100
+
 calamares-settings-siduction (9.0-15) unstable; urgency=medium
 
   * fixes #2 copy sddm-*.conf

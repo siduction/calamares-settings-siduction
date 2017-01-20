@@ -28,7 +28,7 @@ def run():
     """
 
     # copy sddm-*.conf --> sddm.conf
-    return_code = target_env_call(["cp -a /etc/sddm-*.conf sddm.conf"])
+    return_code = target_env_call(["cp -a /etc/sddm-*.conf /etc/sddm.conf"])
     if return_code != 0:
         return "Failed to copy /etc/sddm-*.conf to sddm.conf on the target", "The exit code was {}".format(return_code)
 
