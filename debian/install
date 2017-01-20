@@ -1,2 +1,3 @@
-calamares etc
-scripts/* usr/sbin
+calamares   etc
+scripts/*   usr/sbin
+modules     usr/lib/calamares
