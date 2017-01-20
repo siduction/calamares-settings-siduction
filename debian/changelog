@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-13) unstable; urgency=medium
+
+  * Removed modules/README.md - conflicts with calamares
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 18:18:15 +0100
+
 calamares-settings-siduction (9.0-12) unstable; urgency=medium
 
   * umount - wait 0.3s before removing the calamares mountpoint
