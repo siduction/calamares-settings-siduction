@@ -20,6 +20,7 @@
 
 import os
 import subprocess
+import time
 
 def run():
     """ Generate a / mount point for fll based live systems
@@ -31,4 +32,5 @@ def run():
     if  os.path.exists( path ):
         if os.path.ismount( path ):
             subprocess.Popen( ["umount", path] )
+            time.sleep( .300 )
             os.rmdir( path )

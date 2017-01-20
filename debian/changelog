@@ -1,8 +1,15 @@
+calamares-settings-siduction (9.0-12) unstable; urgency=medium
+
+  * umount - wait 0.3s before removing the calamares mountpoint
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 18:13:10 +0100
+
 calamares-settings-siduction (9.0-11) unstable; urgency=medium
 
   * settings with fllmount and fllumount 
+  * install custom modules
 
- -- Alf Gaida <agaida@siduction.org>  Thu, 19 Jan 2017 18:09:07 -0500
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 18:00:14 +0100
 
 calamares-settings-siduction (9.0-10) unstable; urgency=medium
 
