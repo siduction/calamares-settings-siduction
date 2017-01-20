@@ -1,3 +1,16 @@
+calamares-settings-siduction (9.0-11) unstable; urgency=medium
+
+  * settings with fllmount and fllumount 
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 19 Jan 2017 18:09:07 -0500
+
+calamares-settings-siduction (9.0-10) unstable; urgency=medium
+
+  * added fll-mount to settings
+  * remove the hackery (calprep and calprep.desktop) 
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 19 Jan 2017 16:07:02 -0500
+
 calamares-settings-siduction (9.0-9) unstable; urgency=medium
 
   * some fine tuning
