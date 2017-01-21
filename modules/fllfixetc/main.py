@@ -16,6 +16,7 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this module. If not, see <http://www.gnu.org/licenses/>.
 
+import glob
 import libcalamares
 import os
 import subprocess
@@ -25,12 +26,6 @@ def run():
 
     :return:
     """
-
-    # copy sddm-*.conf --> sddm.conf
-    source = '/etc/sddm-*.conf'
-    target = '/etc/sddm.conf'
-    libcalamares.utils.target_env_call(
-        ['/bin/cp', '-f', '%s' % source, "%s" % target])
 
     # regenerate default snakeoil with new hostname
     libcalamares.utils.target_env_call(
@@ -114,10 +109,20 @@ def run():
 #            ln -fs lxdm.conf "${TARGET_MNT_POINT}/etc/lxdm/default.conf"
 #    fi
 
-     # revert SDDM autologin
-     # partly implemented
-#     rm -f   "${TARGET_MNT_POINT}/etc/sddm.conf" \
-#             "${TARGET_MNT_POINT}/var/lib/sddm/state.conf"
+
+
+    # revert SDDM autologin
+    #     rm -f   "${TARGET_MNT_POINT}/etc/sddm.conf" \
+    #             "${TARGET_MNT_POINT}/var/lib/sddm/state.conf"
+    unwanted = '/etc/sddm.conf'
+    libcalamares.utils.target_env_call([ '/bin/rm', '-f', unwanted ])
+    unwanted = '/var/lib/sddm/state.conf'
+    libcalamares.utils.target_env_call([ '/bin/rm', '-f', unwanted ])
+    # copy sddm-*.conf --> sddm.conf
+    source = glob.glob('/etc/sddm-*.conf')
+    target = '/etc/sddm.conf'
+    libcalamares.utils.target_env_call(
+        ['/bin/cp', '-f', '%s' % source[0], "%s" % target])
 
      #
      # revert slim autologin

@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-36) unstable; urgency=medium
+
+  * fix some typos and sddm 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 22 Jan 2017 00:26:26 +0100
+
 calamares-settings-siduction (9.0-35) unstable; urgency=medium
 
   * fix job order in settings.conf
