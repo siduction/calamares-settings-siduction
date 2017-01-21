@@ -18,11 +18,9 @@
 #   You should have received a copy of the GNU General Public License
 #   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
 
-from libcalamares.utils import target_env_call
 import glob
 import libcalamares
 import os
-import shutil
 
 def run():
     """ Remove some fll leftovers - thats what the fll-installer would do.
@@ -44,26 +42,61 @@ def run():
     # valid - /var/tmp/*    -- done in mount.conf
 
     # /etc/network/run/*
+    path = os.path.join( root_mount_point, "etc/network/run/*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.DCOPserver_*
+    path = os.path.join( root_mount_point, "home/*/.DCOPserver_*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.local/share/akonadi*
+    path = os.path.join( root_mount_point, "home/*/.local/share/akonadi*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.gvfs*
+    path = os.path.join( root_mount_point, "home/*/.gvfs*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.kde/cache-*
+    path = os.path.join( root_mount_point, "home/*/.kde/cache-*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.kde/socket-*
+    path = os.path.join( root_mount_point, "home/*/.kde/socket-*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.kde/tmp-*
+    path = os.path.join( root_mount_point, "home/*/.kde/tmp-*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.*uthority
+    path = os.path.join( root_mount_point, "home/*/.*uthority")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/Desktop/sidu-installer.desktop
+    path = os.path.join( root_mount_point, "home/*/Desktop/sidu-installer.desktop")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /home/*/.kaxtv*
+    path = os.path.join( root_mount_point, "home/*/.kaxtv*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /lib/init/rw/*
+    path = os.path.join( root_mount_point, "lib/init/rw/*")
+    for f in glob.glob(path):
+        os.remove(f)
 
     # /var/cache/gdm/*
- 
+    path = os.path.join( root_mount_point, "var/cache/gdm/*")
+    for f in glob.glob(path):
+        os.remove(f)

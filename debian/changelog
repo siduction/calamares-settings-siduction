@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-23) unstable; urgency=medium
+
+  * implemented the fll-exclusions the hard way 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 15:41:43 +0100
+
 calamares-settings-siduction (9.0-22) unstable; urgency=medium
 
   * fix module name in module.desc 
