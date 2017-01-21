@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-28) unstable; urgency=medium
+
+  * hopefully fix sudo a little bit more 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 19:18:00 +0100
+
 calamares-settings-siduction (9.0-27) unstable; urgency=medium
 
   * Delete sidu-installer.desktop and sidu-manual.desktop from Desktop 

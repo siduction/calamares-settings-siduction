@@ -49,8 +49,10 @@ def run():
 
     # also fix sudoers
     with contextlib.suppress(FileNotFoundError):
-        os.remove( os.path.join( root_mount_point, "etc/sudoers.d/10-installer" ))
-        os.remove( os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" ))
+        unwanted = os.path.join( root_mount_point, "etc/sudoers.d/10-installer" )
+        os.remove( unwanted )
+        unwanted = os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" )
+        os.remove( unwanted )
 
     # not implemented yet !TODO!
 
