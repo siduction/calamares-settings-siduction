@@ -37,7 +37,7 @@ def run():
     #        if [ -d "${TARGET_MNT_POINT}${LIVEHOME}" ] && \
     #           [ ! -d "${TARGET_MNT_POINT}${INSTHOME}" ]; then
     #            mv "${TARGET_MNT_POINT}${LIVEHOME}" "${TARGET_MNT_POINT}${INSTHOME}"
-    libcalamares.utils.target_env_call(['/bin/mv', '%s %s'  % (liveHome,instHome)])
+    libcalamares.utils.target_env_call(['/bin/mv', '%s' % (liveHome), '%s' % (instHome)])
     libcalamares.utils.target_env_call(['chown', '-R', '%s:' % (user), '%s' % (instHome)])
 
     # fix /home/user paths in various config files
@@ -47,7 +47,7 @@ def run():
 
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
-    unwanted = os.path.join( instHome 'Destktop/sidu-installer.desktop' )
+    unwanted = os.path.join( instHome, 'Destktop/sidu-installer.desktop' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop
