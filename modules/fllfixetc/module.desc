@@ -1,5 +1,5 @@
 ---
 type:       "job"
-name:       "fllfinalize"
+name:       "fllfixetc"
 interface:  "python"
 script:     "main.py"

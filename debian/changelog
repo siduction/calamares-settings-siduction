@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-22) unstable; urgency=medium
+
+  * fix module name in module.desc 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 14:34:46 +0100
+
 calamares-settings-siduction (9.0-21) unstable; urgency=medium
 
   * implement fllexcluseions -- partly solved via tmpfs mounts in mount.conf

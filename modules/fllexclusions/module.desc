@@ -1,5 +1,5 @@
 ---
 type:       "job"
-name:       "fllfinalize"
+name:       "fllexclusions"
 interface:  "python"
 script:     "main.py"
