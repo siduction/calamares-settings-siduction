@@ -19,6 +19,7 @@
 #   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
 
 from libcalamares.utils import target_env_call
+import contextlib
 import glob
 import libcalamares
 import os
@@ -38,9 +39,8 @@ def run():
     target = os.path.join(root_mount_point, "etc/sddm.conf")
     shutil.copy( source[0], target)
 
-
     # regenerate default snakeoil with new hostname
-    return_code = target_env_call(["make-ssl-cert", "generate-default-snakeoil", "--force-overwrite"])
+    target_env_call(["make-ssl-cert", "generate-default-snakeoil", "--force-overwrite"])
 
     # don't allow everyone to use sudo.
     source = os.path.join(root_mount_point, "usr/share/base-files/profile")
@@ -48,8 +48,9 @@ def run():
     shutil.copy( source, target)
 
     # also fix sudoers
-    os.remove( os.path.join( root_mount_point, "etc/sudoers.d/10-installer" ))
-    os.remove( os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" ))
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( os.path.join( root_mount_point, "etc/sudoers.d/10-installer" ))
+        os.remove( os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" ))
 
     # not implemented yet !TODO!
 

@@ -1,3 +1,15 @@
+calamares-settings-siduction (9.0-26) unstable; urgency=medium
+
+  * harden some things and place the fllfixes right
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 18:38:32 +0100
+
+calamares-settings-siduction (9.0-25) unstable; urgency=medium
+
+  * make deleting files more robust
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 17:56:41 +0100
+
 calamares-settings-siduction (9.0-24) unstable; urgency=medium
 
   * transfer home implemented

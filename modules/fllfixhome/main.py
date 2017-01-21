@@ -19,6 +19,7 @@
 #   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
 
 from libcalamares.utils import target_env_call
+import contextlib
 import glob
 import libcalamares
 import os
@@ -43,7 +44,7 @@ def run():
     #        if [ -d "${TARGET_MNT_POINT}${LIVEHOME}" ] && \
     #           [ ! -d "${TARGET_MNT_POINT}${INSTHOME}" ]; then
     #            mv "${TARGET_MNT_POINT}${LIVEHOME}" "${TARGET_MNT_POINT}${INSTHOME}"
-    shutil.move( livehome, insthome )¶
+    shutil.move( livehome, insthome )
 
     # fix /home/user paths in various config files
     #       find "${TARGET_MNT_POINT}${INSTHOME}" \
@@ -53,35 +54,43 @@ def run():
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
     unwanted = os.path.join( insthome, "/Destktop/siduction.desktop" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop
     unwanted = os.path.join( insthome, "/Destktop/install-gui.desktop" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop
     unwanted = os.path.join( insthome, ".config/autostart/siduction.desktop" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.hushlogin
     unwanted = os.path.join( insthome, ".hushlogin" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/chromium/SingletonLock
     unwanted = os.path.join( insthome, ".config/chromium/SingletonLock" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/chromium/Local State
     unwanted = os.path.join( insthome, ".config/chromium/Local State" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/chromium/First Run
     unwanted = os.path.join( insthome, ".config/chromium/First Run" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}/root/.hushlogin
     unwanted = os.path.join( root_mount_point, "root/.hushlogin" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # purge content of some dirs
     #        for dir in "${TARGET_MNT_POINT}${INSTHOME}/.cache"; do
@@ -92,27 +101,33 @@ def run():
     # don't test for now grep -s -q sudo "$file" && rm -f "$file"
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/kdesurc
     unwanted = os.path.join( insthome, ".config/kdesurc" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.kde/share/config/kdesurc
     unwanted = os.path.join( insthome, ".kde/share/config/kdesurc" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.kde/share/apps/konsole/sumc.desktop
     unwanted = os.path.join( insthome, ".kde/share/apps/konsole/sumc.desktop" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.kde/share/apps/konsole/su.desktop
     unwanted = os.path.join( insthome, ".kde/share/apps/konsole/su.desktop" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.gconf/apps/gksu/%gconf.xml
     unwanted = os.path.join( insthome, ".gconf/apps/gksu/%gconf.xml" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.su-to-rootrc
     unwanted = os.path.join( insthome, ".su-to-rootrc" )
-    os.remove( unwanted )
+    with contextlib.suppress(FileNotFoundError):
+        os.remove( unwanted )
 
     # revert gksu sudo mode hack
     # sudo -u "${FLL_LIVE_USER}" gconftool-2 -s -t bool /apps/gksu/sudo-mode false
