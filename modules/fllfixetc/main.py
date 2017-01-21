@@ -48,11 +48,14 @@ def run():
     shutil.copy( source, target)
 
     # also fix sudoers
-    with contextlib.suppress(FileNotFoundError):
-        unwanted = os.path.join( root_mount_point, "etc/sudoers.d/10-installer" )
-        os.remove( unwanted )
-        unwanted = os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" )
-        os.remove( unwanted )
+    unwanted = os.path.join( root_mount_point, "etc/sudoers.d/10-installer" )
+    if os.path.isfile( unwanted ):
+        with contextlib.suppress(FileNotFoundError):
+            os.remove( unwanted )
+    unwanted = os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" )
+    if os.path.isfile( unwanted ):
+        with contextlib.suppress(FileNotFoundError):
+            os.remove( unwanted )
 
     # not implemented yet !TODO!
 
@@ -95,7 +98,7 @@ def run():
 
     # revert GDM3 autologin
 #    if [ -f "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf" ]; then
-#            # we want the gdm-theme (set by desktop-defaults in live mode) on hd-install, 
+#            # we want the gdm-theme (set by desktop-defaults in live mode) on hd-install,
 #            # only remove autologin for gdm
 #            sed -i  -e "/^AutomaticLogin\=.*/d" \
 #                   -e "/^AutomaticLoginEnable\=.*/d" \
@@ -133,4 +136,3 @@ def run():
 #                     -e "s/^\#FLL\#//" \
 #                             "${TARGET_MNT_POINT}/etc/slim.conf"
 #     fi
-

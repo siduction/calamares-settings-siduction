@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-30) unstable; urgency=medium
+
+  * put on some belts and braces 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 20:26:16 +0100
+
 calamares-settings-siduction (9.0-29) unstable; urgency=medium
 
   * default groups as in pyfll
