@@ -33,101 +33,118 @@ def run():
     # set root_mount_point
     root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
 
-    # copy sddm-*.conf --> sddm.conf
-    source = glob.glob(os.path.join(root_mount_point, "etc/sddm-*.conf"))
-    target = os.path.join(root_mount_point, "etc/sddm.conf")
-    shutil.copy( source[0], target)
 
-
-    # regenerate default snakeoil with new hostname
-    return_code = target_env_call(["make-ssl-cert", "generate-default-snakeoil", "--force-overwrite"])
-
-    # don't allow everyone to use sudo.
-    source = os.path.join(root_mount_point, "usr/share/base-files/profile")
-    target = os.path.join(root_mount_point, "etc/profile")
-    shutil.copy( source, target)
-
-    # also fix sudoers
-    os.remove( os.path.join( root_mount_point, "etc/sudoers.d/10-installer" ))
-    os.remove( os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" ))
-
-    # not implemented yet !TODO!
-
-    # "normalize" gettys
-
-   # sysvinit
-#   if [ -r "${TARGET_MNT_POINT}/usr/share/sysvinit/inittab" ]; then
-#           cp -f   "${TARGET_MNT_POINT}/usr/share/sysvinit/inittab" \
-#                "${TARGET_MNT_POINT}/etc/inittab"
-#           sed -i  -e 's/^\([2-6]\):23:respawn/\1:2345:respawn/' \
-#                -e 's/id:[0-6]:initdefault:/id:5:initdefault:/' \
-#                    "${TARGET_MNT_POINT}/etc/inittab"
-#   fi
-
-#    # systemd
-#        if [ -r "${TARGET_MNT_POINT}/etc/systemd/system/getty@.service" ]; then
-#                rm -f   "${TARGET_MNT_POINT}/etc/systemd/system/getty@.service" \
-#                        "${TARGET_MNT_POINT}/etc/systemd/system/autovt@.service"
+#        local INSTHOME="/home/${USER_NAME}"
+#        # home of user on live media
+#        local LIVEHOME="/home/${DEFAULT_USER}"
 #
-#                ln -fs  /lib/systemd/system/autovt@.service \
-#                        "${TARGET_MNT_POINT}/etc/systemd/system/getty.target.wants/getty@tty1.service"
+#        if [ "${USER_NAME}" != "${DEFAULT_USER}" ];     then
+#                if [ -d "${TARGET_MNT_POINT}${LIVEHOME}" ] && \
+#                        [ ! -d "${TARGET_MNT_POINT}${INSTHOME}" ]; then
+#                        mv "${TARGET_MNT_POINT}${LIVEHOME}" "${TARGET_MNT_POINT}${INSTHOME}"
+#
+#                        # fix /home/user paths in various config files
+#                        find "${TARGET_MNT_POINT}${INSTHOME}" \
+#                                -type f \
+#                                -exec sed -i "s|${LIVEHOME}|${INSTHOME}|g" {} \;
+#                fi
 #        fi
 
-    # normalize /etc/pam.d/login
-#    if [ -f "${TARGET_MNT_POINT}/etc/pam.d/login" ]; then
-#                sed -i '/^#.*pam_lastlog\.so/s/^#[ \t]\+//' "${TARGET_MNT_POINT}/etc/pam.d/login"
+        # purge unwanted files
+#        for file in     "${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.hushlogin" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.config/chromium/SingletonLock" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.config/chromium/Local State" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.config/chromium/First Run" \
+#                        "${TARGET_MNT_POINT}/root/.hushlogin"; do
+#                rm -f "${file}"
+#        done
+
+        # purge content of some dirs
+#        for dir in "${TARGET_MNT_POINT}${INSTHOME}/.cache"; do
+#            [ -d "$dir" ] && rm -Rf ${dir}/*
+#        done
+
+        # revert sudo workarounds
+#        for file in     "${TARGET_MNT_POINT}${INSTHOME}/.config/kdesurc" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.kde/share/config/kdesurc" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.kde/share/apps/konsole/sumc.desktop" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.kde/share/apps/konsole/su.desktop" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.gconf/apps/gksu/%gconf.xml" \
+#                        "${TARGET_MNT_POINT}${INSTHOME}/.su-to-rootrc"; do
+#                grep -s -q sudo "$file" && rm -f "$file"
+#        done
+
+
+        # revert gksu sudo mode hack
+#        logit "revert gksu sudo mode hack"
+#        chroot "${TARGET_MNT_POINT}" \
+#                sudo -u "${FLL_LIVE_USER}" gconftool-2 -s -t bool /apps/gksu/sudo-mode false
+#        chroot "${TARGET_MNT_POINT}" \
+#                sudo -u "${FLL_LIVE_USER}" gconftool-2 -s -t bool /apps/gksu/display-no-pass-info true
+
+    # remove installer from fluxbox menu
+#        if grep -s -q Installer "${TARGET_MNT_POINT}${INSTHOME}"/.fluxbox/fll-flux-*; then
+#                sed -i '/Installer/d' "${TARGET_MNT_POINT}${INSTHOME}"/.fluxbox/fll-flux-*
 #        fi
 
-    # remove confusing live traces from blkid.tab
-#    rm -f "${TARGET_MNT_POINT}/etc/blkid.tab*"
+    # make sudo alias's vanish
+#        if grep -s -q sudo "${TARGET_MNT_POINT}${INSTHOME}/.bashrc"; then
+#                sed -i 's|\(.*sudo.*\)||' "${TARGET_MNT_POINT}${INSTHOME}/.bashrc"
+#        fi
 
-    # Save ALSA sound volume
-#    if [ -e /proc/asound/modules ] && [ -x /usr/sbin/alsactl ]; then
-#            /usr/sbin/alsactl store
-#            if [ -f /var/lib/alsa/asound.state ]; then
-#                    cp /var/lib/alsa/asound.state \
-#                            "${TARGET_MNT_POINT}/var/lib/alsa"
-#            fi
-#    fi
+    # enable automount-open for gnome, mate and cinnamon in install mode
+#        if [ -d /usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE} ]; then
+#                case "$FLL_FLAVOUR" in
+#                        gnome)
+#                                cat > "${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open" <<EOF
 
-    # revert GDM3 autologin
-#    if [ -f "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf" ]; then
-#            # we want the gdm-theme (set by desktop-defaults in live mode) on hd-install, 
-#            # only remove autologin for gdm
-#            sed -i  -e "/^AutomaticLogin\=.*/d" \
-#                   -e "/^AutomaticLoginEnable\=.*/d" \
-#                   -e "/^TimedLogin\=.*/d" \
-#                   -e "/^TimedLoginDelay\=.*/d" \
-#                   -e "/^TimedLoginEnable\=.*/d" \
-#                           "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf"
-#    fi
+# #!/bin/sh
+# if [ ! -d /usr/share/fll-installer ]; then
+#    gsettings set org.gnome.desktop.media-handling automount true
+#    gsettings set org.gnome.desktop.media-handling automount-open true
+#    rm ${INSTHOME}/.config/autostart/automount-open.desktop
+# fi
+# EOF
+#                        ;;
+#                        cinnamon)
+#                                cat > "${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open" <<EOF
+# #!/bin/sh
+# if [ ! -d /usr/share/fll-installer ]; then
+#     gsettings set org.cinnamon.desktop.media-handling automount true
+#     gsettings set org.cinnamon.desktop.media-handling automount-open true
+#     rm ${INSTHOME}/.config/autostart/automount-open.desktop
+# fi
+# EOF
+#                                 ;;
+#                         mate)
+#                                 cat > "${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open" <<EOF
+# #!/bin/sh
+# if [ ! -d /usr/share/fll-installer ]; then
+#     gsettings set org.mate.media-handling automount true
+#     gsettings set org.mate.media-handling automount-open true
+#     rm ${INSTHOME}/.config/autostart/automount-open.desktop
+# fi
+# EOF
+#                                 ;;
+#         esac
 
-    # revert lightdm autologin
-#    if [ -f "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d/80_fll-live-initscripts.conf" ]; then
-#            rm -f "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d/80_fll-live-initscripts.conf"
-#            rmdir --ignore-fail-on-non-empty \
-#                   "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d" || :
-#   fi
+#         # We don't check existence, -p handles that
+#         mkdir -p ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart
 
-    # revert lxdm autologin
-#    if [ -f "${TARGET_MNT_POINT}/etc/lxdm/live.conf" ] && \
-#       [ -f "${TARGET_MNT_POINT}/etc/lxdm/lxdm.conf" ]; then
-#            rm -f "${TARGET_MNT_POINT}/etc/lxdm/live.conf"
-#            ln -fs lxdm.conf "${TARGET_MNT_POINT}/etc/lxdm/default.conf"
-#    fi
-
-     # revert SDDM autologin
-     # partly implemented
-#     rm -f   "${TARGET_MNT_POINT}/etc/sddm.conf" \
-#             "${TARGET_MNT_POINT}/var/lib/sddm/state.conf"
-
-     #
-     # revert slim autologin
-     #
-#     if [ -f "${TARGET_MNT_POINT}/etc/slim.conf" ]; then
-#             sed -i  -e "/^default_user.*/d" \
-#                     -e "/^auto_login.*/d" \
-#                     -e "s/^\#FLL\#//" \
-#                             "${TARGET_MNT_POINT}/etc/slim.conf"
-#     fi
-
+    # fix permisions for automount-open automount-open.desktop and /.config/autostart
+#        chroot "${TARGET_MNT_POINT}" \
+#        chown ${USER_NAME} ${INSTHOME}/.config/autostart
+#        chroot "${TARGET_MNT_POINT}" \
+#        chgrp ${USER_NAME} ${INSTHOME}/.config/autostart
+#        chmod +x ${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open
+#        chroot "${TARGET_MNT_POINT}" \
+#        ln -sf /usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open.desktop ${INSTHOME}/.config/autostart/automount-open.desktop
+#        chroot "${TARGET_MNT_POINT}" \
+#        chown ${USER_NAME} /usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open
+#        chroot "${TARGET_MNT_POINT}" \
+#        chown ${USER_NAME} /usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open.desktop
+#        fi
+#}
