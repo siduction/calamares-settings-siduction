@@ -1,3 +1,10 @@
+calamares-settings-siduction (9.0-24) unstable; urgency=medium
+
+  * transfer home implemented
+  * file removal in transfered home implemented 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 17:25:13 +0100
+
 calamares-settings-siduction (9.0-23) unstable; urgency=medium
 
   * implemented the fll-exclusions the hard way 
