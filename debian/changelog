@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-27) unstable; urgency=medium
+
+  * Delete sidu-installer.desktop and sidu-manual.desktop from Desktop 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 19:08:08 +0100
+
 calamares-settings-siduction (9.0-26) unstable; urgency=medium
 
   * harden some things and place the fllfixes right

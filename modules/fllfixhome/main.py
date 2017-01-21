@@ -53,16 +53,17 @@ def run():
 
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
-    unwanted = os.path.join( insthome, "/Destktop/siduction.desktop" )
+    unwanted = os.path.join( insthome, "/Destktop/sidu-installer.desktop" )
     with contextlib.suppress(FileNotFoundError):
         os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop
-    unwanted = os.path.join( insthome, "/Destktop/install-gui.desktop" )
+    unwanted = os.path.join( insthome, "/Destktop/sidu-manual.desktop" )
     with contextlib.suppress(FileNotFoundError):
         os.remove( unwanted )
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop
+    # OUTDATED - RELEASE-NOTES???
     unwanted = os.path.join( insthome, ".config/autostart/siduction.desktop" )
     with contextlib.suppress(FileNotFoundError):
         os.remove( unwanted )
