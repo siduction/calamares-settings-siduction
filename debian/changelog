@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-33) unstable; urgency=medium
+
+  * typos fixed
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 23:43:31 +0100
+
 calamares-settings-siduction (9.0-32) unstable; urgency=medium
 
   * fix missed class in fllfixetc 

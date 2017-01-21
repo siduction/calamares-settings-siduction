@@ -51,7 +51,7 @@ def run():
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop
-    unwanted = os.path.join( instHome, '/Destktop/sidu-manual.desktop' )
+    unwanted = os.path.join( instHome, 'Destktop/sidu-manual.desktop' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop
