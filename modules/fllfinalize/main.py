@@ -19,7 +19,10 @@
 #   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
 
 from libcalamares.utils import target_env_call
-import platform
+import glob
+import libcalamares
+import os
+import shutil
 
 def run():
     """ Remove some fll leftovers - thats what the fll-installer would do.
@@ -27,13 +30,27 @@ def run():
     :return:
     """
 
+    # set root_mount_point
+    root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
+
     # copy sddm-*.conf --> sddm.conf
-    return_code = target_env_call(["cp -a /etc/sddm-*.conf /etc/sddm.conf"])
-    if return_code != 0:
-        return "Failed to copy /etc/sddm-*.conf to sddm.conf on the target", "The exit code was {}".format(return_code)
+    source = glob.glob(os.path.join(root_mount_point, "etc/sddm-*.conf"))
+    target = os.path.join(root_mount_point, "etc/sddm.conf")
+    shutil.copy( source[0], target)
+
 
     # regenerate default snakeoil with new hostname
-    return_code = target_env_call(["make-ssl-cert generate-default-snakeoil --force-overwrite"])
-    if return_code != 0:
-        return "Failed to regenerate snakeoil certificate  on the target", "The exit code was {}".format(return_code)
+    return_code = target_env_call(["make-ssl-cert", "generate-default-snakeoil", "--force-overwrite"])
+
+    # don't allow everyone to use sudo.
+    source = os.path.join(root_mount_point, "usr/share/base-files/profile")
+    target = os.path.join(root_mount_point, "etc/profile")
+    shutil.copy( source, target)
+
+    # also fix sudoers
+    # rm -f "${TARGET_MNT_POINT}/etc/sudoers.d/15_${FLL_DISTRO_NAME}"
+    os.remove( os.path.join( root_mount_point, "/etc/sudoers.d/10-installer" ))
+    os.remove( os.path.join( root_mount_point, "/etc/sudoers.d/10_siduction" ))
+    # chroot_it deluser "${USER_NAME}" sudo
+    # not implemented yet !TODO!
 

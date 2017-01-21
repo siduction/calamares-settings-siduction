@@ -1,3 +1,27 @@
+calamares-settings-siduction (9.0-20) unstable; urgency=medium
+
+  * fix finalize - refs #4 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 02:23:09 +0100
+
+calamares-settings-siduction (9.0-19) unstable; urgency=medium
+
+  * clean up sudo and sudoers - refs #4 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 02:15:06 +0100
+
+calamares-settings-siduction (9.0-18) unstable; urgency=medium
+
+  * first two lines of fllfinalize up and running
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 21 Jan 2017 01:09:03 +0100
+
+calamares-settings-siduction (9.0-17) unstable; urgency=medium
+
+  * open a shell for shell commands 
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 20 Jan 2017 22:19:18 +0100
+
 calamares-settings-siduction (9.0-16) unstable; urgency=medium
 
   * move fllfinalize lower, directly before fllinitramfs
