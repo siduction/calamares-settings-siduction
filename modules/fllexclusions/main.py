@@ -1,25 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# === This file is part of Calamares - <http://github.com/calamares> ===
+#   Copyright 2017, Alf Gaida <agaida@siduction.org>
 #
-#   Copyright 2014, Philip Müller <philm@manjaro.org>
-#
-#   Calamares is free software: you can redistribute it and/or modify
-#   it under the terms of the GNU General Public License as published by
-#   the Free Software Foundation, either version 3 of the License, or
-#   (at your option) any later version.
-#
-#   Calamares is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-#   GNU General Public License for more details.
-#
-#   You should have received a copy of the GNU General Public License
-#   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
-
-import contextlib
-import glob
 import libcalamares
 import os
 
@@ -43,74 +26,49 @@ def run():
     # valid - /var/tmp/*    -- done in mount.conf
 
     # /etc/network/run/*
-    path = os.path.join( root_mount_point, "etc/network/run/*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/etc/network/run/*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.DCOPserver_*
-    path = os.path.join( root_mount_point, "home/*/.DCOPserver_*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.DCOPserver_*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.local/share/akonadi*
-    path = os.path.join( root_mount_point, "home/*/.local/share/akonadi*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.local/share/akonadi*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.gvfs*
-    path = os.path.join( root_mount_point, "home/*/.gvfs*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.gvfs*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.kde/cache-*
-    path = os.path.join( root_mount_point, "home/*/.kde/cache-*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.kde/cache-*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.kde/socket-*
-    path = os.path.join( root_mount_point, "home/*/.kde/socket-*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.kde/socket-*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.kde/tmp-*
-    path = os.path.join( root_mount_point, "home/*/.kde/tmp-*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.kde/tmp-*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.*uthority
-    path = os.path.join( root_mount_point, "home/*/.*uthority")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.*uthority'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/Desktop/sidu-installer.desktop
-    path = os.path.join( root_mount_point, "home/*/Desktop/sidu-installer.desktop")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/Desktop/sidu-installer.desktop'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.kaxtv*
-    path = os.path.join( root_mount_point, "home/*/.kaxtv*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/home/*/.kaxtv*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /lib/init/rw/*
-    path = os.path.join( root_mount_point, "lib/init/rw/*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
+    path = '/lib/init/rw/*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /var/cache/gdm/*
-    path = os.path.join( root_mount_point, "var/cache/gdm/*")
-    for f in glob.glob(path):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove(f)
-
+    path = '/var/cache/gdm/*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])

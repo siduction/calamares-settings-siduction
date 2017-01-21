@@ -1,29 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# === This file is part of Calamares - <http://github.com/calamares> ===
+#   Copyright 2017, Alf Gaida <agaida@siduction.org>
 #
-#   Copyright 2014, Philip Müller <philm@manjaro.org>
-#
-#   Calamares is free software: you can redistribute it and/or modify
+#   This module is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   Calamares is distributed in the hope that it will be useful,
+#   This module is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
+#   along with this module. If not, see <http://www.gnu.org/licenses/>.
 
-from libcalamares.utils import target_env_call
-import contextlib
-import glob
 import libcalamares
 import os
-import shutil
+import subprocess
 
 def run():
     """ Remove some fll leftovers - thats what the fll-installer would do.
@@ -31,31 +26,28 @@ def run():
     :return:
     """
 
-    # set root_mount_point
-    root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
-
     # copy sddm-*.conf --> sddm.conf
-    source = glob.glob(os.path.join(root_mount_point, "etc/sddm-*.conf"))
-    target = os.path.join(root_mount_point, "etc/sddm.conf")
-    shutil.copy( source[0], target)
+    source = '/etc/sddm-*.conf'
+    target = '/etc/sddm.conf'
+    libcalamares.utils.target_env_call(
+        ['/bin/cp', '-f', '%s' % source, "%s" % target])
 
     # regenerate default snakeoil with new hostname
-    target_env_call(["make-ssl-cert", "generate-default-snakeoil", "--force-overwrite"])
+    libcalamares.utils.target_env_call(
+        ['make-ssl-cert', 'generate-default-snakeoil', '--force-overwrite'])
 
     # don't allow everyone to use sudo.
-    source = os.path.join(root_mount_point, "usr/share/base-files/profile")
-    target = os.path.join(root_mount_point, "etc/profile")
-    shutil.copy( source, target)
+    source = '/usr/share/base-files/profile'
+    target = '/etc/profile'
+    libcalamares.utils.target_env_call(
+        ['/bin/cp', '-f', '%s' % source, '%s' % target])
 
     # also fix sudoers
-    unwanted = os.path.join( root_mount_point, "etc/sudoers.d/10-installer" )
-    if os.path.isfile( unwanted ):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove( unwanted )
-    unwanted = os.path.join( root_mount_point, "etc/sudoers.d/15_siduction" )
-    if os.path.isfile( unwanted ):
-        with contextlib.suppress(FileNotFoundError):
-            os.remove( unwanted )
+    unwanted = '/etc/sudoers.d/10-installer'
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
+
+    unwanted = '/etc/sudoers.d/15_siduction'
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
 
     # not implemented yet !TODO!
 
