@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-39) unstable; urgency=medium
+
+  * fixhome improved, refs #5 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 22 Jan 2017 12:58:48 +0100
+
 calamares-settings-siduction (9.0-38) unstable; urgency=medium
 
   * sync and sleep added 

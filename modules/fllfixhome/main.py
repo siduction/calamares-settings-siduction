@@ -45,6 +45,11 @@ def run():
     #       find "${TARGET_MNT_POINT}${INSTHOME}" \
     #          -type f \
     #          -exec sed -i "s|${LIVEHOME}|${INSTHOME}|g" {} \;
+   libcalamares.utils.target_env_call(
+       ['/bin/find', '%s' % (instHome,
+            '-type f',
+            '-exec sed -i',
+            '"s#%s#%s#g" {} \;' % (liveHome,instHome)])
 
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
@@ -133,10 +138,13 @@ def run():
     #    sed -i '/Installer/d' "${TARGET_MNT_POINT}${INSTHOME}"/.fluxbox/fll-flux-*
     # fi
 
-    # make sudo alias's vanish
+    # make sudo alias's vanish - we don't ask ...
     # if grep -s -q sudo "${TARGET_MNT_POINT}${INSTHOME}/.bashrc"; then
     #    sed -i 's|\(.*sudo.*\)||' "${TARGET_MNT_POINT}${INSTHOME}/.bashrc"
     # fi
+    wanted = os.path.join( instHome, '.bashrc' )
+    libcalamares.utils.target_env_call(
+        ['/bin/sed', '-i', '"s|\(.*sudo.*\)||"', '%s'  % (wanted)])
 
     # enable automount-open for gnome, mate and cinnamon in install mode
     # if [ -d /usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE} ]; then
