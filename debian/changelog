@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-37) unstable; urgency=medium
+
+  * another set of fixes for installed home 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 22 Jan 2017 01:10:15 +0100
+
 calamares-settings-siduction (9.0-36) unstable; urgency=medium
 
   * fix some typos and sddm 

@@ -16,6 +16,7 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this module. If not, see <http://www.gnu.org/licenses/>.
 
+import glob
 import libcalamares
 import os
 import subprocess
@@ -75,6 +76,14 @@ def run():
     unwanted = os.path.join( instHome, '.config/chromium/First Run' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
+    # ${TARGET_MNT_POINT}${INSTHOME}/.config/emaildefaults
+    unwanted = os.path.join( instHome, '.config/emaildefaults' )
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
+
+    # ${TARGET_MNT_POINT}${INSTHOME}/.config/emailidentities
+    unwanted = os.path.join( instHome, '.config/emailidentities' )
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
+
     # ${TARGET_MNT_POINT}/root/.hushlogin
     unwanted = '/root/.hushlogin'
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
@@ -83,6 +92,11 @@ def run():
     #        for dir in "${TARGET_MNT_POINT}${INSTHOME}/.cache"; do
     #            [ -d "$dir" ] && rm -Rf ${dir}/*
     #        done
+    unwanted = os.path.join( instHome, '.cache' )
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s'  % (unwanted)])
+
+    unwanted = os.path.join( instHome, '.local' )
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s'  % (unwanted)])
 
     # revert sudo workarounds
     # don't test for now grep -s -q sudo "$file" && rm -f "$file"
@@ -160,12 +174,15 @@ def run():
                                #         esac
 
     # We don't check existence, -p handles that
-    # mkdir -p ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart
+    #  mkdir -p ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart
+    wanted = os.path.join( instHome, '.config/autstart' )
+    libcalamares.utils.target_env_call(['/bin/mkdir', '-p', '%s'  % (wanted)])
 
     # fix permisions for automount-open automount-open.desktop and /.config/autostart
     # chown ${USER_NAME} ${INSTHOME}/.config/autostart
-
     # chgrp ${USER_NAME} ${INSTHOME}/.config/autostart
+    libcalamares.utils.target_env_call(
+        ['/bin/chown', '-R', '%s:' % (user), '%s'  % (wanted)])
 
     # chmod +x ${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open
 
