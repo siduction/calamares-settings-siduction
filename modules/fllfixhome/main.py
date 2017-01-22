@@ -45,11 +45,9 @@ def run():
     #       find "${TARGET_MNT_POINT}${INSTHOME}" \
     #          -type f \
     #          -exec sed -i "s|${LIVEHOME}|${INSTHOME}|g" {} \;
-   libcalamares.utils.target_env_call(
-       ['/bin/find', '%s' % (instHome,
-            '-type f',
-            '-exec sed -i',
-            '"s#%s#%s#g" {} \;' % (liveHome,instHome)])
+    command = '/bin/find %s -type f -exec /bin/sed -i \'s|%s|%s|g\' {} \;'
+        % (instHome, liveHome, instHome)
+    libcalamares.utils.target_env_call([ '%s' % command])
 
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
@@ -143,8 +141,8 @@ def run():
     #    sed -i 's|\(.*sudo.*\)||' "${TARGET_MNT_POINT}${INSTHOME}/.bashrc"
     # fi
     wanted = os.path.join( instHome, '.bashrc' )
-    libcalamares.utils.target_env_call(
-        ['/bin/sed', '-i', '"s|\(.*sudo.*\)||"', '%s'  % (wanted)])
+    command = '/bin/sed -i \'s|\(.*sudo.*\)||\' %s'  % (wanted)
+    libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s'  % (command)])
 
     # enable automount-open for gnome, mate and cinnamon in install mode
     # if [ -d /usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE} ]; then

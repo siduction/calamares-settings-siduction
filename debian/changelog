@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-40) unstable; urgency=medium
+
+  * fixhome, some sed fixed refs #5 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 22 Jan 2017 15:31:56 +0100
+
 calamares-settings-siduction (9.0-39) unstable; urgency=medium
 
   * fixhome improved, refs #5 
