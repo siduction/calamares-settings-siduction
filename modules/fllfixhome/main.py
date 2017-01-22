@@ -3,12 +3,12 @@
 #
 #   Copyright 2017, Alf Gaida <agaida@siduction.org>
 #
-#   This Module is free software: you can redistribute it and/or modify
+#   This module is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   This Module is distributed in the hope that it will be useful,
+#   This module is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 #   GNU General Public License for more details.
@@ -129,8 +129,12 @@ def run():
     # revert gksu sudo mode hack
     # sudo -u "${FLL_LIVE_USER}" gconftool-2 -s -t bool /apps/gksu/sudo-mode false
     # sudo -u "${FLL_LIVE_USER}" gconftool-2 -s -t bool /apps/gksu/display-no-pass-info true
+    command = 'sudo -u siducer gconftool-2 -s -t bool /apps/gksu/sudo-mode false'
+    libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s'  % (command)])
+    command = 'sudo -u siducer gconftool-2 -s -t bool /apps/gksu/display-no-pass-info true'
+    libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s'  % (command)])
 
-    # remove installer from fluxbox menu
+    # remove installer from fluxbox menu // we dont check
     # if grep -s -q Installer "${TARGET_MNT_POINT}${INSTHOME}"/.fluxbox/fll-flux-*; then
     #    sed -i '/Installer/d' "${TARGET_MNT_POINT}${INSTHOME}"/.fluxbox/fll-flux-*
     # fi

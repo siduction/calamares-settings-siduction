@@ -49,72 +49,69 @@ def run():
     unwanted = '/etc/sudoers.d/15_siduction'
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
 
-    # not implemented yet !TODO!
-
     # "normalize" gettys
+    # sysvinit // right now i give a fuck on supporting sysvinit
+    #   if [ -r "${TARGET_MNT_POINT}/usr/share/sysvinit/inittab" ]; then
+    #           cp -f   "${TARGET_MNT_POINT}/usr/share/sysvinit/inittab" \
+    #                "${TARGET_MNT_POINT}/etc/inittab"
+    #           sed -i  -e 's/^\([2-6]\):23:respawn/\1:2345:respawn/' \
+    #                -e 's/id:[0-6]:initdefault:/id:5:initdefault:/' \
+    #                    "${TARGET_MNT_POINT}/etc/inittab"
+    #   fi
 
-   # sysvinit
-#   if [ -r "${TARGET_MNT_POINT}/usr/share/sysvinit/inittab" ]; then
-#           cp -f   "${TARGET_MNT_POINT}/usr/share/sysvinit/inittab" \
-#                "${TARGET_MNT_POINT}/etc/inittab"
-#           sed -i  -e 's/^\([2-6]\):23:respawn/\1:2345:respawn/' \
-#                -e 's/id:[0-6]:initdefault:/id:5:initdefault:/' \
-#                    "${TARGET_MNT_POINT}/etc/inittab"
-#   fi
+    # systemd * we don't check if exists, we just try to delete
+    # rm -f   "${TARGET_MNT_POINT}/etc/systemd/system/getty@.service" \
+    #         "${TARGET_MNT_POINT}/etc/systemd/system/autovt@.service"
+    #
+    unwanted = '/etc/systemd/system/getty@.service'
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
+    unwanted = '/etc/systemd/system/autovt@.service'
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
+    # ln -fs  /lib/systemd/system/autovt@.service \
+    #        "${TARGET_MNT_POINT}/etc/systemd/system/getty.target.wants/getty@tty1.service"
+    source = '/lib/systemd/system/autovt@.service'
+    target = '/etc/systemd/system/getty.target.wants/getty@tty1.service'
+    libcalamares.utils.target_env_call(
+        ['/bin/ln', '-sf', '%s' % source, '%s' % target ])
 
-#    # systemd
-#        if [ -r "${TARGET_MNT_POINT}/etc/systemd/system/getty@.service" ]; then
-#                rm -f   "${TARGET_MNT_POINT}/etc/systemd/system/getty@.service" \
-#                        "${TARGET_MNT_POINT}/etc/systemd/system/autovt@.service"
-#
-#                ln -fs  /lib/systemd/system/autovt@.service \
-#                        "${TARGET_MNT_POINT}/etc/systemd/system/getty.target.wants/getty@tty1.service"
-#        fi
-
-    # normalize /etc/pam.d/login
-#    if [ -f "${TARGET_MNT_POINT}/etc/pam.d/login" ]; then
-#                sed -i '/^#.*pam_lastlog\.so/s/^#[ \t]\+//' "${TARGET_MNT_POINT}/etc/pam.d/login"
-#        fi
+    # normalize /etc/pam.d/login // we don't test - the chroot tolerates bugs
+    #    if [ -f "${TARGET_MNT_POINT}/etc/pam.d/login" ]; then
+    #        sed -i '/^#.*pam_lastlog\.so/s/^#[ \t]\+//' "${TARGET_MNT_POINT}/etc/pam.d/login"
+    #    fi
+    command = '/bin/sed -i \'/^#.*pam_lastlog\.so/s/^#[ \t]\+//\' /etc/pam.d/login'
+    libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s' % command])
 
     # remove confusing live traces from blkid.tab
-#    rm -f "${TARGET_MNT_POINT}/etc/blkid.tab*"
+    #    rm -f "${TARGET_MNT_POINT}/etc/blkid.tab*"
+    unwanted = '/etc/blkid.tab*'
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
 
-    # Save ALSA sound volume
-#    if [ -e /proc/asound/modules ] && [ -x /usr/sbin/alsactl ]; then
-#            /usr/sbin/alsactl store
-#            if [ -f /var/lib/alsa/asound.state ]; then
-#                    cp /var/lib/alsa/asound.state \
-#                            "${TARGET_MNT_POINT}/var/lib/alsa"
-#            fi
-#    fi
 
     # revert GDM3 autologin
-#    if [ -f "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf" ]; then
-#            # we want the gdm-theme (set by desktop-defaults in live mode) on hd-install,
-#            # only remove autologin for gdm
-#            sed -i  -e "/^AutomaticLogin\=.*/d" \
-#                   -e "/^AutomaticLoginEnable\=.*/d" \
-#                   -e "/^TimedLogin\=.*/d" \
-#                   -e "/^TimedLoginDelay\=.*/d" \
-#                   -e "/^TimedLoginEnable\=.*/d" \
-#                           "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf"
-#    fi
+    #    if [ -f "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf" ]; then
+    #            # we want the gdm-theme (set by desktop-defaults in live mode) on hd-install,
+    #            # only remove autologin for gdm
+    #            sed -i  -e "/^AutomaticLogin\=.*/d" \
+    #                    -e "/^AutomaticLoginEnable\=.*/d" \
+    #                   -e "/^TimedLogin\=.*/d" \
+    #                   -e "/^TimedLoginDelay\=.*/d" \
+    #                   -e "/^TimedLoginEnable\=.*/d" \
+    #                           "${TARGET_MNT_POINT}/etc/gdm3/daemon.conf"
+    #    fi
 
     # revert lightdm autologin
-#    if [ -f "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d/80_fll-live-initscripts.conf" ]; then
-#            rm -f "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d/80_fll-live-initscripts.conf"
-#            rmdir --ignore-fail-on-non-empty \
-#                   "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d" || :
-#   fi
+    #    if [ -f "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d/80_fll-live-initscripts.conf" ]; then
+    #            rm -f "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d/80_fll-live-initscripts.conf"
+    #            rmdir --ignore-fail-on-non-empty \
+    #                   "${TARGET_MNT_POINT}/etc/lightdm/lightdm.conf.d" || :
+    #   fi
 
     # revert lxdm autologin
-#    if [ -f "${TARGET_MNT_POINT}/etc/lxdm/live.conf" ] && \
-#       [ -f "${TARGET_MNT_POINT}/etc/lxdm/lxdm.conf" ]; then
-#            rm -f "${TARGET_MNT_POINT}/etc/lxdm/live.conf"
-#            ln -fs lxdm.conf "${TARGET_MNT_POINT}/etc/lxdm/default.conf"
-#    fi
-
-
+    #    if [ -f "${TARGET_MNT_POINT}/etc/lxdm/live.conf" ] && \
+    #       [ -f "${TARGET_MNT_POINT}/etc/lxdm/lxdm.conf" ]; then
+    #            rm -f "${TARGET_MNT_POINT}/etc/lxdm/live.conf"
+    #            ln -fs lxdm.conf "${TARGET_MNT_POINT}/etc/lxdm/default.conf"
+    #    fi
 
     # revert SDDM autologin
     #     rm -f   "${TARGET_MNT_POINT}/etc/sddm.conf" \
@@ -132,9 +129,9 @@ def run():
      #
      # revert slim autologin
      #
-#     if [ -f "${TARGET_MNT_POINT}/etc/slim.conf" ]; then
-#             sed -i  -e "/^default_user.*/d" \
-#                     -e "/^auto_login.*/d" \
-#                     -e "s/^\#FLL\#//" \
-#                             "${TARGET_MNT_POINT}/etc/slim.conf"
-#     fi
+     #     if [ -f "${TARGET_MNT_POINT}/etc/slim.conf" ]; then
+     #             sed -i  -e "/^default_user.*/d" \
+     #                     -e "/^auto_login.*/d" \
+     #                     -e "s/^\#FLL\#//" \
+     #                             "${TARGET_MNT_POINT}/etc/slim.conf"
+     #     fi
