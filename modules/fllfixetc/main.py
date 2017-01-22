@@ -20,12 +20,17 @@ import glob
 import libcalamares
 import os
 import subprocess
+import time
 
 def run():
     """ Remove some fll leftovers - thats what the fll-installer would do.
 
     :return:
     """
+
+    # sync first
+    libcalamares.utils.target_env_call(['sync'])
+    time.sleep(.500)
 
     # regenerate default snakeoil with new hostname
     libcalamares.utils.target_env_call(
