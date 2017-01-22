@@ -45,9 +45,8 @@ def run():
     #       find "${TARGET_MNT_POINT}${INSTHOME}" \
     #          -type f \
     #          -exec sed -i "s|${LIVEHOME}|${INSTHOME}|g" {} \;
-    command = '/bin/find %s -type f -exec /bin/sed -i \'s|%s|%s|g\' {} \;'
-        % (instHome, liveHome, instHome)
-    libcalamares.utils.target_env_call([ '%s' % command])
+    command = '/usr/bin/find %s -type f -exec /bin/sed -i \'s|%s|%s|g\' {} \;' % (instHome, liveHome, instHome)
+    libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s' % command])
 
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
