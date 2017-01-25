@@ -1,3 +1,17 @@
+calamares-settings-siduction (9.0-43) unstable; urgency=medium
+
+  * false option - right is
+    setRootPassword: true
+    doReusePassword: false
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 26 Jan 2017 00:21:46 +0100
+
+calamares-settings-siduction (9.0-42) unstable; urgency=medium
+
+  * don't set rootpass=userpass
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 24 Jan 2017 00:38:13 +0100
+
 calamares-settings-siduction (9.0-41) unstable; urgency=medium
 
   * fix some things in etc 
