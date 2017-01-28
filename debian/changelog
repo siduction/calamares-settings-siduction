@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-46) unstable; urgency=medium
+
+  * insert the displaymanager module 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Jan 2017 15:04:50 +0100
+
 calamares-settings-siduction (9.0-45) unstable; urgency=medium
 
   * keep /etc/sddm.conf and let calamares handle it
