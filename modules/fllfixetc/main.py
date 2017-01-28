@@ -62,7 +62,6 @@ def run():
     # systemd * we don't check if exists, we just try to delete
     # rm -f   "${TARGET_MNT_POINT}/etc/systemd/system/getty@.service" \
     #         "${TARGET_MNT_POINT}/etc/systemd/system/autovt@.service"
-    #
     unwanted = '/etc/systemd/system/getty@.service'
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s' % unwanted])
     unwanted = '/etc/systemd/system/autovt@.service'
@@ -116,15 +115,10 @@ def run():
     # revert SDDM autologin
     #     rm -f   "${TARGET_MNT_POINT}/etc/sddm.conf" \
     #             "${TARGET_MNT_POINT}/var/lib/sddm/state.conf"
-    unwanted = '/etc/sddm.conf'
-    libcalamares.utils.target_env_call([ '/bin/rm', '-f', unwanted ])
+    # we don't delete sddm.conf, sddm.conf should be handled by calamares
+    # but we kill the sddm state
     unwanted = '/var/lib/sddm/state.conf'
     libcalamares.utils.target_env_call([ '/bin/rm', '-f', unwanted ])
-    # copy sddm-*.conf --> sddm.conf
-    source = glob.glob('/etc/sddm-*.conf')
-    target = '/etc/sddm.conf'
-    libcalamares.utils.target_env_call(
-        ['/bin/cp', '-f', '%s' % source[0], "%s" % target])
 
      #
      # revert slim autologin

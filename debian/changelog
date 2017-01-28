@@ -1,3 +1,10 @@
+calamares-settings-siduction (9.0-45) unstable; urgency=medium
+
+  * keep /etc/sddm.conf and let calamares handle it
+  * kill only the sddm state.conf
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Jan 2017 14:48:35 +0100
+
 calamares-settings-siduction (9.0-44) unstable; urgency=medium
 
   * inserted siduction logo
