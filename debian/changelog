@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-48) unstable; urgency=medium
+
+  * adjust some colors
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Jan 2017 18:27:20 +0100
+
 calamares-settings-siduction (9.0-47) unstable; urgency=medium
 
   * branding changed
