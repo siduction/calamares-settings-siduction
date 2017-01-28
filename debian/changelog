@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-50) unstable; urgency=medium
+
+  * we must cleanup calamares.desktop instead of sidu-installer.desktop
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Jan 2017 20:14:52 +0100
+
 calamares-settings-siduction (9.0-49) unstable; urgency=medium
 
   * change logo geometry 

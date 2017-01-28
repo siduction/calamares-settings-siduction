@@ -57,8 +57,8 @@ def run():
     path = '/home/*/.*uthority'
     libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
-    # /home/*/Desktop/sidu-installer.desktop
-    path = '/home/*/Desktop/sidu-installer.desktop'
+    # /home/*/Desktop/calamares.desktop - former sidu-installer.desktop
+    path = '/home/*/Desktop/calamares.desktop'
     libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
 
     # /home/*/.kaxtv*
