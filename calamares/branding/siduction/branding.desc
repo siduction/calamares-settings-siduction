@@ -2,13 +2,13 @@
 componentName:   siduction
 
 strings:
-    productName:         siduction linux
+    productName:         siduction
     shortProductName:    siduction
     version:             17.1.0
     shortVersion:        17.1.0
-    versionedName:       siduction linux 17.1.0 
+    versionedName:       siduction 17.1.0 
     shortVersionedName:  siduction 17.1.0
-    bootloaderEntryName: siduction linux
+    bootloaderEntryName: siduction 17.1.0
     productUrl:          https://siduction.org
     supportUrl:          https://forum.siduction.org
     releaseNotesUrl:     https://news.siduction.org/category/release-notes

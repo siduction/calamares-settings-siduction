@@ -1,3 +1,9 @@
+calamares-settings-siduction (9.0-44) unstable; urgency=medium
+
+  * inserted siduction logo
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Jan 2017 14:21:29 +0100
+
 calamares-settings-siduction (9.0-43) unstable; urgency=medium
 
   * false option - right is
