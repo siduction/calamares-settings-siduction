@@ -1,3 +1,20 @@
+calamares-settings-siduction (9.0-52) unstable; urgency=medium
+
+  * added module locale
+    - enabled geoip
+    - defaulte Europe/Berlin
+
+  * added module fstab
+    - change to recommend values for debian
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 30 Jan 2017 02:09:56 +0100
+
+calamares-settings-siduction (9.0-51) unstable; urgency=medium
+
+  * fixed fllfixhome - remove sidu-installer.desktop 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Jan 2017 20:52:10 +0100
+
 calamares-settings-siduction (9.0-50) unstable; urgency=medium
 
   * we must cleanup calamares.desktop instead of sidu-installer.desktop

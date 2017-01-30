@@ -50,7 +50,7 @@ def run():
 
     # purge unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
-    unwanted = os.path.join( instHome, 'Desktop/sidu-installer.desktop' )
+    unwanted = os.path.join( instHome, 'Desktop/calamares.desktop' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop
