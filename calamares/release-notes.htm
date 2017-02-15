@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="stylesheet" href="./release.css" type="text/css"/>
+  </head>
+
+  <body>
+    <h1>Next release plans</h1>
+    <p>We are planning to release a full set of siduction images with all flavours
+    before going to CLT (Chemnitzer Linux-Tage) next month. There are at least three
+    reasons for that:</p>
+    <ul>
+       <li>We can boast about it at the conference</li>
+       <li>We will have a new installer for you to try</li>
+       <li>We promised to do so</li>
+    </ul>
+
+    <p>And here are the gory details: Six years ago we thought it would be a cool
+    idea to have our installer running in a browser with the help of a tiny http
+    server. Today for some reasons we do not think it is quite that cool. One of
+    the reasons for that being the fact, that the guy who initialy wrote the
+    installer is not available anymore. </p>
+
+    <p>Then, about three years ago someone by the name of Teo Mrnjavac had a
+    marvelous idea, that will, similar to systemd, unify linux in a in my
+    humble opinion positive way. I am talking about the Calamares Installer
+    Framework. As you can see at the bottom of
+    <a href="https://calamares.io/about/" target="_blank">their webpage</a>,
+    your favorite distro is listed there already. It is used more and more by
+    distributions and every one of them makes the code better. Sharing one
+    installer eases a lot of problems for smaller distributions. The partitioning
+    is done by KDE's partition manager. What it does not do yet is LVM and RAID,
+    but those are in the pipeline. Also, Calamares will make it's way into Debian
+    soon.</p>
+
+    <p>So for the past weeks that is what we have been working on. Calamares is C++,
+    Qt 5 for the user interface and python modules to pick what you need and
+    configure to your liking. Then apply a branding and you are done. Of course
+    this was the fast-forward-mode, but we managed to get it up and running in less
+    than two weeks. We are doing more testing to make sure it lives up to it's
+    reputation with siduction as well. </p>
+
+    <p>It also works fine with BIOS and UEFI, which kills another problem for us:
+    The integration of UEFI in the old installer was far from perfect and included
+    manual setup work before starting the installer. Given that we do not run into
+    any blockers with the installer, we are confident that the freeze for Debian
+    GNU/Linux 9 "Stretch" will allow us a release of all flavours without too many
+    problems.</p>
+
+    <p>We also plan to make this next release our first release with 64-bit only.
+    Yep, we think the time is right to drop the 32-bit plattform without making too
+    many users unhappy. Should you be one of those not happy with our plan, please
+    let us know your reasons on our forum. If you have a good reason to still
+    run 32-bit, you might even be able to talk us into a custom build. But overall,
+    dropping this architecture saves us a lot of time that can be better spent
+    elsewhere.</p>
+  </body>
+</html>

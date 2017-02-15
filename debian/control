@@ -1,4 +1,4 @@
-Source: calamares-settings-siduction
+Source: calamares-branding-siduction
 Section: utils
 Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
@@ -8,11 +8,11 @@ Homepage: https://gitlab.com/highvoltage/calamares-settings-debian
 Vcs-Git: https://gitlab.com/highvoltage/calamares-settings-debian-packaging.git
 Vcs-Browser: https://gitlab.com/highvoltage/calamares-settings-debian-packaging/tree/master
 
-Package: calamares-settings-siduction
+Package: calamares-branding-siduction
 Architecture: all
 Depends: ${misc:Depends},
          calamares
-Provides: calamares-settings
+Provides: calamares-branding
 Description: Siduction theme and settings for the Calamares Installer
  Calamares is a genereic installer framework for Linux distributions.
  By default, it contains a set of boilerplate wording and images. This
