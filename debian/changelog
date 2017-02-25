@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.0.0-4) unstable; urgency=medium
+
+  * new calamares settings - untested 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 25 Feb 2017 23:04:09 +0100
+
 calamares-branding-siduction (17.0.0-3) unstable; urgency=medium
 
   * basic release notes added
