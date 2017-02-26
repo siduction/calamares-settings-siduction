@@ -3,5 +3,5 @@ debian/debhelper-build-stamp
 debian/files
 
 
-debian/calamares-settings-siduction/
+debian/calamares-branding-siduction/
 
