@@ -1,32 +1,52 @@
 #!/bin/sh
+# -*- coding: utf-8 -*-
+#
+#   Copyright 2017, Alf Gaida <agaida@siduction.org>
+#
+#   This module is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This module is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this module. If not, see <http://www.gnu.org/licenses/>.
+
+purge_pkg() {
+    apt purge $1 --assume-yes || true
+}
 
 remove_qemu() {
     echo "Remove Qemu!"
-    apt purge qemu-guest-agent || true
-    apt purge qemu-system-common || true
-    apt purge qemu-system-x86 || true
-    apt purge qemu-utils || true
+    purge_pkg qemu-guest-agent
+    purge_pkg qemu-system-common
+    purge_pkg qemu-system-x86
+    purge_pkg qemu-utils
 }
 
 remove_vmware() {
     echo "Remove VMWare!"
-    apt purge open-vm-tools || true
-    apt purge open-vm-tools-desktop || true
-    apt purge open-vm-tools-dkms || true
-    apt purge xserver-xorg-video-vmware || true
+    purge_pkg open-vm-tools
+    purge_pkg open-vm-tools-desktop
+    purge_pkg open-vm-tools-dkms
+    purge_pkg xserver-xorg-video-vmware
 }
 
 remove_spice() {
     echo "Remove Spice!"
-    apt purge spice-vdagent || true
-    apt purge xserver-xorg-video-qxl || true
+    purge_pkg spice-vdagent
+    purge_pkg xserver-xorg-video-qxl
 }
 
 remove_virtualbox() {
     echo "Remove VirtualBox!"
-    apt purge virtualbox-guest-dkms || true
-    apt purge virtualbox-guest-utils || true
-    apt purge virtualbox-guest-x11 || true
+    purge_pkg virtualbox-guest-dkms
+    purge_pkg virtualbox-guest-utils
+    purge_pkg virtualbox-guest-x11
 }
 
 
@@ -82,4 +102,3 @@ case ${virt} in
 esac
 
 exit 0
-

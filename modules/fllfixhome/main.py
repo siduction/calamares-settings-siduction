@@ -62,6 +62,10 @@ def run():
     unwanted = os.path.join( instHome, '.config/autostart/siduction.desktop' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
+    # ${TARGET_MNT_POINT}${INSTHOME}/.gitconfig
+    unwanted = os.path.join( instHome, '.gitconfig' )
+    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
+
     # ${TARGET_MNT_POINT}${INSTHOME}/.hushlogin
     unwanted = os.path.join( instHome, '.hushlogin' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
