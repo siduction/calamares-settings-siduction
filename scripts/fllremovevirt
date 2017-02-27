@@ -1,0 +1,104 @@
+#!/bin/sh
+# -*- coding: utf-8 -*-
+#
+#   Copyright 2017, Alf Gaida <agaida@siduction.org>
+#
+#   This module is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This module is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this module. If not, see <http://www.gnu.org/licenses/>.
+
+purge_pkg() {
+    apt purge $1 --assume-yes || true
+}
+
+remove_qemu() {
+    echo "Remove Qemu!"
+    purge_pkg qemu-guest-agent
+    purge_pkg qemu-system-common
+    purge_pkg qemu-system-x86
+    purge_pkg qemu-utils
+}
+
+remove_vmware() {
+    echo "Remove VMWare!"
+    purge_pkg open-vm-tools
+    purge_pkg open-vm-tools-desktop
+    purge_pkg open-vm-tools-dkms
+    purge_pkg xserver-xorg-video-vmware
+}
+
+remove_spice() {
+    echo "Remove Spice!"
+    purge_pkg spice-vdagent
+    purge_pkg xserver-xorg-video-qxl
+}
+
+remove_virtualbox() {
+    echo "Remove VirtualBox!"
+    purge_pkg virtualbox-guest-dkms
+    purge_pkg virtualbox-guest-utils
+    purge_pkg virtualbox-guest-x11
+}
+
+
+for i in $(virt-what); do
+    echo "Test auf i=$i"
+    [ "x$i" = "x" ] && isBare=true && echo "fucking bare"
+    [ "x$i" = "xkvm" ] && isKVM=true && echo "fucking kvm"
+    [ "x$i" = "xqemu" ] && isQemu=true && echo "fucking qemu"
+    [ "x$i" = "xvirtualbox" ] && isVirtualBox=true && echo "fucking virtualbox"
+    [ "x$i" = "xvmware" ] && isVMWare=true && echo "fucking vmware"
+done
+
+[ $isBare ] && virt=none
+[ $isKVM ] &&  virt=kvm
+[ $isQemu ] && virt=qemu
+[ $isVMWare ] && virt=vmware
+[ $isVirtuaBox ] && virt=virtualbox
+
+case ${virt} in
+    "kvm")
+        echo "in kvm"
+        remove_vmware
+        remove_virtualbox
+        ;;
+    "qemu")
+        echo "in qemu"
+        remove_vmware
+        remove_virtualbox
+        ;;
+    "virtualbox")
+        echo "in vbox"
+        remove_vmware
+        remove_qemu
+        remove_spice
+        ;;
+    "vmware")
+        echo "in vmware"
+        remove_qemu
+        remove_spice
+        remove_virtualbox
+        ;;
+    "none")
+        echo "in none"
+        remove_qemu
+        remove_vmware
+        remove_spice
+        remove_virtualbox
+        ;;
+    *)
+        echo "Fuck, something went wrong!"
+        echo "Toter Hund angebunden!"
+        ;;
+esac
+
+exit 0

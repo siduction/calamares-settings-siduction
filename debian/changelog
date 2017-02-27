@@ -1,3 +1,23 @@
+calamares-branding-siduction (17.0.0-9) unstable; urgency=medium
+
+  * put a valid license header to fllremovevirt scripts 
+  * remove $HOME/.gitconfig in the installed system
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Feb 2017 21:51:41 +0100
+
+calamares-branding-siduction (17.0.0-8) unstable; urgency=medium
+
+  * fllremovevirt debugged and improved
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Feb 2017 21:47:48 +0100
+
+calamares-branding-siduction (17.0.0-7) unstable; urgency=medium
+
+  * added module and script fllremovevirt: removal of not needed
+    virtual packages
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Feb 2017 18:49:04 +0100
+
 calamares-branding-siduction (17.0.0-6) unstable; urgency=medium
 
   * don't try to remove sshstart  - replaced with sshactivate, wich is
