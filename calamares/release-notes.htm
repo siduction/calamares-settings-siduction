@@ -7,92 +7,156 @@
   </head>
 
   <body>
-  <h3>Release Notes for siduction 2017.01</h3>
-    <p>Today we are proud to release siduction 2017.1 with the flavours KDE, LXQt, GNOME, Cinnamon, MATE, XFCE, LXDE, Xorg and noX. The fact that Debian is in deep freeze for Debian 9 »Stretch« allows us to release the whole stack. As I <a href="https://news.siduction.org/2017/02/next-release-plans/" target="_blank">posted before</a> not too long ago, we planned the release before going to CLT-Conference on 11./12. of March, and voila - here it is.
-</p><br>
-<p>The released images are a snapshot of Debian unstable, that also goes by the name of Sid, from 2017-XX-XX. They are enhanced with some useful packages and scripts, a brand new installer and a custom patched version of the linux-kernel 4.10, accompanied by X-Server 1.19.0-4 and systemd 232-18.</p>
-<br>
-<strong>New Installer</strong>
-<p>Work on the new installer built from the <a href="https://calamares.io/about/" target="_blank">Calamares Installer Framework</a>, which we are very happy about was pretty much straight forward. So, with this new release, our old installer, that was often critisized as not being very clear in its graphical appearance, is being retired and Calamares takes its place.</p><br>
+    <h3>Release Notes for siduction 2017.01</h3>
+    <p>Today we are proud to release siduction 2017.1 with the flavours KDE, LXQt,
+       GNOME, Cinnamon, MATE, XFCE, LXDE, Xorg and noX. The fact that Debian is in
+       deep freeze for Debian 9 »Stretch« allows us to release the whole stack. As
+       I <a href="https://news.siduction.org/2017/02/next-release-plans/" target="_blank">posted before</a>
+       not too long ago, we planned the release before going to CLT-Conference on
+       11./12. of March, and voila - here it is.
+    </p>
+    <br>
+    <p>The released images are a snapshot of Debian unstable, that also goes by the
+       name of Sid, from 2017-XX-XX. They are enhanced with some useful packages and
+       scripts, a brand new installer and a custom patched version of the linux-kernel
+       4.10, accompanied by X-Server 1.19.0-4 and systemd 232-18.
+    </p>
+    <br>
+    <strong>New Installer</strong>
+    <p>Work on the new installer built from the <a href="https://calamares.io/about/" target="_blank">Calamares Installer Framework</a>,
+       which we are very happy about was pretty much straight forward. So, with this
+       new release, our old installer, that was often critisized as not being very
+       clear in its graphical appearance, is being retired and Calamares takes its
+       place.
+    </p>
+    <br>
+    <strong>UEFI installs made easy</strong>
+    <p>With Calamares we can offer full implementation of UEFI-Installs, which were
+       still a bit cumbersome with the old installer. Besides that it offers almost
+       everything, the old installer did. For now we have turned off encryption with
+       LUKS, which Calamares offers as an option. We want to be on top of that feature
+       before we offer it to you. Offering it means we need to be able to support this
+       critical functionality. We do not feel we can do this adequatly at the moment,
+       but we will further look into it for our next release.
+    </p>
+    <br>
 
-<strong>UEFI installs made easy</strong>
-<p>With Calamares we can offer full implementation of UEFI-Installs, which were still a bit cumbersome with the old installer. Besides that it offers almost everything, the old installer did. For now we have turned off encryption with LUKS, which Calamares offers as an option. We want to be on top of that feature before we offer it to you. Offering it means we need to be able to support this critical functionality. We do not feel we can do this adequatly at the moment, but we will further look into it for our next release.</p><br>
+    <strong>Shortcomings</strong>
+    <p>What Calamares cannot do at this point of its develope4ment is LVM, but that is
+       being worked on. so hopefully when we feel comfortable with encryption in the
+       installer, LVM will be ready and they can go hand in hand. That leaves two things
+       that will not be included in the new installer. One is the option to turn on SSH
+       before installing the system. Calamares does not offer that and before writing a
+       calamares module for this, we decided to just build 2 small scripts to turn SSH on
+       and off. They are aptly named <em>SSH Activate</em> and <em>SSH Deactivate</em>
+       and you can find them in your menu.
+    </p>
+    <br>
 
-<strong>Shortcomings</strong>
-<p>What Calamares cannot do at this point of its develope4ment is LVM, but that is being worked on. so hopefully when we feel comfortable with encryption in the installer, LVM will be ready and they can go hand in hand. That leaves two things that will not be included in the new installer. One is the option to turn on SSH before installing the system. Calamares does not offer that and before writing a calamares module for this, we decided to just build 2 small packages to turn SSH on and off. They are aptly named <em>SSH Activate</em> and <em>SSH Deactivate</em> annd you can find them in your menu.</p><br>
+    <strong>Non-free software</strong>
+    <p>The other option that the installer does not offer anymore is the decision is to
+       opt-out to allow software to be installed that does not comply with DFSG, the
+       Debian Free Software Guidelines. If you did not use the opt-out, non-free packages
+       with non-free-firmware enabling your wifi were installed on the system. As there
+       is no option to do that in Calamares, for now we have added a script called
+       <em>remove-nonfree</em> to siduction-scripts, that will remove any non-free
+       packages during installation. A list of the packages involved can be seen below.
+       The command <code>vrms</code> will also list these packages, should you want to
+       remove them manualy after install. Besides running the script, this can be achieved
+       by issuing <code>apt purge $(vrms -s -q)</code>.
+    </p>
+    <br>
 
-<strong>Non-free software</strong>
-<p>The other option that the installer does not offer anymore is the decision is to opt-out to allow software to be installed that does not comply with DFSG, the Debian Free Software Guidelines. If you did not use the opt-out, non-free packages with non-free-firmware enabling your wifi were installed on the system. As there is no option to do that in Calamares, for now we have added a script called <em>remove-nonfree</em> to siduction-scripts, that will remove any non-free packages during installation. A list of the packages involed can be seen below. The command <code>apt purge $(vrms -s)</code> will also list these packages, should you want to remove them manualy after install. Besides running the script, this can be achieved by issuing <code>apt purge $(vrms)</code>.</p><br>
+    <strong>The following nonfree packages are installed by default:</strong>
+    <ul>
+        <li>amd64-microcode Processor microcode firmware for AMD CPUs</li>
+        <li>firmware-amd-graphics Binary firmware for AMD/ATI graphics chips</li>
+        <li>firmware-atheros Binary firmware for Atheros wireless cards</li>
+        <li>firmware-bnx2 Binary firmware for Broadcom NetXtremeII</li>
+        <li>firmware-bnx2x Binary firmware for Broadcom NetXtreme II 10Gb</li>
+        <li>firmware-brcm80211 Binary firmware for Broadcom 802.11 wireless card</li>
+        <li>firmware-crystalhd Crystal HD Video Decoder (firmware)</li>
+        <li>firmware-intelwimax Binary firmware for Intel WiMAX Connection</li>
+        <li>firmware-iwlwifi Binary firmware for Intel Wireless cards</li>
+        <li>firmware-libertas Binary firmware for Marvell  wireless card</li>
+        <li>firmware-linux-nonfree Binary firmware for various drivers in the Linux kernel</li>
+        <li>firmware-misc-nonfree Binary firmware for various drivers in the Linux kernel</li>
+        <li>firmware-myricom Binary firmware for Myri-10G Ethernet adapters</li>
+        <li>firmware-netxen Binary firmware for QLogic Intelligent Ethernet (3000)</li>
+        <li>firmware-qlogic Binary firmware for QLogic HBAs</li>
+        <li>firmware-realtek Binary firmware for Realtek wired/wifi/BT adapters</li>
+        <li>firmware-ti-connectivity Binary firmware for TI Connectivity wireless network</li>
+        <li>firmware-zd1211 binary firmware for the zd1211rw wireless driver</li>
+        <li>intel-microcode Processor microcode firmware for Intel CPUs</li>
+    </ul>
+    <br>
+    <strong>Contrib packages installed on siduction</strong>
+    <ul>
+        <li>b43-fwcutter utility for extracting Broadcom 43xx firmware<li>
+        <li>firmware-b43-installer firmware installer for the b43 driver<li>
+        <li>firmware-b43legacy-installer firmware installer for the b43legacy driver<li>
+        <li>iucode-tool Intel processor microcode too.<li>
+    </ul>
+    <br>
 
-<strong>The following nonfree packages are installed by default:</strong>
-<ul>
-amd64-microcode Processor microcode firmware for AMD CPUs<br>
-firmware-amd-graphics Binary firmware for AMD/ATI graphics chips<br>
-firmware-atheros Binary firmware for Atheros wireless cards<br>
-firmware-bnx2 Binary firmware for Broadcom NetXtremeII<br>
-firmware-bnx2x Binary firmware for Broadcom NetXtreme II 10Gb<br>
-firmware-brcm80211 Binary firmware for Broadcom 802.11 wireless card<br>
-firmware-crystalhd Crystal HD Video Decoder (firmware)<br>
-firmware-intelwimax Binary firmware for Intel WiMAX Connection<br>
-firmware-iwlwifi Binary firmware for Intel Wireless cards<br>
-firmware-libertas Binary firmware for Marvell  wireless card<br>
-firmware-linux-nonfree Binary firmware for various drivers in the Linux kernel<br>
-firmware-misc-nonfree Binary firmware for various drivers in the Linux kernel<br>
-firmware-myricom Binary firmware for Myri-10G Ethernet adapters<br>
-firmware-netxen Binary firmware for QLogic Intelligent Ethernet (3000)<br>
-firmware-qlogic Binary firmware for QLogic HBAs<br>
-firmware-realtek Binary firmware for Realtek wired/wifi/BT adapters<br>
-firmware-ti-connectivity Binary firmware for TI Connectivity wireless network<br>
-firmware-zd1211 binary firmware for the zd1211rw wireless driver<br>
-intel-microcode Processor microcode firmware for Intel CPUs<br><br>
-Contrib packages installed on siduction<br>
-b43-fwcutter utility for extracting Broadcom 43xx firmware<br>
-firmware-b43-installer firmware installer for the b43 driver<br>
-firmware-b43legacy-installer firmware installer for the b43legacy driver<br>
-iucode-tool Intel processor microcode too.</ul><br><br>
+    <strong>Disclaimer</strong>
+    <p>You need to be aware that this behaviour is not in accordance with the Debian
+       Free Software Guide (DFSG). We offer an opt-out by script from this to go back
+       to a DFSG-compliant installation.
+    </p>
+    <br>
 
-<strong>Disclaimer</strong>
-<p>You need to be aware that this behaviour is not in accordance with the Debian Free Software Guide (DFSG). We offer an opt-out by script from this to go back to a DFSG-compliant installation.</p><br>
+    <strong>Changes to our release model</strong>
+    <p>Besides that, we will slightly alter our release model. During the past release
+       cycles we learned that with as many flavours as we have and with the ressources
+       we can muster, we find it very hard to release all flavours together in one release.
+       This made it hard to release in the past, which leaves new users with growing first
+       upgrades as time moves on. To prevent that from happening again, in the future we
+       will release flavours as soon as they are ready and benefit the user. We will still
+       try to release more than one at a time, but not neccesarily wait for a chance to
+       release all of them together.
+    </p>
+    <br>
 
-<strong>Changes to our release model</strong>
-<p>Besides that, we will slightly alter our release model. During the past release cycles we learned that with as many flavours as we have and with the ressources we can muster, we find it very hard to release all flavours together in one release. This made it hard to release in the past, which leaves new users with growing first upgrades as time moves on. To prevent that from happening again, in the future we will release flavours as soon as they are ready and benefit the user. We will still try to release more than one at a time, but not neccesarily wait for a chance to release all of them together.</p><br>
+    <strong>Credits for siduction 2017.1</strong><br>
+    Core Team:<br>
+    Alf Gaida (agaida)<br>
+    Angelescu Ovidiu (convbsd)<br>
+    Axel Beu (ab)<br>
+    Ferdinand Thommes (devil)<br>
+    Torsten Wohlfarth (towo)<br>
+    J. Theede (musca)<br>
+    Maintainers of the siduction Desktop Environments:<br>
+    GNOME: Angelescu Ovidiu (convbsd)<br>
+    KDE: Ferdinand Thommes (devil)<br>
+    LXDE: Alf Gaida (agaida)<br>
+    LXQt: Alf Gaida (agaida)<br>
+    XFCE: Torsten Wolfahrt (towo)<br>
+    Cinnamon: J. Theede (musca)<br>
+    noX: Alf Gaida (agaida)<br>
+    MATE: J. Theede (musca), Angelescu Ovidiu (convbsd)<br>
+    <br>
 
-<strong>Credits for siduction 2017.1</strong><br>
-Core Team:<br>
-Alf Gaida (agaida)<br>
-Angelescu Ovidiu (convbsd)<br>
-Axel Beu (ab)<br>
-Ferdinand Thommes (devil)<br>
-Torsten Wohlfarth (towo)<br>
-J. Theede (musca)<br>
-Maintainers of the siduction Desktop Environments:<br>
-GNOME: Angelescu Ovidiu (convbsd)<br>
-KDE: Ferdinand Thommes (devil)<br>
-LXDE: Alf Gaida (agaida)<br>
-LXQt: Alf Gaida (agaida)<br>
-XFCE: Torsten Wolfahrt (towo)<br>
-Cinnamon: J. Theede (musca)<br>
-noX: Alf Gaida (agaida)<br>
-MATE: J. Theede (musca), Angelescu Ovidiu (convbsd)<br><br>
-Art Team:<br>
-Bob<br>
-Hendrik Lehmbruch (hendriKL)<br>
-We need more contributors for siduction release art!<br><br>
-Code, ideas and support:<br>
-ayla<br>
-bluelupo<br>
-der_bud<br>
-Hendrik Lehmbruch [hendrikL)<br>
-Markus Schimpf (arno911)<br>
-Thank you!<br><br>
+    Art Team:<br>
+    Bob<br>
+    Hendrik Lehmbruch (hendriKL)<br>
+    We need more contributors for siduction release art!<br><br>
+    Code, ideas and support:<br>
+    ayla<br>
+    bluelupo<br>
+    der_bud<br>
+    Hendrik Lehmbruch [hendrikL)<br>
+    Markus Schimpf (arno911)<br>
+    Thank you!<br>
+    <br>
 
-Also<strong> thank you</strong> very much to all testers and all the people giving us support in any possible way. This is also your achievement.<br>
+    Also<strong> thank you</strong> very much to all testers and all the people giving
+    us support in any possible way. This is also your achievement.<br>
 
-We also want to thank Debian, as we are using their base.<br>
-And now enjoy!<br>
-
-Rock on.<br>
-On behalf of the siduction team:<br>
-Ferdinand Thommes
+    We also want to thank Debian, as we are using their base.<br>
+    And now enjoy!<br>
+    Rock on.<br>
+    On behalf of the siduction team:<br>
+    Ferdinand Thommes
   </body>
 </html>

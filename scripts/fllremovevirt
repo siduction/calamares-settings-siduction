@@ -21,7 +21,6 @@ purge_pkg() {
 }
 
 remove_qemu() {
-    echo "Remove Qemu!"
     purge_pkg qemu-guest-agent
     purge_pkg qemu-system-common
     purge_pkg qemu-system-x86
@@ -29,7 +28,6 @@ remove_qemu() {
 }
 
 remove_vmware() {
-    echo "Remove VMWare!"
     purge_pkg open-vm-tools
     purge_pkg open-vm-tools-desktop
     purge_pkg open-vm-tools-dkms
@@ -37,13 +35,11 @@ remove_vmware() {
 }
 
 remove_spice() {
-    echo "Remove Spice!"
     purge_pkg spice-vdagent
     purge_pkg xserver-xorg-video-qxl
 }
 
 remove_virtualbox() {
-    echo "Remove VirtualBox!"
     purge_pkg virtualbox-guest-dkms
     purge_pkg virtualbox-guest-utils
     purge_pkg virtualbox-guest-x11
@@ -52,11 +48,11 @@ remove_virtualbox() {
 
 for i in $(virt-what); do
     echo "Test auf i=$i"
-    [ "x$i" = "x" ] && isBare=true && echo "fucking bare"
-    [ "x$i" = "xkvm" ] && isKVM=true && echo "fucking kvm"
-    [ "x$i" = "xqemu" ] && isQemu=true && echo "fucking qemu"
-    [ "x$i" = "xvirtualbox" ] && isVirtualBox=true && echo "fucking virtualbox"
-    [ "x$i" = "xvmware" ] && isVMWare=true && echo "fucking vmware"
+    [ "x$i" = "x" ] && isBare=true
+    [ "x$i" = "xkvm" ] && isKVM=true
+    [ "x$i" = "xqemu" ] && isQemu=true
+    [ "x$i" = "xvirtualbox" ] && isVirtualBox=true
+    [ "x$i" = "xvmware" ] && isVMWare=true
 done
 
 [ $isBare ] && virt=none
@@ -67,7 +63,6 @@ done
 
 case ${virt} in
     "kvm")
-        echo "in kvm"
         remove_vmware
         remove_virtualbox
         ;;
