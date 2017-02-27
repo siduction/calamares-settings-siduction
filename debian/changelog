@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.0.0-7) unstable; urgency=medium
+
+  * added stub for removal of not needed virtual packages
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Feb 2017 16:50:35 +0100
+
 calamares-branding-siduction (17.0.0-6) unstable; urgency=medium
 
   * don't try to remove sshstart  - replaced with sshactivate, wich is

@@ -16,10 +16,7 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this module. If not, see <http://www.gnu.org/licenses/>.
 
-import glob
 import libcalamares
-import os
-import commands
 
 def run():
     """ Remove not needed virt packages in target system.
@@ -27,6 +24,4 @@ def run():
     :return:
     """
 
-    print  commands.getstatusoutput('virt-what')
-
-    #libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s'  % (command)])
+    libcalamares.utils.target_env_call(['/bin/sh', '-c', 'fllremovevirt'])

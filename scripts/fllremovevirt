@@ -1,0 +1,85 @@
+#!/bin/sh
+
+remove_qemu() {
+    echo "Remove Qemu!"
+    apt purge qemu-guest-agent || true
+    apt purge qemu-system-common || true
+    apt purge qemu-system-x86 || true
+    apt purge qemu-utils || true
+}
+
+remove_vmware() {
+    echo "Remove VMWare!"
+    apt purge open-vm-tools || true
+    apt purge open-vm-tools-desktop || true
+    apt purge open-vm-tools-dkms || true
+    apt purge xserver-xorg-video-vmware || true
+}
+
+remove_spice() {
+    echo "Remove Spice!"
+    apt purge spice-vdagent || true
+    apt purge xserver-xorg-video-qxl || true
+}
+
+remove_virtualbox() {
+    echo "Remove VirtualBox!"
+    apt purge virtualbox-guest-dkms || true
+    apt purge virtualbox-guest-utils || true
+    apt purge virtualbox-guest-x11 || true
+}
+
+
+for i in $(virt-what); do
+    echo "Test auf i=$i"
+    [ "x$i" = "x" ] && isBare=true && echo "fucking bare"
+    [ "x$i" = "xkvm" ] && isKVM=true && echo "fucking kvm"
+    [ "x$i" = "xqemu" ] && isQemu=true && echo "fucking qemu"
+    [ "x$i" = "xvirtualbox" ] && isVirtualBox=true && echo "fucking virtualbox"
+    [ "x$i" = "xvmware" ] && isVMWare=true && echo "fucking vmware"
+done
+
+[ $isBare ] && virt=none
+[ $isKVM ] &&  virt=kvm
+[ $isQemu ] && virt=qemu
+[ $isVMWare ] && virt=vmware
+[ $isVirtuaBox ] && virt=virtualbox
+
+case ${virt} in
+    "kvm")
+        echo "in kvm"
+        remove_vmware
+        remove_virtualbox
+        ;;
+    "qemu")
+        echo "in qemu"
+        remove_vmware
+        remove_virtualbox
+        ;;
+    "virtualbox")
+        echo "in vbox"
+        remove_vmware
+        remove_qemu
+        remove_spice
+        ;;
+    "vmware")
+        echo "in vmware"
+        remove_qemu
+        remove_spice
+        remove_virtualbox
+        ;;
+    "none")
+        echo "in none"
+        remove_qemu
+        remove_vmware
+        remove_spice
+        remove_virtualbox
+        ;;
+    *)
+        echo "Fuck, something went wrong!"
+        echo "Toter Hund angebunden!"
+        ;;
+esac
+
+exit 0
+
