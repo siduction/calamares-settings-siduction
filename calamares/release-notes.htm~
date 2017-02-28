@@ -23,7 +23,7 @@
     </p>
     <br>
     <strong>Desktop Environments</strong>
-<p> Debians freeze enables us to release all our flavours at once, but it also means that there were hardly any changes to the flavours  noX, Xorg, LXDE, Xfce and Plasma 5, that we released in December 2016. So Plasma 5 did not yet move to 5.9, which is an update many users wait for. Some of the other desktops like Gnome, Cinnamon, Mate and LXQt have seen updates since the last release. Specialy LXQt made quiete some progress and is now also available in Debian.</p><br>
+<p> Debians freeze enables us to release all our flavours at once, but it also means that there were hardly any changes to the flavours  noX, Xorg, LXDE, Xfce and Plasma 5, that we released in December 2016. So Plasma 5 did not yet move to 5.9, which is an update many users wait for. Some of the other desktops Gnome, Cinnamon, Mate and LXQt have seen updates since the last release. Specialy LXQt made quiet some advance and is also available in Debian now.</p><br>
     <strong>New Installer</strong>
     <p>Work on the new installer built from the <a href="https://calamares.io/about/" target="_blank">Calamares Installer Framework</a>,
        which we are very happy about was pretty much straight forward. So, with this
