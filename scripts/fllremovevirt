@@ -45,10 +45,14 @@ remove_virtualbox() {
     purge_pkg virtualbox-guest-x11
 }
 
+# test bare metal
+i= $(virt-what)
+[ "x$i" = "x" ] && isBare=true
 
+
+# test misc virts
 for i in $(virt-what); do
     echo "Test auf i=$i"
-    [ "x$i" = "x" ] && isBare=true
     [ "x$i" = "xkvm" ] && isKVM=true
     [ "x$i" = "xqemu" ] && isQemu=true
     [ "x$i" = "xvirtualbox" ] && isVirtualBox=true
@@ -84,15 +88,15 @@ case ${virt} in
         remove_virtualbox
         ;;
     "none")
-        echo "in none"
         remove_qemu
         remove_vmware
         remove_spice
         remove_virtualbox
         ;;
     *)
-        echo "Fuck, something went wrong!"
-        echo "Toter Hund angebunden!"
+        echo "Toter Hund angebunden! Please file a bug in"
+        echo "https://git.siduction.org/extra/calamares-settings-siduction.git"
+        echo "or in https://forum.siduction.org"
         ;;
 esac
 
