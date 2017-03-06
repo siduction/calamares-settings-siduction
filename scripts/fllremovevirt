@@ -63,7 +63,7 @@ done
 [ $isKVM ] &&  virt=kvm
 [ $isQemu ] && virt=qemu
 [ $isVMWare ] && virt=vmware
-[ $isVirtuaBox ] && virt=virtualbox
+[ $isVirtualBox ] && virt=virtualbox
 
 case ${virt} in
     "kvm")
@@ -76,7 +76,6 @@ case ${virt} in
         remove_virtualbox
         ;;
     "virtualbox")
-        echo "in vbox"
         remove_vmware
         remove_qemu
         remove_spice

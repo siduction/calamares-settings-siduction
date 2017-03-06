@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.1.0-2) unstable; urgency=medium
+
+  * fix typo in isVirtualBox
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 06 Mar 2017 21:43:03 +0100
+
 calamares-branding-siduction (17.1.0-1) unstable; urgency=medium
 
   * release branding
