@@ -42,7 +42,7 @@ Presentation
             anchors.top: background1.bottom
             text: "Welcome to siduction 17.1.0 \"Patience\".<br/>"+
                   "The rest of the installation is automated and typically takes a few minutes to complete."
-  				  "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).
+  				  "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide)."
   				  "We ship non-free firmware that enables you to get your WiFi and other hardware\
                    with non-free needs up and running".</br>
                    "If you want your system to be DFSG-compliant, you need to run the script <em>remove-nonfree</em>\
