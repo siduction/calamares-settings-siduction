@@ -43,8 +43,7 @@ Presentation
             text: "Welcome to siduction 17.1.0 \"Patience\".<br/>"+
                   "The rest of the installation is automated and typically takes a few minutes to complete."
   				  "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide)."
-  				  "We ship non-free firmware that enables you to get your WiFi and other hardware
-                   with non-free needs up and running".</br>
+  				  "We ship non-free firmware that enables you to set up wifi and other hardware with no-free needs".</br>
                    "If you want your system to be DFSG-compliant, you need to run the script <em>remove-nonfree</em>
   				   after you reboot into the installed system."
             wrapMode: Text.WordWrap
