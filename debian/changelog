@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.1.0-3) unstable; urgency=medium
+
+  * Some reminder because of non-free software 
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 14 Mar 2017 23:44:02 +0100
+
 calamares-branding-siduction (17.1.0-2) unstable; urgency=medium
 
   * fix typo in isVirtualBox
