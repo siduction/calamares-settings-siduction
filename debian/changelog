@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.1.0-4) unstable; urgency=medium
+
+  * fixed some text formatting issues
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 16 Mar 2017 19:59:52 +0100
+
 calamares-branding-siduction (17.1.0-3) unstable; urgency=medium
 
   * Some reminder because of non-free software 
