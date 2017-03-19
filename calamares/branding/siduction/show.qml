@@ -23,33 +23,25 @@ Presentation
 {
     id: presentation
 
-    Timer {
-        interval: 20000
-        repeat: true
-        onTriggered: presentation.goToNextSlide()
+    Image {
+        id: image1
+        source: "slide1.png"
+        width: 467; height: 280
+        fillMode: Image.PreserveAspectFit
+        anchors.horizontalCenter: parent.horizontalCenter
     }
-
-    Slide {
-        Image {
-            id: background1
-            source: "slide1.png"
-            width: 467; height: 280
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
-        }
-        Text {
-            anchors.horizontalCenter: background1.horizontalCenter
-            anchors.top: background1.bottom
-            text: "Welcome to siduction 17.1.0 \"Patience\".<br/>"+
-                  "The rest of the installation is automated and typically takes a few minutes to complete. <br/><br/>"+
-                  "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/>"+
-                  "We ship non-free firmware that enables you to set up wifi and other hardware with no-free needs.<br/>"+
-                  "If you want your system to be DFSG-compliant, you need to run the script <em>remove-nonfree</em><br/>"+
-                  "after you reboot into the installed system."
-            wrapMode: Text.WordWrap
-            width: 600
-            horizontalAlignment: Text.Center
-        }
-    }
-
+    Text {
+        anchors.horizontalCenter: image1.horizontalCenter
+        anchors.top: image1.bottom
+        text: "Welcome to siduction 17.1.0 \"Patience\".<br/>"+
+              "The rest of the installation is automated and typically takes a few minutes to complete. <br/><br/>"+
+              "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/>"+
+              "We ship non-free firmware that enables you to set up wifi and other hardware with no-free needs.<br/>"+
+              "If you want your system to be DFSG-compliant, you need to run the script <b>'remove-nonfree'</b><br/>"+
+              "after you reboot into the installed system."
+        wrapMode: Text.WordWrap
+        width: 700
+        horizontalAlignment: Text.Center
+   }
 }
+
