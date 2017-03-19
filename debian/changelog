@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.1.0-6) unstable; urgency=medium
+
+  * fix show.qml
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 19 Mar 2017 21:38:42 +0100
+
 calamares-branding-siduction (17.1.0-5) unstable; urgency=medium
 
   * some formatting 
