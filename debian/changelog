@@ -1,3 +1,9 @@
+calamares-branding-siduction (17.1.0-7) unstable; urgency=medium
+
+  * bold header, fixed no-free another time 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 19 Mar 2017 22:55:32 +0100
+
 calamares-branding-siduction (17.1.0-6) unstable; urgency=medium
 
   * fix show.qml

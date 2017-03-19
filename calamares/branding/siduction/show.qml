@@ -33,10 +33,10 @@ Presentation
     Text {
         anchors.horizontalCenter: image1.horizontalCenter
         anchors.top: image1.bottom
-        text: "Welcome to siduction 17.1.0 \"Patience\".<br/>"+
+        text: "<b>Welcome to siduction 17.1.0 \"Patience\".</b><br/>"+
               "The rest of the installation is automated and typically takes a few minutes to complete. <br/><br/>"+
               "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/>"+
-              "We ship non-free firmware that enables you to set up wifi and other hardware with no-free needs.<br/>"+
+              "We ship non-free firmware that enables you to set up wifi and other hardware with non-free needs.<br/>"+
               "If you want your system to be DFSG-compliant, you need to run the script <b>'remove-nonfree'</b><br/>"+
               "after you reboot into the installed system."
         wrapMode: Text.WordWrap
