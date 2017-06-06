@@ -24,4 +24,4 @@ def run():
     :return:
     """
 
-    libcalamares.utils.target_env_call(['/bin/sh', '-c', 'fllremovevirt'])
+    libcalamares.utils.target_env_call('/bin/sh', '-c', 'fllremovevirt')
