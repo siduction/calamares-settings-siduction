@@ -1,3 +1,15 @@
+calamares-branding-siduction (17.2.0-1) unstable; urgency=medium
+
+  * Prepare the new release
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 26 Dec 2017 19:17:20 +0100
+
+calamares-branding-siduction (17.1.0-10) unstable; urgency=medium
+
+  * bring back the brackets, not a good idea 
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 06 Jun 2017 21:06:13 +0200
+
 calamares-branding-siduction (17.1.0-9) unstable; urgency=medium
 
   * test brackets

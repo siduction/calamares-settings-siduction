@@ -48,7 +48,7 @@ def run():
     command = '/usr/bin/find %s -type f -exec /bin/sed -i \'s|%s|%s|g\' {} \;' % (instHome, liveHome, instHome)
     libcalamares.utils.target_env_call(['/bin/sh', '-c', '%s' % command])
 
-    # purge unwanted files
+    # remove unwanted files
     # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/${FLL_DISTRO_NAME}.desktop
     unwanted = os.path.join( instHome, 'Desktop/calamares.desktop' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
@@ -94,7 +94,7 @@ def run():
     unwanted = '/root/.hushlogin'
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
-    # purge content of some dirs
+    # remove content of some dirs
     #        for dir in "${TARGET_MNT_POINT}${INSTHOME}/.cache"; do
     #            [ -d "$dir" ] && rm -Rf ${dir}/*
     #        done
