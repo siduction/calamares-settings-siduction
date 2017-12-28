@@ -3,10 +3,10 @@ Section: utils
 Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
 Build-Depends: debhelper (>= 10)
-Standards-Version: 3.9.8
-Homepage: https://gitlab.com/highvoltage/calamares-settings-debian
-Vcs-Git: https://gitlab.com/highvoltage/calamares-settings-debian-packaging.git
-Vcs-Browser: https://gitlab.com/highvoltage/calamares-settings-debian-packaging/tree/master
+Standards-Version: 4.1.3
+Homepage: https:
+Vcs-Git: https:
+Vcs-Browser: https:
 
 Package: calamares-branding-siduction
 Architecture: all
