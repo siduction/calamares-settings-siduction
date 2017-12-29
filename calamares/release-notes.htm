@@ -7,14 +7,13 @@
   </head>
 
   <body>
-    <h3>Release Notes for siduction 2018.1.0</h3>
-
+    <h2>Release Notes for siduction 2018.1.0</h2>
     <p>Today we are proud to release siduction 2018.1.0 with the flavours KDE,
     LXQt, GNOME, Cinnamon, MATE, XFCE, LXDE, Xorg and noX. The released images
     are a snapshot of Debian unstable, that also goes by the name of Sid,
-    from 2017-28-12. They are enhanced with some useful packages and scripts,
-    a brand new installer and a custom patched version of the linux-kernel 4.14,
-    accompanied by X-Server 1.19.5-1 and systemd 236-1.</p>
+    from 2017-29-12. They are enhanced with some useful packages and scripts,
+    a brand new installer and a custom patched version of the linux-kernel 4.14.9,
+    accompanied by X-Server 1.19.5 and systemd 236.</p>
 
     <p>KDE Plasma stands at version 5.10.5, while GNOME comes in at 3.26 with
     some packages still at 3.24. LXQt ships at 0.12.0 and Xfce at 4.12.4, while
@@ -23,142 +22,140 @@
     releaseable state, we might have to drop these flavours with our next release.
     The corresponding packages will stay in the archives.</p>
 
-    <p>This release just comes with a number and no name to it. How we deal with
+    <p>This release comes with the name "patience 2018.1.0". How we deal with
     this in the future is unclear. The next release, which might be there in March,
     in advance of <a href="https://chemnitzer.linux-tage.de/2018/en/">CLT 2018</a>,
     will ship whatever we come up with. Maybe it'll be just numbers… </p>
 
-    <h4>32-bit architecture was retired with last release</h4>
-    <p>As already mentioned in the <a href="https://news.siduction.org/2017/02/">news section</a>,
-    with the 2017.1.0 release we retired the 32-bit architecture. The work that it took to build
-    and maintain that architecture is in our humble opinion better invested in other
-    places. Users that still need 32-bit can come talk to us on IRC or send a PM
-    and we will try to find a solution for these particular cases.</p>
+    <h2>Release Highlights</h2>
+    <h3>Recommends enabled</h3>
+    <p>Years ago we decided to not install recommends anymore for our releases or when the user
+    installs a package. The handling of that feature in Debian was not as we thought it should be.
+    A lot of cruft was installed to the system and we wanted to prevent that. Times have changed
+    and so has the handling of recommends. So now the recommends that the maintainer
+    sets for a package are installed in siduction. If you would like recommends
+    not installed, you can override our decision in
+    <em>/etc/apt/apt.conf.d/80-siduction</em> in the line <em>APT::Install-Recommends "1";</em>.</p>
 
-    <h4>New Installer</h4>
+    <h3>Rotation for Journald</h3>
+    <p>To prevent the journal from growing too large we have implemented a journal-rotation
+    and a maximum size to the journal. You can overrule this setting by editing the
+    files in <em>/etc/journal.conf.d/</em>. There will be a blog post on this topic
+    within the next days.</p>
+
+    <h3>SSH Handling</h3>
+    <p>We built two small scripts to turn SSH on and off in the live and in the
+    installed system. They are aptly named <em>SSH Activate</em> and <em>SSH Deactivate</em>
+    and you can find them in your menu.
+
+    <h3>Calamares - our new installer</h3>
     <p>This is the 2nd release with the new installer built from the
     <a href="https://calamares.io/about/" target="_blank">Calamares Installer Framework</a>
     and we are quite happy with it. It is under steady developement and will in
     the near future improve quite a bit on LVM and LUKS2.</p>
 
-    <p>The partitioning is done by the KDE Partition Manager (KPM). The corresponding
-    package is called <code>partitionmanager</code>. Pretty soon, with
-    <code>kpmcore 3.3</code> calamares will be able to detect LVM devices better
-    and can see pre-existing LVM logical volumes and also perform partitioning
-    operations on them. If you install siduction, always make sure to try to update
-    the installer in live mode to be able to use the latest features.</p>
+    <p>The partitioning is done by the brand new <code>kpmcore 3.3.0</code>, which
+    is also at the heart of the KDE Partition Manager (KPM). The corresponding package
+    for that is called <code>partitionmanager</code>.</p>
 
     <h4>UEFI installs made easy</h4>
     <p>With Calamares we can proclaim full implementation of UEFI-Installs since 2017.1.0.
     For now we still have encryption with LUKS and LVM turned off, which Calamares offers
     as an option. We want to be on top of that feature before we offer it to you. Offering
     it means we need to be able to support this critical functionality. We do not feel we
-    can do this adequatly at the moment, but we will further look into it for our
-    next release.</p>
-
-    <h4>Shortcomings</h4>
-    <p>There is two things that do not work in Calamares. One is the option to turn
-    on SSH before installing the system. Calamares does not offer that and before
-    writing a calamares module for this, we decided to just build 2 small packages to
-    turn SSH on and off. They are aptly named <em>SSH Activate</em> and
-    <em>SSH Deactivate</em> and you can find them in your menu.</p>
-
-    <h4>Recommends enabled</h4>
-    <p>Years ago we decided to not install recommends anymore. The handling of
-    that feature in Debian was not as we thought it should be. A lot of cruft
-    was installed to the system and we wanted to prevent that. Times have changed
-    and so has the handling of recommends. So now the recommends that the maintainer
-    sets for a package are installed in siduction. If you would like recommends
-    not installed, you can override our decision in
-    <em>/etc/apt/apt.conf.d/80-siduction</em> in the line
-    <em>APT::Install-Recommends "1";</em>.</p>
-
-    <h4>Rotation for Journald</h4>
-    <p>To prevent the journal from growing too large we have implemented a journal-rotation
-    and a maximum size to the journal. You can overrule this setting by editing the
-    files in <em>/etc/journal.conf.d/</em>. There will be a blog post on this topic
-    within the next days.</p>
+    can do this adequatly at the moment, as it is an ongoing developement, that should be
+    more mature with <code>kpmcore 3.4</code>.</p>
 
     <h4>Non-free software</h4>
-    <p>The other option that the installer does not offer anymore is the decision
-    to opt-out to allow software to be installed that does not comply with DFSG,
-    the Debian Free Software Guidelines. If you did not use the opt-out, non-free
-    packages with non-free-firmware enabling your wifi were installed on the system.
-    As there is no option to do that in Calamares, for now we have added a script
-    called <em>remove-nonfree</em> to siduction-scripts, that will remove any
-    non-free packages during installation. A list of the packages involed can be
-    seen below. The command <code>apt purge $(vrms -s)</code> will also list these
-    packages, should you want to remove them manualy after install. Besides running
-    the script, this can be achieved by issuing <code>apt purge $(vrms)</code>.</p>
+    <p>The installer does not offer the option to opt-out software that does not
+    comply with DFSG, the Debian Free Software Guidelines. That means that non-free
+    packages would be installed by default on the system. The command
+    <code>apt purge $(vrms -s)</code> will list these packages. One can
+    remove not wanted packages manually or remove them all by issuing
+    <code>apt purge $(vrms)</code> before or after installation</p>
 
-    <h5>The following non-free and contrib packages are installed by default:</h5>
-    <h6>non-free</h6>
-    amd64-microcode Processor microcode firmware for AMD CPUs
-    firmware-amd-graphics Binary firmware for AMD/ATI graphics chips
-    firmware-atheros Binary firmware for Atheros wireless cards
-    firmware-bnx2 Binary firmware for Broadcom NetXtremeII
-    firmware-bnx2x Binary firmware for Broadcom NetXtreme II 10Gb
-    firmware-brcm80211 Binary firmware for Broadcom 802.11 wireless card
-    firmware-crystalhd Crystal HD Video Decoder (firmware)
-    firmware-intelwimax Binary firmware for Intel WiMAX Connection
-    firmware-iwlwifi Binary firmware for Intel Wireless cards
-    firmware-libertas Binary firmware for Marvell Libertas 8xxx wireless car
-    firmware-linux-nonfree Binary firmware for various drivers in the Linux kernel
-    firmware-misc-nonfree Binary firmware for various drivers in the Linux kernel
-    firmware-myricom Binary firmware for Myri-10G Ethernet adapters
-    firmware-netxen Binary firmware for QLogic Intelligent Ethernet (3000)
-    firmware-qlogic Binary firmware for QLogic HBAs
-    firmware-realtek Binary firmware for Realtek wired/wifi/BT adapters
-    firmware-ti-connectivity Binary firmware for TI Connectivity wireless network
-    firmware-zd1211 binary firmware for the zd1211rw wireless driver
-    intel-microcode Processor microcode firmware for Intel CPUs
+    The very same topic has ruffled feathers on the debian deverloper mailing list
+    last month with two extensive threads and a
+    <a href="https://lists.debian.org/debian-devel/2017/12/msg00161.html">
+    possible future solution layed out by Russ Allbery</a>.
 
-    <h6>Contrib packages</h6>
-    b43-fwcutter utility for extracting Broadcom 43xx firmware
-    firmware-b43-installer firmware installer for the b43 driver
-    firmware-b43legacy-installer firmware installer for the b43legacy driver
-    iucode-tool Intel processor microcode too.
+    <h4>The following non-free and contrib packages are installed by default:</h4>
+    <h5>non-free</h5>
+    * <i>amd64-microcode</i> - Processor microcode firmware for AMD CPUs </br>
+    * <i>firmware-amd-graphics</i> - Binary firmware for AMD/ATI graphics chips </br>
+    * <i>firmware-atheros</i> - Binary firmware for Atheros wireless cards </br>
+    * <i>firmware-bnx2</i> - Binary firmware for Broadcom NetXtremeII </br>
+    * <i>firmware-bnx2x</i> - Binary firmware for Broadcom NetXtreme II 10Gb </br>
+    * <i>firmware-brcm80211</i> - Binary firmware for Broadcom 802.11 wireless card </br>
+    * <i>firmware-crystalhd</i> - Crystal HD Video Decoder (firmware) </br>
+    * <i>firmware-intelwimax</i> - Binary firmware for Intel WiMAX Connection </br>
+    * <i>firmware-iwlwifi</i> - Binary firmware for Intel Wireless cards </br>
+    * <i>firmware-libertas</i> - Binary firmware for Marvell Libertas 8xxx wireless car </br>
+    * <i>firmware-linux-nonfree</i> - Binary firmware for various drivers in the Linux kernel </br>
+    * <i>firmware-misc-nonfree</i> - Binary firmware for various drivers in the Linux kernel </br>
+    * <i>firmware-myricom</i> - Binary firmware for Myri-10G Ethernet adapters </br>
+    * <i>firmware-netxen</i> - Binary firmware for QLogic Intelligent Ethernet (3000) </br>
+    * <i>firmware-qlogic</i> - Binary firmware for QLogic HBAs </br>
+    * <i>firmware-realtek</i> - Binary firmware for Realtek wired/wifi/BT adapters </br>
+    * <i>firmware-ti-connectivity</i> - Binary firmware for TI Connectivity wireless network </br>
+    * <i>firmware-zd1211</i> - binary firmware for the zd1211rw wireless driver </br>
+    * <i>intel-microcode</i> - Processor microcode firmware for Intel CPUs </br>
 
-    <h4>Disclaimer</h4>
-    <p>You need to be aware that this behaviour is not in accordance with the Debian
-    Free Software Guide (DFSG). We offer an opt-out by script from this to go back
-    to a DFSG-compliant installation.</p>
+    <h5>Contrib packages</h5>
+    * <i>b43-fwcutter</i> - utility for extracting Broadcom 43xx firmware </br>
+    * <i>firmware-b43-installer</i> - firmware installer for the b43 driver </br>
+    * <i>firmware-b43legacy-installer</i> - firmware installer for the b43legacy driver </br>
+    * <i>iucode-tool</i> - Intel processor microcode too. </br>
 
+    <h2>32-bit architecture was retired with last release</h2>
+    <p>As already mentioned in the <a href="https://news.siduction.org/2017/02/">news section</a>,
+    with the 2017.1.0 release we retired the 32-bit architecture. The work that it
+    took to build and maintain that architecture is in our humble opinion better
+    invested in other places. Users that still need 32-bit can come talk to us on
+    IRC or send a PM and we will try to find a solution for these particular cases.</p>
 
-    <h3>Credits for siduction 2017.2</h3>
-    <h4>Core Team:</h4>
-    Alf Gaida (agaida)
-    Axel Beu (ab)
-    Ferdinand Thommes (devil)
-    Torsten Wohlfarth (towo)
-    J. Theede (musca)
+    <h2>Credits for siduction 2018.1.0</h2>
+    <h3>Core Team:</h3>
+    Alf Gaida (agaida) </br>
+    Axel Beu (ab) </br>
+    Ferdinand Thommes (devil) </br>
+    Torsten Wohlfarth (towo) </br>
+    J. Theede (musca) </br>
 
-    <h4>Maintainers of the siduction Desktop Environments:</h4>
-    KDE: Ferdinand Thommes (devil)
-    LXDE: Alf Gaida (agaida)
-    LXQt: Alf Gaida (agaida)
-    XFCE: Torsten Wolfahrt (towo)
-    Gnome: J. Theede (muscca)
-    Cinnamon: J. Theede (musca)
-    Mate: J. Theede (musca)
-    noX: Alf Gaida (agaida)
+    <h3>Maintainers:</h3>
+    Kernel: Torsten Wolfahrt (towo) </br>
+    Buildsystem/Installer: Alf Gaida (agaida) </br>
+    Grub/Themes: Hendrik Lehmbruch (hendrikL) </br>
 
-    <h4>Art Team:</h4>
-    Bob
-    Hendrik Lehmbruch (hendriKL)
-    We need more contributors for siduction release art!
+    <h3>Flavour Support:</h3>
+    Cinnamon: J. Theede (musca) </br>
+    Gnome: J. Theede (muscca) </br>
+    KDE: Ferdinand Thommes (devil) </br>
+    LXDE: Alf Gaida (agaida) </br>
+    LXQt: Alf Gaida (agaida) </br>
+    XFCE: Torsten Wolfahrt (towo) </br>
+    Mate: J. Theede (musca) </br>
+    noX: Alf Gaida (agaida) </br>
+    XFCE: Torsten Wolfahrt (towo) </br>
+    XORG(fluxbox): Alf Gaida (agaida) </br>
 
-    <h4>Code, ideas and support:</h4>
-    ayla
-    bluelupo
-    der_bud
-    Hendrik Lehmbruch [hendrikL)
+    <h3>Code, ideas and support:</h3>
+    ayla </br>
+    bluelupo </br>
+    der_bud </br>
+    Hendrik Lehmbruch (hendrikL) </br>
+    </br>
     Thank you!
-
-    Also <strong>thank you</strong> very much to all testers and all the people
-    giving us support in any possible way. This is also your achievement.
-
-    We also want to thank Debian, as we are using their base.
-    And now enjoy!
+    </br>
+     </br>
+    Also <strong>thank you</strong> very much to all testers and all the people  </br>
+    giving us support in any possible way. This is also your achievement. </br>
+ </br>
+    We also want to thank Debian, as we are using their base.  </br>
+    And now enjoy!  </br>
+ </br>
+ </br>
+    On behalf of the siduction team:  </br>
+    Ferdinand Thommes </br>
   </body>
 </html>
