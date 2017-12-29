@@ -4,9 +4,9 @@ Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.1.3
-Homepage: https:
-Vcs-Git: https:
-Vcs-Browser: https:
+Homepage: https://git.siduction.org/extra/calamares-settings-siduction.git
+Vcs-Git: https://git.siduction.org/extra/calamares-settings-siduction.git
+Vcs-Browser: https://git.siduction.org/extra/calamares-settings-siduction.git
 
 Package: calamares-branding-siduction
 Architecture: all

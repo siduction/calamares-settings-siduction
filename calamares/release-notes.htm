@@ -70,9 +70,9 @@
     <p>The installer does not offer the option to opt-out software that does not
     comply with DFSG, the Debian Free Software Guidelines. That means that non-free
     packages would be installed by default on the system. The command
-    <code>apt purge $(vrms -s)</code> will list these packages. One can
+    <code>vrms</code> will list these packages. One can
     remove not wanted packages manually or remove them all by issuing
-    <code>apt purge $(vrms)</code> before or after installation</p>
+    <code>apt purge $(vrms -s)</code> before or after installation</p>
 
     The very same topic has ruffled feathers on the debian deverloper mailing list
     last month with two extensive threads and a
