@@ -1,3 +1,9 @@
+calamares-branding-siduction (18.1.0-6) unstable; urgency=medium
+
+  * added missed paragraph formatting 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 30 Dec 2017 23:24:13 +0100
+
 calamares-branding-siduction (18.1.0-5) unstable; urgency=medium
 
   * Mention simple paste and coruja
