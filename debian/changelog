@@ -1,3 +1,9 @@
+calamares-branding-siduction (18.1.0-7) unstable; urgency=medium
+
+  * Fixed kernel version to 4.14.10
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 31 Dec 2017 00:15:42 +0100
+
 calamares-branding-siduction (18.1.0-6) unstable; urgency=medium
 
   * added missed paragraph formatting 
