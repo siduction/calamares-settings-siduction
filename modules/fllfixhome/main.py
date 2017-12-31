@@ -188,7 +188,7 @@ def run():
 
     # We don't check existence, -p handles that
     #  mkdir -p ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart
-    wanted = os.path.join( instHome, '.config/autstart' )
+    wanted = os.path.join( instHome, '.config/autostart' )
     libcalamares.utils.target_env_call(['/bin/mkdir', '-p', '%s'  % (wanted)])
 
     # fix permisions for automount-open automount-open.desktop and /.config/autostart
