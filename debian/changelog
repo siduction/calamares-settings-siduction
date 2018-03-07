@@ -1,8 +1,14 @@
-calamares-branding-siduction (18.1.0-0) unstable; urgency=medium
+calamares-branding-siduction (18.2.0-1) unstable; urgency=medium
+
+  * fix some formattking and versions 
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 07 Mar 2018 01:07:25 +0100
+
+calamares-branding-siduction (18.2.0-0) unstable; urgency=medium
 
   * New release notes
 
- -- Alf Gaida <agaida@siduction.org>  Tue, 06 Mar 2018 23:48:15 +0100
+ -- Alf Gaida <agaida@siduction.org>  Tue, 06 Mar 2018 23:49:16 +0100
 
 calamares-branding-siduction (18.1.0-7) unstable; urgency=medium
 

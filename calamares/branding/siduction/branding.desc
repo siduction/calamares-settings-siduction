@@ -4,11 +4,11 @@ componentName:   siduction
 strings:
     productName:         siduction
     shortProductName:    siduction
-    version:             2018.1.0
-    shortVersion:        2018.1.0
-    versionedName:       siduction 2018.1.0
-    shortVersionedName:  siduction 2018.1.0
-    bootloaderEntryName: siduction 2018.1.0
+    version:             2018.2.0
+    shortVersion:        2018.2.0
+    versionedName:       siduction 2018.2.0
+    shortVersionedName:  siduction 2018.2.0
+    bootloaderEntryName: siduction 2018.2.0
     productUrl:          https://siduction.org
     supportUrl:          https://forum.siduction.org
     releaseNotesUrl:     https://news.siduction.org/category/release-notes
