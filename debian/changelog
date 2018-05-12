@@ -1,6 +1,18 @@
+calamares-branding-siduction (18.3.0~1-2) unstable; urgency=medium
+
+  * hopefully fixed locale.conf
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 12 May 2018 15:31:50 +0200
+
+calamares-branding-siduction (18.3.0~1-1) unstable; urgency=medium
+
+  * basic changes for 18.3
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 12 May 2018 10:48:28 +0200
+
 calamares-branding-siduction (18.2.0-1) unstable; urgency=medium
 
-  * fix some formattking and versions 
+  * fix some formattking and versions
 
  -- Alf Gaida <agaida@siduction.org>  Wed, 07 Mar 2018 01:07:25 +0100
 
@@ -18,7 +30,7 @@ calamares-branding-siduction (18.1.0-7) unstable; urgency=medium
 
 calamares-branding-siduction (18.1.0-6) unstable; urgency=medium
 
-  * added missed paragraph formatting 
+  * added missed paragraph formatting
 
  -- Alf Gaida <agaida@siduction.org>  Sat, 30 Dec 2017 23:24:13 +0100
 
