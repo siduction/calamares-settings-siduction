@@ -1,3 +1,9 @@
+calamares-branding-siduction (18.3.0~1-3) unstable; urgency=medium
+
+  * refresh configurations
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 12 May 2018 23:36:21 +0200
+
 calamares-branding-siduction (18.3.0~1-2) unstable; urgency=medium
 
   * hopefully fixed locale.conf
