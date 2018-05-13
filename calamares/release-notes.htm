@@ -33,11 +33,11 @@
     With the new version of <em>ncurses 6.1-1</em>, that we cherry-picked, users of Htop will be
     happy to find out, that this magnificent tool gained the ability to let you wheel through the
     processes with the mouse.</p>
-	
-	<h3>Connman 1.36</p>
-	Our LXQt flavour will contain connman 1.36 which was released yesterday - one might don't see
+
+	<h3>Connman 1.36</h3>
+	<p>Our LXQt flavour will contain <em>connman 1.36</em> which was released yesterday - one might don't see
 	differences in behaviour since we follow connman upstream very close - but it is nice to have
-	a released version in. 
+	a released version in.</p>
 
     <h2>New features from this years releases</h2>
     <h3>Meltdown &amp; Spectre</h3>
@@ -45,16 +45,16 @@
     will stay with us for a long time. In mitigating Meltdown &amp; Spectre, siduction was as close
     to the kernel as possible to be able to get fixes in as soon as they roll out. Kernel 4.15 had
     most of the bases covered and now there is far more mitigation with 4.16.8.</p>
-	
+
     <p>We expect this to be going on for a while, specialy since 8 new vulnerabilities have just been
     discovered. For users to be able to easily check the status of their systems regarding Meltdown &amp;
     Spectre, we added the package <em>spectre-meltdown-checker</em> to the image. Just call it as
     root and you will see at a glance where you are in that regard.</p>
 
     <h3>Ceni removed</h3>
-    <p>We have removed Ceni (for setting up /etc/network/interfaces/) from all flavours but noX and
+    <p>We have removed Ceni (for setting up <em>/etc/network/interfaces/</em>) from all flavours but noX and
     Xorg. It interfers with Network-Manager and speaks only IPv4. Besides that it is easy enough to
-    get a dhcp lease with `dhclient`, if you have a network cable at hand. You can still find Ceni in
+    get a dhcp lease with <em>dhclient</em>, if you have a network cable at hand. You can still find Ceni in
     the archive, should you want to install it.</p>
 
     <h3>Recommends enabled</h3>
@@ -63,12 +63,12 @@
     A lot of cruft was installed to the system and we wanted to prevent that. Times have changed
     and so has the handling of recommends. So now the recommends that the maintainer sets for a
     package are installed in siduction. If you would like recommends not installed, you can override
-    our decision in `/etc/apt/apt.conf.d/80-siduction` in the line `APT::Install-Recommends "1";`.</p>
+    our decision in <em>/etc/apt/apt.conf.d/80-siduction</em> in the line <em>APT::Install-Recommends "1";`.</em></p>
 
     <h3>Rotation for Journald</h3>
     <p>To prevent the journal from growing too large we have implemented a journal-rotation and a
     maximum size to the journal. You can overrule this setting by editing the files in
-    `/etc/journal.conf.d/`. There will be a blog post on this topic within the next days.</p>
+    <em>/etc/journal.conf.d/</em>. There will be a blog post on this topic within the next days.</p>
 
     <h3>SSH Handling</h3>
     <p>We built two small scripts to turn SSH on and off in the live and in the installed system.
@@ -93,7 +93,7 @@
     <p>Right now the installer does not offer the option to opt-out software that does not comply
     with DFSG, the Debian Free Software Guidelines. That means that non-free packages would be
     installed by default on the system. The command vrms will list these packages. One can remove
-    not wanted packages manually or remove them all by issuing `apt purge $(vrms -s)` before or
+    not wanted packages manually or remove them all by issuing <em>apt purge $(vrms -s)</em> before or
     after installation.</p>
 
 
