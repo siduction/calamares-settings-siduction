@@ -1,3 +1,15 @@
+calamares-branding-siduction (18.3.0-3) UNRELEASED; urgency=medium
+
+  * another typo fixed
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 13 May 2018 22:34:29 +0200
+
+calamares-branding-siduction (18.3.0-2) unstable; urgency=medium
+
+  * typo fixed
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 13 May 2018 22:34:18 +0200
+
 calamares-branding-siduction (18.3.0-1) unstable; urgency=medium
 
   * incorporate current release notes
