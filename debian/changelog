@@ -1,8 +1,46 @@
-calamares-branding-siduction (18.3.0-3) UNRELEASED; urgency=medium
+calamares-branding-siduction (18.4.0~6) unstable; urgency=medium
+
+  * synced with latest calamares v3.2.1-45-gf118fd73b
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 30 Jun 2018 16:35:27 +0200
+
+calamares-branding-siduction (18.4.0~5) unstable; urgency=medium
+
+  * Synced the siduction branding with calamares upstream
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 30 Jun 2018 02:21:09 +0200
+
+calamares-branding-siduction (18.4.0~4) unstable; urgency=medium
+
+  * Some improvements - and turning out pwquality
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 20 Jun 2018 02:06:16 +0200
+
+calamares-branding-siduction (18.4.0~3) unstable; urgency=medium
+
+  * synced configurations with upstream
+  * highly experimental
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 19 Jun 2018 22:04:35 +0200
+
+calamares-branding-siduction (18.4.0~2) unstable; urgency=medium
+
+  * Added a warning to calamares, including the version.
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 26 May 2018 15:26:07 +0200
+
+calamares-branding-siduction (18.4.0~1) unstable; urgency=medium
+
+  * Make the package arch:any - thanks highvoltage
+  * fixed debian/rules - install in triple dirs
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 26 May 2018 14:51:23 +0200
+
+calamares-branding-siduction (18.3.0-3) unstable; urgency=medium
 
   * another typo fixed
 
- -- Alf Gaida <agaida@siduction.org>  Sun, 13 May 2018 22:34:29 +0200
+ -- Alf Gaida <agaida@siduction.org>  Sun, 13 May 2018 22:35:31 +0200
 
 calamares-branding-siduction (18.3.0-2) unstable; urgency=medium
 

@@ -9,7 +9,7 @@ Vcs-Git: https://git.siduction.org/extra/calamares-settings-siduction.git
 Homepage: https://git.siduction.org/extra/calamares-settings-siduction.git
 
 Package: calamares-branding-siduction
-Architecture: all
+Architecture: any
 Depends: ${misc:Depends},
          calamares
 Provides: calamares-branding

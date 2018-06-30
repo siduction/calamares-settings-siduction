@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# wtfpl 2018 Alf Gaida <agaida@siduction.org>
+
+modules='finished.conf
+         fstab.conf
+         locale.conf
+         mount.conf
+         packages.conf
+         partition.conf
+         removeuser.conf
+         unpackfs.conf
+         users.conf
+         webview.conf
+         welcome.conf'
+
+for i in $modules; do
+  echo "==== $i ===="
+  bcompare  calamares/modules/$i ../upstream/src/modules/*/$i
+  echo
+done
