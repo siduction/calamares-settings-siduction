@@ -1,3 +1,13 @@
+calamares-branding-siduction (18.4.0~7) unstable; urgency=medium
+
+  * synced with calamares 3.2.2
+  * We provide now all needed configuration files and don't use calamares
+    defaults anymore. (That doesn't mean we change anything - but the config
+    files are now exlusivly from calamares-branding)
+  * Bumped standards to 4.2.1
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 13 Sep 2018 22:50:26 +0200
+
 calamares-branding-siduction (18.4.0~6) unstable; urgency=medium
 
   * synced with latest calamares v3.2.1-45-gf118fd73b

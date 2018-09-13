@@ -2,13 +2,37 @@
 
 # wtfpl 2018 Alf Gaida <agaida@siduction.org>
 
-modules='finished.conf
+modules='bootloader.conf
+         contextualprocess.conf
+         displaymanager.conf
+         dummycpp.conf
+         dummypython.conf
+         dummypythonqt.conf
+         finished.conf
          fstab.conf
+         grubcfg.conf
+         initcpio.conf
+         interactiveterminal.conf
+         keyboard.conf
+         license.conf
          locale.conf
+         luksopenswaphookcfg.conf
+         machineid.conf
          mount.conf
+         netinstall.conf
+         openrcdmcryptcfg.conf
+         owncloud.conf
          packages.conf
          partition.conf
+         plasmalnf.conf
+         plymouthcfg.conf
+         preservefiles.conf
          removeuser.conf
+         services-openrc.conf
+         services-systemd.conf
+         shellprocess.conf
+         tracking.conf
+         umount.conf
          unpackfs.conf
          users.conf
          webview.conf
