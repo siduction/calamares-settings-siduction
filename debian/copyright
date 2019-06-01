@@ -3,12 +3,13 @@ Upstream-Name: calamares-branding-siduction
 Source: https://git.siduction.org/
 
 Files: *
-Copyright: 2016, Jonathan Carter <jcarter@linux.com>
+Copyright: 2017-2019, Alf Gaida <agaida@siduction.org>
+           2016, Jonathan Carter <jcarter@linux.com>
 License: ISC
 
 Files: debian/*
-Copyright: 2017-2018 Alf Gaida <agaida@siduction.org>
-           2016 Jonathan Carter <jcarter@linux.com>
+Copyright: 2017-2019, Alf Gaida <agaida@siduction.org>
+           2016, Jonathan Carter <jcarter@linux.com>
 License: ISC
 
 License: ISC

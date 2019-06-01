@@ -2,8 +2,8 @@ Source: calamares-branding-siduction
 Section: utils
 Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
-Build-Depends: debhelper (>= 11~)
-Standards-Version: 4.2.1
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.3.0
 Vcs-Browser: https://git.siduction.org/extra/calamares-settings-siduction
 Vcs-Git: https://git.siduction.org/extra/calamares-settings-siduction.git
 Homepage: https://git.siduction.org/extra/calamares-settings-siduction.git
