@@ -1,6 +1,18 @@
+calamares-branding-siduction (19.1.0-5) unstable; urgency=medium
+
+  * synced with calamares 3.2.15
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 11 Oct 2019 23:20:37 +0200
+
+calamares-branding-siduction (19.1.0-4) unstable; urgency=medium
+
+  * synced with calamares 3.2.13
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 25 Sep 2019 17:28:41 +0200
+
 calamares-branding-siduction (19.1.0-3) unstable; urgency=medium
 
-  * synced with calamares 3.2.9 
+  * synced with calamares 3.2.9
 
  -- Alf Gaida <agaida@siduction.org>  Tue, 04 Jun 2019 22:26:01 +0200
 

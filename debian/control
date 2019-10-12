@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
 Build-Depends: debhelper-compat (= 12)
-Standards-Version: 4.3.0
+Standards-Version: 4.4.1
 Vcs-Browser: https://git.siduction.org/extra/calamares-settings-siduction
 Vcs-Git: https://git.siduction.org/extra/calamares-settings-siduction.git
 Homepage: https://git.siduction.org/extra/calamares-settings-siduction.git
@@ -14,7 +14,7 @@ Depends: ${misc:Depends},
          calamares
 Provides: calamares-branding
 Description: Siduction theme and settings for the Calamares Installer
- Calamares is a genereic installer framework for Linux distributions.
+ Calamares is a generic installer framework for Linux distributions.
  By default, it contains a set of boilerplate wording and images. This
  package provides the latest Siduction artwork as well as scripts that
  supports EFI installations.
