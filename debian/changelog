@@ -1,3 +1,17 @@
+calamares-branding-siduction (19.1.0-7) unstable; urgency=medium
+
+  * new settings:
+    - disabled tracking 
+    - Switched geoip to https://ipapi.co/json
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 19 Oct 2019 10:51:02 +0200
+
+calamares-branding-siduction (19.1.0-6) unstable; urgency=medium
+
+  * some minor modifications
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 13 Oct 2019 16:34:48 +0200
+
 calamares-branding-siduction (19.1.0-5) unstable; urgency=medium
 
   * synced with calamares 3.2.15

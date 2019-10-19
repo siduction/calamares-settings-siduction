@@ -9,9 +9,12 @@ modules='bootloader.conf
          dummypython.conf
          dummypythonqt.conf
          finished.conf
+         fsresizer.conf
          fstab.conf
          grubcfg.conf
          initcpio.conf
+         initcpiocfg.conf
+         initramfs.conf
          interactiveterminal.conf
          keyboard.conf
          license.conf
@@ -22,11 +25,13 @@ modules='bootloader.conf
          netinstall.conf
          openrcdmcryptcfg.conf
          owncloud.conf
+         packagechooser.conf
          packages.conf
          partition.conf
          plasmalnf.conf
          plymouthcfg.conf
          preservefiles.conf
+         rawfs.conf
          removeuser.conf
          services-openrc.conf
          services-systemd.conf
