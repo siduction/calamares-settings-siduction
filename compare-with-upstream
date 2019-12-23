@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# wtfpl 2018 Alf Gaida <agaida@siduction.org>
+# wtfpl 2018-2019 Alf Gaida <agaida@siduction.org>
 
 modules='bootloader.conf
          contextualprocess.conf

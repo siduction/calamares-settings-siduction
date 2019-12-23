@@ -1,3 +1,22 @@
+calamares-branding-siduction (19.1.0-10) unstable; urgency=medium
+
+  * remove selinux configuration - it's already provided
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 23 Dec 2019 03:23:10 +0100
+
+calamares-branding-siduction (19.1.0-9) unstable; urgency=medium
+
+  * write a selinux configuration for cala (Disabled) 
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 06 Dec 2019 21:58:41 +0100
+
+calamares-branding-siduction (19.1.0-8) unstable; urgency=medium
+
+  * New release 19.1
+  * Removed release notes 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 19 Oct 2019 12:26:19 +0200
+
 calamares-branding-siduction (19.1.0-7) unstable; urgency=medium
 
   * new settings:
