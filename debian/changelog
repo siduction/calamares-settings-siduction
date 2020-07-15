@@ -1,3 +1,10 @@
+calamares-branding-siduction (19.1.0-10.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * add slideshowAPI: 1 to branding.desc
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 15 Jul 2020 22:00:30 +0200
+
 calamares-branding-siduction (19.1.0-10) unstable; urgency=medium
 
   * remove selinux configuration - it's already provided

@@ -1,5 +1,6 @@
 ---
 componentName:   siduction
+slideshowAPI: 1
 
 strings:
     productName:         siduction
