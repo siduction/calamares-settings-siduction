@@ -1,9 +1,13 @@
-calamares-branding-siduction (19.1.0-10.2) UNRELEASED; urgency=medium
+calamares-branding-siduction (21.1.0-1) unstable; urgency=medium
 
+  [ Hendrik Lehmbruch ]
   * Non-maintainer upload.
   * preparing c-blues release 2021.1.0
 
- -- Hendrik Lehmbruch <hendrikl@siduction.org>  Mon, 25 Jan 2021 17:13:55 +0100
+  [ Torsten Wohlfarth ]
+  * build and upload for release of c-blues
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 30 Jan 2021 16:12:50 +0100
 
 calamares-branding-siduction (19.1.0-10.1) unstable; urgency=medium
 
