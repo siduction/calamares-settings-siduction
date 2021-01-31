@@ -1,6 +1,6 @@
 calamares-branding-siduction (21.1.0-2) unstable; urgency=medium
 
-  * import changes from devil in calamares/branding/siduction/show.qml
+  * import changes from devil in branding/siduction/show.qml
 
  -- Torsten Wohlfarth <towo@siduction.org>  Sun, 31 Jan 2021 16:51:45 +0100
 
