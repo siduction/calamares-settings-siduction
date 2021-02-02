@@ -15,6 +15,10 @@
 #
 #   You should have received a copy of the GNU General Public License
 #   along with this module. If not, see <http://www.gnu.org/licenses/>.
+CHROOT=$(mount | grep proc | grep calamares | awk '{print $3}' | sed -e "s#/proc##g")
+if [ -r $CHROOT/etc/sddm.conf.d/kde_settings.conf ]; then
+    sed -i 's/siducer//g' $CHROOT/etc/sddm.conf.d/kde_settings.conf
+fi
 
 purge_pkg() {
     apt purge $1 --assume-yes || true

@@ -1,3 +1,9 @@
+calamares-branding-siduction (19.1.0-11) unstable; urgency=medium
+
+  * let calamares help fix our kde autologin problem
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 02 Feb 2021 21:57:56 +0100
+
 calamares-branding-siduction (19.1.0-10.1) unstable; urgency=medium
 
   * Non-maintainer upload.
