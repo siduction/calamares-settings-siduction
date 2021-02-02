@@ -4,6 +4,24 @@ calamares-branding-siduction (19.1.0-11) unstable; urgency=medium
 
  -- Torsten Wohlfarth <towo@siduction.org>  Tue, 02 Feb 2021 21:57:56 +0100
 
+calamares-branding-siduction (21.1.0-2) unstable; urgency=medium
+
+  * import changes from devil in branding/siduction/show.qml
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 31 Jan 2021 16:51:45 +0100
+
+calamares-branding-siduction (21.1.0-1) unstable; urgency=medium
+
+  [ Hendrik Lehmbruch ]
+  * Non-maintainer upload.
+  * preparing c-blues release 2021.1.0
+
+  [ Torsten Wohlfarth ]
+  * build and upload for release of c-blues
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 30 Jan 2021 16:12:50 +0100
+>>>>>>> 9b7cc464e2e3a6cf452398447cc781506fdf66e2
+
 calamares-branding-siduction (19.1.0-10.1) unstable; urgency=medium
 
   * Non-maintainer upload.
