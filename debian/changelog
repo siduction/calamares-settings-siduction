@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.0-5) unstable; urgency=medium
+
+  * fix the settings
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 03 Feb 2021 22:08:42 +0100
+
 calamares-branding-siduction (21.1.0-4) unstable; urgency=medium
 
   * packaging commit 239cd15f8c 'preparing the release notes'
