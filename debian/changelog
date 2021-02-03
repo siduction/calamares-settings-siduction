@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.0-4) unstable; urgency=medium
+
+  * packaging commit 239cd15f8c 'preparing the release notes'
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 03 Feb 2021 21:52:40 +0100
+
 calamares-branding-siduction (21.1.0-3) unstable; urgency=medium
 
   * let calamares help fix our kde autologin problem
