@@ -19,9 +19,110 @@
   <body>
     <header><h3>Release Notes C-Blues 2021.1.0</h3></header>
         <main>
-            <p>And now enjoy!</p>
-            <p>Rock on.</p>
-            <p>On behalf of the siduction team:</p>
+        <!-- wp:paragraph -->
+<p>The siduction team is proud to present to you siduction 2021.1. After a long hiatus of almost 3 years we are happy to be back with an official release. This one is dubbed »C-Blues«, and it should be easy to guess what the »C« stands for in these troubled times. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>What have we got here?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The flavors we offer images for siduction 2021.1.0 are KDE Plasma 5.20.5, LXQt 0.16.0-1, Cinnamon 4.8.6, Xfce 4.16, Lxde 10+nmu1, Xorg and noX. GNOME and MATE did not make it this time. They might be back at some point or not. Of course, they are still installable from the repository.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The released images are a snapshot of Debian unstable, that also goes by the name of Sid, from 2021-02-07<strong>.</strong> They are enhanced with some useful packages and scripts, an installer based on Calamares and a custom patched version of the Linux kernel 5.10.12, Systemd is at 247.3.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Plasma is still our main offering, and it has made amazing progress over the past years. We have it staffed with the latest additions that will hit with Plasma 5.21 in a couple of weeks, like the new <em>system monitor</em> that will be the successor to <em>ksysguard</em> ans the Conference Companion <em>Kongress</em>. Also, years in the making, finaly there is <em>kio-fuse</em>. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The latter allows you to mount remote directories into the root hierarchy of your local file system, thereby exposing KDE's access capabilities likeSSH, SAMBA/Windows, FTP, TAR/GZip/BZip2, WebDav and others to POSIX-compliant applications such as Firefox, OpenOffice, GNOME apps, shell utilities and more. Quite the handy tool.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Xorg and nox flavors come with a new tool to connect your wireless devices. Intels  <a href="https://wiki.debian.org/NetworkManager/iwd">iNet wireless daemon</a> (iwd) sends WPA-Supplicant into well-earned retirement. Ten times smaller and a lot faster, iwd will be the successor. If you like, you can use iwd in the other flavors too, either on its own or within Network-Manager.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>Why has there been no release since 2018?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When the pandemic hit, we were in early preparations for a new release. Changes were mostly worked on for the infrastructure. Shortly thereafter, around April 2020, Alf (agaida), our lead developer vanished from the face of the earth and has not been heard off ever since. We have no idea what happened to him, as all our inquiries into his whereabouts came up empty. So, Alf, if you are reading this, come by and say peep. We miss you.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That being said, after agaida being in the wind for the better part of a year, we thought it was about time to do a new release without him, but based on his former work before he vanished. So we shook of our own corona blues and - tada - here it is brand new, shiny and still hot off the servers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>Official Releases and Isobuilds</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>During our hiatus we built new images ever once in a while to keep the demand for fresh software for new installs covered. These images on <a href="https://isobuilds.siduction.org/">isobuilds</a> are unofficial, were and will continue to be tested by booting and installing them, but that's the extent of testing for that platform. So far, there was no trouble with that.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>The following non-free and contrib packages are installed by default:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h3>Non-free</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>amd64-microcode - Processor microcode firmware for AMD CPUs</li><li>firmware-amd-graphics - Binary firmware for AMD/ATI graphics chips</li><li>firmware-atheros - Binary firmware for Atheros wireless cards</li><li>firmware-bnx2 - Binary firmware for Broadcom NetXtremeII</li><li>firmware-bnx2x - Binary firmware for Broadcom NetXtreme II 10Gb</li><li>firmware-brcm80211 - Binary firmware for Broadcom 802.11 wireless card</li><li>firmware-crystalhd - Crystal HD Video Decoder (firmware)</li><li>firmware-intelwimax - Binary firmware for Intel WiMAX Connection</li><li>firmware-iwlwifi - Binary firmware for Intel Wireless cards</li><li>firmware-libertas - Binary firmware for Marvell Libertas 8xxx wireless card</li><li>firmware-linux-nonfree - Binary firmware for various drivers in the Linux kernel</li><li>firmware-misc-nonfree - Binary firmware for various drivers in the Linux kernel</li><li>firmware-myricom - Binary firmware for Myri-10G Ethernet adapters</li><li>firmware-netxen - Binary firmware for QLogic Intelligent Ethernet (3000)</li><li>firmware-qlogic - Binary firmware for QLogic HBAs</li><li>firmware-realtek - Binary firmware for Realtek wired/wifi/BT adapters</li><li>firmware-ti-connectivity - Binary firmware for TI Connectivity wireless network</li><li>firmware-zd1211 - binary firmware for the zd1211rw wireless driver</li><li>intel-microcode - Processor microcode firmware for Intel CPUs</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h3>Contrib</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>b43-fwcutter - utility for extracting Broadcom 43xx firmware</li><li>firmware-b43-installer - firmware installer for the b43 driver</li><li>firmware-b43legacy-installer - firmware installer for the b43legacy driver</li><li>iucode-tool - Intel processor microcode</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h3>Return to non-free</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Right now the installer does not offer an opt-out for packages that does not comply with DFSG, the Debian Free Software Guidelines. That means that non-free packages like unfree firmware will be installed by default on the system. The command<span class="has-inline-color has-black-color"> </span><code><span class="has-inline-color has-black-color">vrms</span></code> will list these packages for you. You can remove not wanted packages manually or remove them all by issuing<code><span class="has-inline-color has-cyan-bluish-gray-color"> apt purge $(vrms -s)</span></code> before or after installation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>Credits for siduction 2021.1.0</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Core Team</strong><br>
+Alf Gaida (agaida)<br>Axel Beu (ab)<br>                                                                                                                                                                                                          Torsten Wohlfarth (towo)<br>                                                                                                                                                                                                                            Hendrik Lehmbruch (hendrikL) <br>                                                                                                                                                                                                             Ferdinand Thommes (devil)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>Code, ideas and support:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>der_bud <br>                                                                                                                                                                                                                                 Markus Meyer (coruja)<br></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h3>Thank you!</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>We want to thank all testers and all the people giving us support in any possible way. This is also your achievement. We also want to thank Debian, as we are standing on the shoulders of giants.<br>And now enjoy!</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>On behalf of the siduction team:<br>Ferdinand Thommes</p>
+<!-- /wp:paragraph -->
         </main>
     <footer><p id="author">Ferdinand Thommes</p></footer>
   </body>
