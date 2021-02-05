@@ -1,3 +1,10 @@
+calamares-branding-siduction (21.1.0-7) unstable; urgency=medium
+
+  * change kernel version in releasenotes
+  * add changes from der_bud in releasenotes f6be651399
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 05 Feb 2021 21:09:38 +0100
+
 calamares-branding-siduction (21.1.0-6) unstable; urgency=medium
 
   * package latest changes
