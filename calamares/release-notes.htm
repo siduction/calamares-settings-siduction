@@ -83,6 +83,17 @@
         <h3>Return to non-free</h3>
 
         <p>Right now the installer does not offer an opt-out for packages that does not comply with DFSG, the Debian Free Software Guidelines. That means that non-free packages like unfree firmware will be installed by default on the system. The command<code><span> vrms</span></code> will list these packages for you. You can remove not wanted packages manually or remove them all by issuing<code><span> apt purge $(vrms -s)</span></code> before or after installation.</p>
+        
+        <!-- wp:heading -->
+        <h3>Installation hints and pitfalls</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+        <p>If you want to reuse your existing home (or any other data) partition, it would be wise to do so after installation and not in the Calamares Installer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+        <p>Encyption setups like LUKS and others are not yet supported by the Installer Framework, you should prepare your partition setup beforehand and might better use the <code>cli-installer</code> in a terminal.</p>
 
         <h3>Credits for siduction 2021.1.0</h3>
 
