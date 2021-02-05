@@ -49,6 +49,12 @@
 
 <!-- wp:paragraph -->
 <p>The Xorg and nox flavors come with a new tool to connect your wireless devices. Intels  <a href="https://wiki.debian.org/NetworkManager/iwd">iNet wireless daemon</a> (iwd) sends WPA-Supplicant into well-earned retirement. Ten times smaller and a lot faster, iwd will be the successor. If you like, you can use iwd in the other flavors too, either on its own or within Network-Manager.</p>
+<p>To easily set iwd up, use these steps:<br>
+sudo rm /etc/systemd/system/wpa_supplicant.service<br>
+sudo systemctl mask wpa_supplicant<br>
+sudo systemctl enable --now iwd.service<br></p>
+
+<p>Now you should be able to start an interactive shell by starting iwd from a terminal. Entering 'help' in the shell gives you all the options to list, scan and connect to your device.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
