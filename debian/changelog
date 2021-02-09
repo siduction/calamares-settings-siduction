@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.0-8) unstable; urgency=medium
+
+  * package latest cahnges up to commit 6ef4100b55
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 09 Feb 2021 15:53:18 +0100
+
 calamares-branding-siduction (21.1.0-7) unstable; urgency=medium
 
   * change kernel version in releasenotes
