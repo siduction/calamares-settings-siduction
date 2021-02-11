@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.0-9) unstable; urgency=medium
+
+  * fix geoip setting in locales.conf (hendrikL)
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 11 Feb 2021 13:55:40 +0100
+
 calamares-branding-siduction (21.1.0-8) unstable; urgency=medium
 
   * package latest cahnges up to commit 6ef4100b55
