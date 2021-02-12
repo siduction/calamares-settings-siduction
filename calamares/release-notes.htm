@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
         <style>
-            h2 { 
+            main {
                 margin-left: 2em;
+                margin-right: 3em;
+                }
+            h2 { 
+                margin-left: 2.5em;
                 }        
             h3 { 
                 margin-left: 2.5em;
@@ -14,6 +18,10 @@
                 margin-right: 3em;
                 }
             pre {
+                white-space: pre-line;
+                margin-left: 4em;
+                margin-right: 3em;
+                font-family:monospace;
                 font-size: 1.3em;
                 font-style: italic;
                 }
@@ -54,7 +62,7 @@
         
         <p>First stop and mask iwd.service, stop NetworkManager.service, rename /etc/NetworkManger/conf.d/nm.conf, unmask and start wpa_supplicant.service, start NetworkManager.service again:</p>
         
-        <p><pre>
+        <pre>
         sudo systemctl stop iwd.service
         sudo systemctl mask iwd.service
         sudo systemctl stop NetworkManager.service
@@ -62,7 +70,7 @@
         sudo systemctl unmask wpa_supplicant.service
         sudo systemctl enable --now wpa_supplicant.service
         sudo systemctl start NetworkManager.service
-        </pre></p>
+        </pre>
         
         <p>Now you should be able to connect your wireless device with wpa_supplicant.</p>
         
