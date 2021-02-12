@@ -50,15 +50,41 @@
 
         <p>The Xorg and noX flavors come with a new tool to connect your wireless devices. Intels  <a href="https://wiki.debian.org/NetworkManager/iwd">iNet wireless daemon</a> (iwd) sends WPA-Supplicant into well-earned retirement. Ten times smaller and a lot faster, iwd will be the successor. If you like, you can use iwd in the other flavors too, either on its own or within Network-Manager.</p>
 
+        <p>If you want to use <code>wpa_supplicant</code> instead of <code>iwd</code> follow the steps below.</p>
+        
+        <p>First stop and mask iwd.service, stop NetworkManager.service, rename /etc/NetworkManger/conf.d/nm.conf, umask and start wpa_supplicant.service, start NetworkManager.service again:</p>
+        
+        <p><pre>
+        sudo systemctl stop iwd.service
+        sudo systemctl mask iwd.service
+        sudo systemctl stop NetworkManager.service
+        sudo mv /etc/NetworkManager/conf.d/nm.conf /etc/NetworkManager/conf.d/nm.conf~
+        sudo systemctl unmask wpa_supplicant.service
+        sudo systemctl enable --now wpa_supplicant.service
+        sudo systemctl start NetworkManager.service
+        </pre></p>
+        
+        <p>Now you should be able to connect you wireless device with wpa_supplicant.</p>
+        
+        <p>If you like, you can use <code>iwd</code> in the other flavors too, either on its own or within Network-Manager.</p>        
+        
         <p>To easily set iwd up, use these steps:
         <pre>
-        sudo rm /etc/systemd/system/wpa_supplicant.service
-        sudo systemctl mask wpa_supplicant
+        sudo apt update
+        sudo apt install iwd
+        sudo systemctl stop wpa_supplicant.service
+        sudo systemctl mask wpa_supplicant.service
+        sudo systemctl stop NetworkManager.service
+        sudo touch /etc/NetworkManager/conf.d/nm.conf
+        sudo echo -e "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/nm.conf
+        sudo touch /etc/iwd/main.conf
+        sudo echo -e "[General]\nEnableNetworkConfiguration=true\n\n[Network]\nNameResolvingService=systemd" > /etc/iwd/main.conf
         sudo systemctl enable --now iwd.service
+        sudo systemctl start NetworkManager.service
         </pre>
         </p>
-
-        <p>Now you should be able to start an interactive shell by starting <span><code>iwctl</span></code> from a terminal. Entering 'help' in the shell gives you all the options to list, scan and connect to your device.</p>
+        
+        <p>Now you should be able to start an interactive shell by starting <code>iwctl</code> from a terminal. Entering 'help' in the shell gives you all the options to list, scan and connect to your device or simply use <code>nmtui</code> or <code>nmcli</code> on the command-line or the graphical-interface of network-manager</p>
 
         <h3>Why has there been no release since 2018?</h3>
 
