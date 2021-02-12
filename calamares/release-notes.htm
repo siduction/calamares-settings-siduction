@@ -20,10 +20,15 @@
                 font-style: italic;
                 }
             code{
-                font-size: 1.25em;
+                font-size: 1.35em;
                 font-style: italic;
                 font-weight: bold;
-                }                
+                }
+             em {
+                font-size: 0.95em;
+                font-weight: bold;
+                }
+                
             ul {
                 padding-left: 2.5em;
                 }
@@ -43,15 +48,15 @@
 
         <p>The flavors we offer for siduction 2021.1.0 are KDE Plasma 5.20.5, LXQt 0.16.0-1, Cinnamon 4.8.6, Xfce 4.16, Lxde 10+nmu1, Xorg and noX. GNOME and MATE did not make it this time. They might be back at some point or not. Of course, they are still installable from the repository.</p>
 
-        <p>The released images are a snapshot of Debian unstable, that also goes by the name of Sid, from 2021-02-07<strong>.</strong> They are enhanced with some useful packages and scripts, an installer based on Calamares and a custom patched version of the Linux kernel 5.10.13, Systemd is at 247.3.</p>
+        <p>The released images are a snapshot of Debian unstable, that also goes by the name of Sid, from 2021-02-07. They are enhanced with some useful packages and scripts, an installer based on Calamares and a custom patched version of the Linux kernel 5.10.13, Systemd is at 247.3.</p>
 
         <p>Plasma is still our main offering, and it has made amazing progress over the past years. We have it staffed with the latest additions that will hit with Plasma 5.21 in a couple of weeks, like the new <em>system monitor</em> that will be the successor to <em>ksysguard</em> and the Conference Companion <em>Kongress</em>. Also, years in the making, finally there is <em>kio-fuse</em>. </p>
 
         <p>The latter allows you to mount remote directories into the root hierarchy of your local file system, thereby exposing KDE's access capabilities like SSH, SAMBA/Windows, FTP, TAR/GZip/BZip2, WebDav and others to POSIX-compliant applications such as Firefox, LibreOffice, GNOME apps, shell utilities and more. Quite the handy tool.</p>
 
-        <p>The Xorg and noX flavors come with a new tool to connect your wireless devices. Intels  <a href="https://wiki.debian.org/NetworkManager/iwd">iNet wireless daemon</a> (iwd) sends WPA-Supplicant into well-earned retirement. Ten times smaller and a lot faster, iwd will be the successor. If you like, you can use iwd in the other flavors too, either on its own or within Network-Manager.</p>
+        <p>The Xorg and noX flavors come with a new tool to connect your wireless devices. Intels  <a href="https://wiki.debian.org/NetworkManager/iwd">iNet wireless daemon</a> (iwd) sends WPA-Supplicant into well-earned retirement. Ten times smaller and a lot faster, iwd will be the successor.</p>
 
-        <p>If you want to use <code>wpa_supplicant</code> instead of <code>iwd</code> follow the steps below.</p>
+        <p>If you want to use <em>wpa_supplicant</em> instead of <em>iwd</em> follow the steps below.</p>
         
         <p>First stop and mask iwd.service, stop NetworkManager.service, rename /etc/NetworkManger/conf.d/nm.conf, unmask and start wpa_supplicant.service, start NetworkManager.service again:
         
@@ -67,6 +72,8 @@
         </p>
         
         <p>Now you should be able to connect your wireless device with wpa_supplicant.</p>
+        
+        <h3>Installing iwd</h3>
         
         <p>If you like, you can use <code>iwd</code> in the other flavors too, either on its own or within Network-Manager.</p>        
         
@@ -86,7 +93,7 @@
         </pre>
         </p>
         
-        <p>Now you should be able to start an interactive shell by starting <code>iwctl</code> from a terminal. Entering 'help' in the shell gives you all the options to list, scan and connect to your device or simply use <code>nmtui</code> or <code>nmcli</code> on the command line or the graphical-interface of network-manager</p>
+        <p>Now you should be able to start an interactive shell by starting <code>iwctl</code> from a terminal. Entering 'help' in the shell gives you all the options to list, scan and connect to your device or simply use <code>nmtui</code> or <code>nmcli</code> on the command line or the graphical-interface of Network-Manager</p>
 
         <h3>Why has there been no release since 2018?</h3>
 
@@ -110,7 +117,7 @@
 
         <h3>Return to non-free</h3>
 
-        <p>Right now the installer does not offer an opt-out for packages that does not comply with DFSG, the Debian Free Software Guidelines. That means that non-free packages like unfree firmware will be installed by default on the system. The command<code><span> vrms</span></code> will list these packages for you. You can remove not wanted packages manually or remove them all by issuing<code><span> apt purge $(vrms -s)</span></code> before or after installation. Else our script <span><code>remove-nonfree</code></span> can do that for you.</p>
+        <p>Right now the installer does not offer an opt-out for packages that does not comply with DFSG, the Debian Free Software Guidelines. That means that non-free packages like unfree firmware will be installed by default on the system. The command<code> vrms</code> will list these packages for you. You can remove not wanted packages manually or remove them all by issuing<code> apt purge $(vrms -s)</code> before or after installation. Else our script <code>remove-nonfree</code> can do that for you.</p>
         
        
         <h3>Installation hints and pitfalls</h3>
