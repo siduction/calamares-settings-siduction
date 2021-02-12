@@ -60,7 +60,7 @@
 
         <p>If you want to use <code>wpa_supplicant</code> instead of <code>iwd</code> follow the steps below.</p>
         
-        <p>First stop and mask iwd.service, stop NetworkManager.service, rename /etc/NetworkManger/conf.d/nm.conf, unmask and start wpa_supplicant.service, start NetworkManager.service again:</p>
+        <p>First stop and mask iwd.service, stop NetworkManager.service, rename /etc/NetworkManger/conf.d/nm.conf, unmask and start wpa_supplicant.service, start NetworkManager.service again:
         
         <pre>
         sudo systemctl stop iwd.service
@@ -71,6 +71,7 @@
         sudo systemctl enable --now wpa_supplicant.service
         sudo systemctl start NetworkManager.service
         </pre>
+        </p>
         
         <p>Now you should be able to connect your wireless device with wpa_supplicant.</p>
         
