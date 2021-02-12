@@ -1,3 +1,10 @@
+calamares-branding-siduction (21.1.0-10) unstable; urgency=medium
+
+  * fix kernel version in releasenotes
+  * package latest changes
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 12 Feb 2021 18:16:22 +0100
+
 calamares-branding-siduction (21.1.0-9) unstable; urgency=medium
 
   * fix geoip setting in locales.conf (hendrikL)
