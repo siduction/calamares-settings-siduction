@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.0-12) unstable; urgency=medium
+
+  * package for release (fixing some typos) by devil
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 14 Feb 2021 20:03:05 +0100
+
 calamares-branding-siduction (21.1.0-11) unstable; urgency=medium
 
   * package for release
