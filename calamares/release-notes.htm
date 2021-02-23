@@ -33,13 +33,29 @@
                 font-weight: bold;
                 }
         </style>
-    <title>Release Notes for C-Blues 2021.1.0</title>
+    <title>Release Notes for C-Blues 2021.1.1</title>
   </head>
   <body>
-    <header><h2>Release Notes C-Blues 2021.1.0</h2></header>
+    <header><h2>Release Notes C-Blues 2021.1.0 and Point Release 2021.1</h2></header>
         <main>
         
+        <h3>Release Notes for C-Blues 2021.1.1 (Point Release)</h3>
+
+        <p>To circumvent a bug that made the Calamares installer fail to create GPT partitions in EFI mode, we have released a siduction 2021.1.1 point release. For the technically inclined users among you let me dive into what happened behind the scenes of <a href="https://github.com/calamares/calamares/issues/1637">this bug</a>. A new version 4.2 of <a href="https://github.com/dosfstools/dosfstools">dosfstools</a> prevents <a href="https://github.com/KDE/kpmcore">kpmcore</a>, which sits at the heart of KDE Partition Manager and gets utilized in Calamares, to create GPT partitions. </p>
+
+        <h3>Dosfstools is to blame</h3>
+
+        <p>Dosfstools no longer allows empty labels, but it also changed the way labels are reset. In the specific use case of creating a fat32 partition for the ESP, there is no label to reset as the partition does not exist yet. And so the installation fails, whereas if partitions are created before the installation and then pointed to in Calamares, things worked as expected.</p>
+
+        <h3>Downgrade to the rescue</h3>
+
+        <p>A fixed official version of dosfstools in the repositories will take a while, so we decided to downgrade dosfstools to 4.1.2, which resulted in the package <em>dosfstools 4.2-1.1~really4.1-2</em>. This point release is only important for fresh installs with Calamares. That is why noX did not get updated, it only has the cli-installer, no Calamares. Users, who have installed siduction already, don’t need to do anything.</p>
+
         <p>The siduction team is proud to present to you siduction 2021.1.0 After a long hiatus of almost 3 years we are happy to be back with an official release. This one is dubbed »C-Blues«, and it should be easy to guess what the »C« stands for in these troubled times. </p>
+
+        <hr />
+        
+        <h3>Release Notes for C-Blues 2021.1.0</h3>
 
         <h3>What have we got here?</h3>
 
