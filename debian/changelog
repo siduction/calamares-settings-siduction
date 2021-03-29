@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.0-14) unstable; urgency=medium
+
+  * fix LUKS setting in partition.conf
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Mar 2021 14:04:06 +0200
+
 calamares-branding-siduction (21.1.0-13) unstable; urgency=medium
 
   * enabled LUKS for testing
