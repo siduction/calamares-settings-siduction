@@ -33,15 +33,21 @@
                 font-weight: bold;
                 }
         </style>
-    <title>Release Notes for C-Blues 2021.1.1</title>
+    <title>Release Notes for Axel 2021.2.0</title>
   </head>
   <body>
-    <header><h2>Release Notes C-Blues 2021.1.0 and Point Release 2021.1</h2></header>
+    <header><h2>Release Notes Axel 2021.2.0</h2></header>
         <main>
         
-        <h3>Release Notes for C-Blues 2021.1.1 (Point Release)</h3>
+        <h3>In memoriam Axel Beu</h3>
+        
+        <p>For our good old friend, which past much too young!</p>
+        
+        <p>This is still beta, a new release is coming soon!</p>
+        
+        <!--<h3>Release Notes for C-Blues 2021.1.1 (Point Release)</h3>-->
 
-        <p>To circumvent a bug that made the Calamares installer fail to create GPT partitions in EFI mode, we have released a siduction 2021.1.1 point release. For the technically inclined users among you let me dive into what happened behind the scenes of <a href="https://github.com/calamares/calamares/issues/1637">this bug</a>. A new version 4.2 of <a href="https://github.com/dosfstools/dosfstools">dosfstools</a> prevents <a href="https://github.com/KDE/kpmcore">kpmcore</a>, which sits at the heart of KDE Partition Manager and gets utilized in Calamares, to create GPT partitions. </p>
+<!--        <p>To circumvent a bug that made the Calamares installer fail to create GPT partitions      in EFI mode, we have released a siduction 2021.1.1 point release. For the technically inclined users among you let me dive into what happened behind the scenes of <a href="https://github.com/calamares/calamares/issues/1637">this bug</a>. A new version 4.2 of <a href="https://github.com/dosfstools/dosfstools">dosfstools</a> prevents <a href="https://github.com/KDE/kpmcore">kpmcore</a>, which sits at the heart of KDE Partition Manager and gets utilized in Calamares, to create GPT partitions. </p>
 
         <h3>Dosfstools is to blame</h3>
 
@@ -143,20 +149,22 @@
 
         <li>Encryption setups like LUKS and others are not yet supported by the Installer Framework, you should prepare your partition setup beforehand and might better use the <code>cli-installer</code> in a terminal.</li>
         
-        <li>With some Intel GPUs on some devices, you might encounter a frozen system on Live shortly after boot. To fix this you need to set the kernel parameter <code>intel_iommu=igfx_off</code> before booting again.</li></ul>
+        <li>With some Intel GPUs on some devices, you might encounter a frozen system on Live shortly after boot. To fix this you need to set the kernel parameter <code>intel_iommu=igfx_off</code> before booting again.</li></ul>-->
 
-        <h3>Credits for siduction 2021.1.0</h3>
+        <h3>Credits for siduction 2021.2.0</h3>
 
         <h3>Core Team</h3>
         <p>Alf Gaida (agaida)<br>
           Axel Beu (ab)<br>
           Torsten Wohlfarth (towo)<br>
           Hendrik Lehmbruch (hendrikL)<br>
-          Ferdinand Thommes (devil)</p>
+          Ferdinand Thommes (devil)<br>
+          Vinz (vinzv)</p>
 
         <h3>Code, ideas and support:</h3>
 
         <p>der_bud<br>
+          cryptosteve<br>
           Markus Meyer (coruja)<br>
           akli (for his work on getting the manual back in shape)</p>
         <h3>Thank you!</h3>
