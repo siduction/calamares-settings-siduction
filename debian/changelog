@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.99-1) unstable; urgency=medium
+
+  * prepare packaging for farewell release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 08 Jun 2021 11:46:44 +0200
+
 calamares-branding-siduction (21.1.0-14) unstable; urgency=medium
 
   * fix LUKS setting in partition.conf
