@@ -33,7 +33,7 @@ Presentation
     Text {
         anchors.horizontalCenter: image1.horizontalCenter
         anchors.top: image1.bottom
-        text: "<b>Welcome to siduction 2021.1.1 \"C-Blues\".</b><br/>"+
+        text: "<b>Welcome to siduction 2021.2.0 \"Farewell\".</b><br/>"+
               "The rest of the installation is automated and typically takes a few minutes to complete. <br/><br/>"+
               "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/>"+
               "We ship non-free firmware that enables you to set up wifi and other hardware with non-free needs.<br/>"+
