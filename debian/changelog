@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.1.99-2) unstable; urgency=medium
+
+  * package latest changeset; https://github.com/siduction/calamares-settings-siduction/compare/7aeebfc294...95ca389554
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 09 Jun 2021 14:35:24 +0200
+
 calamares-branding-siduction (21.1.99-1) unstable; urgency=medium
 
   * prepare packaging for farewell release
