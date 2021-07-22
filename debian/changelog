@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.2.0-1) unstable; urgency=medium
+
+  * set final version
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 22 Jul 2021 14:29:34 +0200
+
 calamares-branding-siduction (21.1.99-4) unstable; urgency=medium
 
   * package latest changes
