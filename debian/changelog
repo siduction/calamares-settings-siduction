@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.2.0-2) unstable; urgency=medium
+
+  * remove the buttons
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 27 Jul 2021 21:58:04 +0200
+
 calamares-branding-siduction (21.2.0-1) unstable; urgency=medium
 
   * set final version
