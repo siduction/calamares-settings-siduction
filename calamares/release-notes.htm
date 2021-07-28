@@ -44,9 +44,11 @@
 <br>
         <h2>Release Notes for siduction 2021.2.0</h2>
 <br>
-<h2>Release Notes for siduction 2021.02</h2>
+<br>
 <img class="alignnone wp-image-2256" src="https://siduction.org/wp-content/uploads/2021/07/axel-300x225.png" alt="" width="645" height="484" />
-
+<br>
+<br>
+<br>
 The siduction team is very proud that for our 10th birthday (yes, we started out in July 2011) we can present to you siduction 2021.2.0. This one is dubbed »Farewell« in remembrance of our friend <a href="https://forum.siduction.org/index.php?topic=8283.0">Axel</a>, who passed away way to early. So no, farewell does not mean we are going anywhere. The highlight of this release is the resuscitated siduction manual, that goes back to the days of sidux, which some of you will remember as a former incarnation of siduction. We will go on a little history tour on that further down. But first things first.
 <h3>What's new this time around?</h3>
 The flavours we offer for siduction 2021.2 are KDE Plasma 5.20.5, LXQt 0.16.0-1, Cinnamon 4.8.6.2, Xfce 4.16, Lxde 11, Xorg and noX. GNOME and MATE did again not make it due to a lack of a maintainer within siduction. They might be back at some point or not. Of course, they are still installable from the repository.
@@ -134,10 +136,9 @@ Return to non-free
 
 Right now, the installer does not offer an opt-out for packages that do not comply with DFSG, the Debian Free Software Guidelines. That means that non-free packages like unfree firmware will be installed by default on the system. The command vrms will list these packages for you. You can remove not wanted packages manually or remove them all by issuing apt purge $(vrms -s) before or after installation. Else our script remove-nonfree can do that for you.
 <h4>Installation hints and known issues</h4>
-If you want to reuse your existing home (or any other data) partition, it would be wise to do so after installation and not in the Calamares Installer.
-Calamares-Installer has a bug preventing it from creating GPT partitions. In those cases, please set up partitions manually or use cli-installer.
-Encryption setups like LUKS and others are not yet supported by the Installer Framework, you should prepare your partition setup beforehand and might better use the cli-installer in a terminal.
-With some Intel GPUs on some devices, you might encounter a frozen system on Live shortly after boot. To fix this, you need to set the kernel parameter <em>intel_iommu=igfx_off</em> before booting again.
+* If you want to reuse your existing home (or any other data) partition, it would be wise to do so after installation and not in the Calamares Installer.
+* Encryption setups like LUKS and others are not yet supported by the Installer Framework, you should prepare your partition setup beforehand and might better use the cli-installer in a terminal.
+* With some Intel GPUs on some devices, you might encounter a frozen system on Live shortly after boot. To fix this, you need to set the kernel parameter <em>intel_iommu=igfx_off</em> before booting again.
 <h4>Credits for siduction 2021.2.0
 Core Team</h4>
 Torsten Wohlfarth (towo)
