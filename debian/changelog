@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.2.0-6) unstable; urgency=medium
+
+  * update releasenotes
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 28 Jul 2021 19:12:05 +0200
+
 calamares-branding-siduction (21.2.0-5) unstable; urgency=medium
 
   * set right kernel version in releasenotes
