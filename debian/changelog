@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.2.99-2) unstable; urgency=medium
+
+  * set GRUB_DISABLE_OS_PROBER=false
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 29 Nov 2021 09:09:42 +0100
+
 calamares-branding-siduction (21.2.99-1) unstable; urgency=medium
 
   * prepare wintersky release
