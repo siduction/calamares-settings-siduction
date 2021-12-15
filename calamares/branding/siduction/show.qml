@@ -34,10 +34,70 @@ Presentation
         anchors.horizontalCenter: image1.horizontalCenter
         anchors.top: image1.bottom
         text: "<b>Welcome to siduction 2021.3.0 \"wintersky\".</b><br/>"+
-              "The rest of the installation is automated and typically takes a few minutes to complete. <br/><br/>"+
-              "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/>"+
-              "We ship non-free firmware that enables you to set up wifi and other hardware with non-free needs.<br/>"+
-              "If you want your system to be DFSG-compliant, you need to run the script <b>'remove-nonfree'</b><br/>"+
+        wrapMode: Text.WordWrap
+        width: 700
+        horizontalAlignment: Text.Center
+   }
+
+    Image {
+        id: image2
+        source: "slide1.png"
+        width: 467; height: 280
+        fillMode: Image.PreserveAspectFit
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+    Text {
+        anchors.horizontalCenter: image1.horizontalCenter
+        anchors.top: image1.bottom
+        text: "The rest of the installation is automated and typically takes a few minutes to complete. <br/><br/>"+
+        wrapMode: Text.WordWrap
+        width: 700
+        horizontalAlignment: Text.Center
+   }
+
+    Image {
+        id: image3
+        source: "slide1.png"
+        width: 467; height: 280
+        fillMode: Image.PreserveAspectFit
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+    Text {
+        anchors.horizontalCenter: image1.horizontalCenter
+        anchors.top: image1.bottom
+        text: "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/>"+
+        wrapMode: Text.WordWrap
+        width: 700
+        horizontalAlignment: Text.Center
+   }
+
+    Image {
+        id: image4
+        source: "slide1.png"
+        width: 467; height: 280
+        fillMode: Image.PreserveAspectFit
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+    Text {
+        anchors.horizontalCenter: image1.horizontalCenter
+        anchors.top: image1.bottom
+        text: "We ship non-free firmware that enables you to set up wifi and other hardware with non-free needs.<br/>"+
+        wrapMode: Text.WordWrap
+        width: 700
+        horizontalAlignment: Text.Center
+   }
+
+    Image {
+        id: image5
+        source: "slide1.png"
+        width: 467; height: 280
+        fillMode: Image.PreserveAspectFit
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+    Text {
+        anchors.horizontalCenter: image1.horizontalCenter
+        anchors.top: image1.bottom
+        text: "If you want your system to be DFSG-compliant, you need to run the script <b>'remove-nonfree'</b><br/>"+
               "after you reboot into the installed system."
         wrapMode: Text.WordWrap
         width: 700
