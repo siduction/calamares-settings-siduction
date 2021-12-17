@@ -5,11 +5,11 @@ slideshowAPI: 1
 strings:
     productName:         siduction
     shortProductName:    siduction
-    version:             2021.2.0
-    shortVersion:        2021.2.0
-    versionedName:       siduction 2021.2.0
-    shortVersionedName:  siduction 2021.2.0
-    bootloaderEntryName: siduction 2021.2.0
+    version:             2021.3.0
+    shortVersion:        2021.3.0
+    versionedName:       siduction 2021.3.0
+    shortVersionedName:  siduction 2021.3.0
+    bootloaderEntryName: siduction 2021.3.0
 
 images:
     productLogo:         "siduction-logo.png"
