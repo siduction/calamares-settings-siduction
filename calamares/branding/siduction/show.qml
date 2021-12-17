@@ -61,11 +61,9 @@ Presentation
         Text {
             anchors.horizontalCenter: background2.horizontalCenter
             anchors.top: background2.bottom
-            text: "The rest of the installation is automated and typically takes a few minutes to complete.<br/><br/>"+
-                  "With this little slightshow we present you some old artwork of the last ten years!<br/><br/>"+
-                  "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/><br/>"+
-                  "Our logo which we still use, 'siduction - the community based os', is made by coruja!<br/><br/>"+
-                  "Also we thank all the people who helped to start this projekt and adventure 'sidution'!<br/><br/>"
+            text:  "With this little slightshow we present you some old artwork of the last ten years!<br/>"+
+                  "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/>"+
+                  "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -84,8 +82,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background3.horizontalCenter
             anchors.top: background3.bottom
-            text: "WARNING: After the installation finishes, your system will not be DFSG-compliant (Debian Free Software Guide).<br/><br/>"+
-                  "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen se7en<br/><br/>"
+                  "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -104,7 +101,6 @@ Presentation
         Text {
            anchors.top: background4.bottom
              anchors.horizontalCenter: background4.horizontalCenter
-            text: "We ship non-free firmware that enables you to set up wifi and other hardware with non-free needs.<br/><br/>"+
                   "Our fourth release, Riders On The Storm, artwork by se7en with some modifikations for our first chrismas-release by hendrikL.<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
@@ -124,9 +120,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background5.horizontalCenter
             anchors.top: background5.bottom
-            text: "If you want your system to be DFSG-compliant, you need to run the script <b>'remove-nonfree',</b><br/>"+
-                  "after you reboot into the installed system.<br/><br>"+
-                  "This was our fifth release, Firestarter, artwork by hendrikL<br/><br/>"+
+            text: "This was our fifth release, Firestarter, artwork by hendrikL<br/><br/>"+
                   "As you found out, we used song names for our releases back in time<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
@@ -146,10 +140,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background6.horizontalCenter
             anchors.top: background6.bottom
-            text: "Now we wish you a lot of fun with siduction, maybe you want to help us to make siduction greater than it ever was!</b><br/>"+
-                  "If so, don't be shy to ask us if you can help!<br/><br/>"+
-                  "This was our chrismas special, steam edition, back in 2014.<br/>"+
-                  "Artwork, background by bob, which is still in use (we changed the color a bit) and as it was for chrismas the modifikations by hendrikL.<<br/><br/>"
+            text: "This was our chrismas special, steam edition, back in 2014.<br/>"+
+                  "Artwork, background by bob, which is still in use and as it was for chrismas the modifikations made by hendrikL.<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
@@ -168,9 +160,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
             anchors.top: background7.bottom
-            text: "Don't forget to do an 'apt update; apt full-upgrade' from time to time, do not wait to long, because debian sid/unstable is rolling and rolling forward!</b><br/>"+
-                  "Before you do a full-upgrade, always look in our forum if some trouble is in the air, sid/unstable can be a beast but mostly it is tame<br/>"+
-                  "So, with that in mind <b>'apt moo'<b/>!<br/><br/>"
+            text: "Also we thank all the people who helped to start this projekt and adventure 'sidution'!<br/>"
+                  "Have fun and <b>'apt moo'<b/>!<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
