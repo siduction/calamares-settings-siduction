@@ -65,7 +65,7 @@ Presentation
                   "With this little slightshow we present you some old artwork of the last ten years!<br/><br/>"+
                   "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/><br/>"+
                   "Our logo which we still use, 'siduction - the community based os', is made by coruja!<br/><br/>"+
-                  "Also we thank all the people who helped to start this projekt and adventure 'sidution'!<br/><br/>
+                  "Also we thank all the people who helped to start this projekt and adventure 'sidution'!<br/><br/>"
             wrapMode: Text.WordWrap
             width: 600
             horizontalAlignment: Text.Center
