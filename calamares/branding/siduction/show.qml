@@ -166,7 +166,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
             anchors.top: background7.bottom
-            text: "Don't forget to do an 'apt updat; apt full-upgrade' from time to time, do not wait to long, because debian sid/unstable is rolling and       rolling forward!</b><br/>"+
+            text: "Don't forget to do an 'apt update; apt full-upgrade' from time to time, do not wait to long, because debian sid/unstable is rolling and       rolling forward!</b><br/>"+
                   "Before you do a full-upgrade, always look in our forum if some trouble is in the air, sid/unstable can be a beast but mostly it is tame<br/>"+
                   "So, with that in mind <b>'apt moo'<b/>!<br/><br/>"
             wrapMode: Text.WordWrap
