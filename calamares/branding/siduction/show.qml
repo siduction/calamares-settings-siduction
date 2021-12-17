@@ -61,7 +61,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background2.horizontalCenter
             anchors.top: background2.bottom
-            text:  "With this little slightshow we present you some old artwork of the last ten years!<br/>"+
+            text: "With this little slightshow we present you some old artwork of the last ten years!<br/>"+
                   "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/>"+
                   "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/><br/>"
             wrapMode: Text.WordWrap
