@@ -44,7 +44,7 @@ Presentation
             anchors.top: background1.bottom
             text: "Welcome to siduction.<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -65,7 +65,7 @@ Presentation
                   "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/>"+
                   "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -84,7 +84,7 @@ Presentation
             anchors.top: background3.bottom
                   "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -103,7 +103,7 @@ Presentation
              anchors.horizontalCenter: background4.horizontalCenter
                   "Our fourth release, Riders On The Storm, artwork by se7en with some modifications for our first christmas-release by hendrikL.<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -123,7 +123,7 @@ Presentation
             text: "This was our fifth release, Firestarter, artwork by hendrikL<br/>"+
                   "As you may have found out, we used song names for our releases back in those days.<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -143,7 +143,7 @@ Presentation
             text: "This was our christmas special, steam edition, back in 2014.<br/>"+
                   "Artwork, background by bob, which is still in use and as it was for christmas the modifications made by hendrikL.<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -163,7 +163,7 @@ Presentation
             text: "Also, we want to thank all the people who helped to start this project and adventure 'sidution'!<br/>"
                   "Have fun and <b>'apt moo'<b/>!<br/>"
             wrapMode: Text.WordWrap
-            width: 467
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
