@@ -101,7 +101,7 @@ Presentation
         Text {
            anchors.top: background4.bottom
              anchors.horizontalCenter: background4.horizontalCenter
-                  "Our fourth release, Riders On The Storm, artwork by se7en with some modifikations for our first christmas-release by hendrikL.<br/>"
+                  "Our fourth release, Riders On The Storm, artwork by se7en with some modifications for our first christmas-release by hendrikL.<br/>"
             wrapMode: Text.WordWrap
             width: 467
             horizontalAlignment: Text.Center
@@ -140,8 +140,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background6.horizontalCenter
             anchors.top: background6.bottom
-            text: "This was our chrismas special, steam edition, back in 2014.<br/>"+
-                  "Artwork, background by bob, which is still in use and as it was for christmas the modifikations made by hendrikL.<br/>"
+            text: "This was our christmas special, steam edition, back in 2014.<br/>"+
+                  "Artwork, background by bob, which is still in use and as it was for christmas the modifications made by hendrikL.<br/>"
             wrapMode: Text.WordWrap
             width: 467
             horizontalAlignment: Text.Center
