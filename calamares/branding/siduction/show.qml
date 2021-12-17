@@ -44,7 +44,7 @@ Presentation
             anchors.top: background1.bottom
             text: "Welcome to siduction.<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
@@ -63,9 +63,9 @@ Presentation
             anchors.top: background2.bottom
             text: "With this little slightshow we present you some old artwork of the last ten years!<br/>"+
                   "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/>"+
-                  "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/><br/>"
+                  "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
@@ -82,9 +82,9 @@ Presentation
         Text {
             anchors.horizontalCenter: background3.horizontalCenter
             anchors.top: background3.bottom
-                  "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en<br/><br/>"
+                  "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
@@ -101,9 +101,9 @@ Presentation
         Text {
            anchors.top: background4.bottom
              anchors.horizontalCenter: background4.horizontalCenter
-                  "Our fourth release, Riders On The Storm, artwork by se7en with some modifikations for our first chrismas-release by hendrikL.<br/><br/>"
+                  "Our fourth release, Riders On The Storm, artwork by se7en with some modifikations for our first christmas-release by hendrikL.<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
@@ -120,10 +120,10 @@ Presentation
         Text {
             anchors.horizontalCenter: background5.horizontalCenter
             anchors.top: background5.bottom
-            text: "This was our fifth release, Firestarter, artwork by hendrikL<br/><br/>"+
-                  "As you found out, we used song names for our releases back in time<br/><br/>"
+            text: "This was our fifth release, Firestarter, artwork by hendrikL<br/>"+
+                  "As you may have found out, we used song names for our releases back in those days.<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
@@ -141,9 +141,9 @@ Presentation
             anchors.horizontalCenter: background6.horizontalCenter
             anchors.top: background6.bottom
             text: "This was our chrismas special, steam edition, back in 2014.<br/>"+
-                  "Artwork, background by bob, which is still in use and as it was for chrismas the modifikations made by hendrikL.<br/><br/>"
+                  "Artwork, background by bob, which is still in use and as it was for christmas the modifikations made by hendrikL.<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
@@ -160,10 +160,10 @@ Presentation
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
             anchors.top: background7.bottom
-            text: "Also we thank all the people who helped to start this projekt and adventure 'sidution'!<br/>"
-                  "Have fun and <b>'apt moo'<b/>!<br/><br/>"
+            text: "Also, we want to thank all the people who helped to start this project and adventure 'sidution'!<br/>"
+                  "Have fun and <b>'apt moo'<b/>!<br/>"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 467
             horizontalAlignment: Text.Center
         }
     }
