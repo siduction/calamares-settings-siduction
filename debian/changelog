@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.2.99-6) unstable; urgency=medium
+
+  * fix typo
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 17 Dec 2021 14:02:45 +0100
+
 calamares-branding-siduction (21.2.99-5) unstable; urgency=medium
 
   * add filesystem choice on automatic partitioning
