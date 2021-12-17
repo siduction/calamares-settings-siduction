@@ -1,3 +1,10 @@
+calamares-branding-siduction (21.2.99-8) unstable; urgency=medium
+
+  [hendrikL]
+  * fix typo
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 17 Dec 2021 22:13:44 +0100
+
 calamares-branding-siduction (21.2.99-7) unstable; urgency=medium
 
   * package the new designed slideshow
