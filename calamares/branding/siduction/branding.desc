@@ -1,6 +1,8 @@
 ---
 componentName:   siduction
 slideshowAPI: 2
+windowPlacement: center
+windowSize: 900px,600px
 
 strings:
     productName:         siduction

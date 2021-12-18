@@ -33,7 +33,7 @@ Presentation
     Slide {
 
         Image {
-            id: image1
+            id: background1
             source: "slide1.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
@@ -52,7 +52,7 @@ Presentation
     Slide {
 
         Image {
-            id: image2
+            id: background2
             source: "slide2.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
@@ -73,7 +73,7 @@ Presentation
     Slide {
 
         Image {
-            id: image3
+            id: background3
             source: "slide3.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
@@ -92,7 +92,7 @@ Presentation
     Slide {
 
         Image {
-            id: image4
+            id: background4
             source: "slide4.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
@@ -111,7 +111,7 @@ Presentation
     Slide {
 
         Image {
-            id: image5
+            id: background5
             source: "slide5.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
@@ -131,7 +131,7 @@ Presentation
     Slide {
 
         Image {
-            id: image6
+            id: background6
             source: "slide6.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
@@ -151,7 +151,7 @@ Presentation
     Slide {
 
         Image {
-            id: image7
+            id: background7
             source: "slide7.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
