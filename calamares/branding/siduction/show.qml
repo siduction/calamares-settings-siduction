@@ -82,7 +82,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background3.horizontalCenter
             anchors.top: background3.bottom
-                  "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>"
+            text: "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>"
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -99,12 +99,12 @@ Presentation
             anchors.centerIn: parent
         }
         Text {
-           anchors.top: background4.bottom
              anchors.horizontalCenter: background4.horizontalCenter
-                  "Our fourth release, Riders On The Storm, artwork by se7en with some modifications for our first christmas-release by hendrikL.<br/>"
-            wrapMode: Text.WordWrap
-            width: 800
-            horizontalAlignment: Text.Center
+             anchors.top: background4.bottom
+             text: "Our fourth release, Riders On The Storm, artwork by se7en with some modifications for our first christmas-release by hendrikL.<br/>"
+             wrapMode: Text.WordWrap
+             width: 800
+             horizontalAlignment: Text.Center
         }
     }
 
