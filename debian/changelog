@@ -1,3 +1,10 @@
+calamares-branding-siduction (21.2.99-9) unstable; urgency=medium
+
+  * set slideshow API to 2
+  * package latest changes
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 18 Dec 2021 11:19:43 +0100
+
 calamares-branding-siduction (21.2.99-8) unstable; urgency=medium
 
   [hendrikL]
