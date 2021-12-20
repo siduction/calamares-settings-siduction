@@ -160,7 +160,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
             anchors.top: background7.bottom
-            text: "Also, we want to thank all the people who helped to start this project and adventure 'sidution'!<br/>"+
+            text: "Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
                   "Have fun and <b>'apt moo'<b/>!<br/>"
             wrapMode: Text.WordWrap
             width: 800
