@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.2.99-11) unstable; urgency=medium
+
+  * package latest changes
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 20 Dec 2021 11:26:35 +0100
+
 calamares-branding-siduction (21.2.99-10) unstable; urgency=medium
 
   * removed remainig typos in show.qml
