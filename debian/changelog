@@ -1,3 +1,9 @@
+calamares-branding-siduction (21.3.0-2) unstable; urgency=medium
+
+  * fix btrfs mountoptions
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 05 Jan 2022 12:48:47 +0100
+
 calamares-branding-siduction (21.3.0-1) unstable; urgency=medium
 
   * wintersky release
