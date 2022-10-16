@@ -1,3 +1,11 @@
+calamares-branding-siduction (21.3.0-6) unstable; urgency=medium
+
+  * make snapper-config an own script
+  * changes AllOW_GROUPS tu users instead of sudo
+  * activate snappor only, if siduction is installed on btrfs, otherwise remove snapper, snapper-gui and grub-btrfs
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 16 Oct 2022 21:07:26 +0200
+
 calamares-branding-siduction (21.3.0-5) unstable; urgency=medium
 
   * add shellprocess for snapper config
