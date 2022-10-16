@@ -1,5 +1,5 @@
 #!/bin/bash
-if  [ $(mount | grep -m1 btrfs | awk '{print $5}' ]; then
+if  [ $(mount | grep -m1 btrfs | awk '{print $5}') ]; then
     umount @@ROOT@@.snapshots
     rm -r @@ROOT@@.snapshots
     snapper --no-dbus create-config -f btrfs @@ROOT@@
