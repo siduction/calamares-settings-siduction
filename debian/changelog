@@ -1,3 +1,10 @@
+calamares-branding-siduction (21.3.0-9) unstable; urgency=medium
+
+  * TIMELINE_CREATE=no fort $HOME
+  * add systemctl disable snapper-timeline.timer
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 01 Dec 2022 23:43:15 +0100
+
 calamares-branding-siduction (21.3.0-8) unstable; urgency=medium
 
   * revert changes
