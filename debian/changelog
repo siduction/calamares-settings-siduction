@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.0-5) unstable; urgency=medium
+
+  * fix efi entry
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 22 Dec 2022 16:18:23 +0100
+
 calamares-branding-siduction (22.1.0-4) unstable; urgency=medium
 
   * add desktop file and icon
