@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.0-3) unstable; urgency=medium
+
+  * fix a typo in fllfixhome
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 22 Dec 2022 09:28:22 +0100
+
 calamares-branding-siduction (22.1.0-2) unstable; urgency=medium
 
   * disable tmpfs for /tmp
