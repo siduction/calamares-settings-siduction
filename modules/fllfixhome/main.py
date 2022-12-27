@@ -105,7 +105,7 @@ def run():
     unwanted = os.path.join( instHome, '.cache' )
     libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s'  % (unwanted)])
 
-    unwanted = os.path.join( instHome, '.local' )
+    unwanted = os.path.join( instHome, '.local/state' )
     libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s'  % (unwanted)])
 
     # revert sudo workarounds

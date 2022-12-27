@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.0-6) unstable; urgency=medium
+
+  * try to fix empty favorites after install
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 27 Dec 2022 20:38:21 +0100
+
 calamares-branding-siduction (22.1.0-5) unstable; urgency=medium
 
   * fix efi entry
