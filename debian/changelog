@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.0-7) unstable; urgency=medium
+
+  * add systemctl disable tmp.mount to shellprocess.conf
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 27 Dec 2022 21:19:42 +0100
+
 calamares-branding-siduction (22.1.0-6) unstable; urgency=medium
 
   * try to fix empty favorites after install
