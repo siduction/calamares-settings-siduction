@@ -199,7 +199,7 @@ def run():
     # chown ${USER_NAME} ${INSTHOME}/.config/autostart
     # chgrp ${USER_NAME} ${INSTHOME}/.config/autostart
     libcalamares.utils.target_env_call(
-        ['/bin/chown', '-R', '%s:' % (user), '%s'  % (wanted)])
+        ['/bin/chown', '-R', '%s:' % (user),'%s' % (user), '%s'  % (wanted)])
 
     # chmod +x ${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open
 
