@@ -1,3 +1,10 @@
+calamares-branding-siduction (22.1.0-8) UNRELEASED; urgency=medium
+
+  * make /tmp tmpfs
+  * fix chown command in fllfixhome
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 28 Dec 2022 19:13:01 +0100
+
 calamares-branding-siduction (22.1.0-7) unstable; urgency=medium
 
   * add systemctl disable tmp.mount to shellprocess.conf
