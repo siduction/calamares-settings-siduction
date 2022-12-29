@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.0-9) unstable; urgency=medium
+
+  * package [hhl] change welcome graphics
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 29 Dec 2022 11:09:39 +0100
+
 calamares-branding-siduction (22.1.0-8) unstable; urgency=medium
 
   * make /tmp tmpfs
