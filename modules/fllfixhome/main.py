@@ -57,9 +57,9 @@ def run():
     unwanted = os.path.join( instHome, 'Desktop/chroot-helper.desktop' )
     libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
-    # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/install-gui.desktop
-    unwanted = os.path.join( instHome, 'Desktop/siduction-manual.desktop' )
-    libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
+    # ${TARGET_MNT_POINT}${INSTHOME}/Desktop/siduction-manual.desktop
+    #unwanted = os.path.join( instHome, 'Desktop/siduction-manual.desktop' )
+    #libcalamares.utils.target_env_call(['/bin/rm', '-f', '%s'  % (unwanted)])
 
     # ${TARGET_MNT_POINT}${INSTHOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop
     # OUTDATED - RELEASE-NOTES???
