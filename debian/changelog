@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.1-1) unstable; urgency=medium
+
+  * package https://github.com/siduction/calamares-settings-siduction/pull/4
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 08 Mar 2023 23:25:59 +0100
+
 calamares-branding-siduction (22.1.0-11) unstable; urgency=medium
 
   * let the manual stay on desktop after install
