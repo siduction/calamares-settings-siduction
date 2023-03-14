@@ -1,3 +1,9 @@
+calamares-branding-siduction (22.1.1-2) unstable; urgency=medium
+
+  * fix fllfixhome
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 14 Mar 2023 14:12:39 +0100
+
 calamares-branding-siduction (22.1.1-1) unstable; urgency=medium
 
   * package https://github.com/siduction/calamares-settings-siduction/pull/4

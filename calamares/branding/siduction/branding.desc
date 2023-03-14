@@ -7,10 +7,10 @@ windowSize: 1000px,700px
 strings:
     productName:         siduction
     shortProductName:    siduction
-    version:             2022.1.0
-    shortVersion:        2022.1.0
-    versionedName:       siduction 2022.1.0 "Masters of War" Release
-    shortVersionedName:  siduction 2022.1.0
+    version:             2022.1.2
+    shortVersion:        2022.1.2
+    versionedName:       siduction 2022.1.2 "Masters of War" Release
+    shortVersionedName:  siduction 2022.1.2
     bootloaderEntryName: siduction
 
 images:

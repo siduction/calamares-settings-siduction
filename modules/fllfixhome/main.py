@@ -39,7 +39,7 @@ def run():
     #           [ ! -d "${TARGET_MNT_POINT}${INSTHOME}" ]; then
     #            mv "${TARGET_MNT_POINT}${LIVEHOME}" "${TARGET_MNT_POINT}${INSTHOME}"
     libcalamares.utils.target_env_call(['/bin/mv', '%s' % (liveHome), '%s' % (instHome)])
-    libcalamares.utils.target_env_call(['chown', '-R', '%s:' % (user), '%s' % (instHome)])
+    libcalamares.utils.target_env_call(['chown', '-R', '%s:' % (user), '%s' % (user), '%s' % (instHome)])
 
     # fix /home/user paths in various config files
     #       find "${TARGET_MNT_POINT}${INSTHOME}" \
