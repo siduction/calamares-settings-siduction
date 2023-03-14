@@ -39,7 +39,6 @@ def run():
     #           [ ! -d "${TARGET_MNT_POINT}${INSTHOME}" ]; then
     #            mv "${TARGET_MNT_POINT}${LIVEHOME}" "${TARGET_MNT_POINT}${INSTHOME}"
     libcalamares.utils.target_env_call(['/bin/mv', '%s' % (liveHome), '%s' % (instHome)])
-    libcalamares.utils.target_env_call(['chown', '-R', '%s:' % (user), '%s' % (user), '%s' % (instHome)])
 
     # fix /home/user paths in various config files
     #       find "${TARGET_MNT_POINT}${INSTHOME}" \
@@ -198,8 +197,8 @@ def run():
     # fix permisions for automount-open automount-open.desktop and /.config/autostart
     # chown ${USER_NAME} ${INSTHOME}/.config/autostart
     # chgrp ${USER_NAME} ${INSTHOME}/.config/autostart
-    libcalamares.utils.target_env_call(
-        ['/bin/chown', '-R', '%s:' % (user),'%s' % (user), '%s'  % (wanted)])
+    #libcalamares.utils.target_env_call(
+    #    ['/bin/chown', '-R', '%s:' % (user),'%s' % (user), '%s'  % (wanted)])
 
     # chmod +x ${TARGET_MNT_POINT}/usr/share/siduction-settings-${FLL_FLAVOUR}-${FLL_DISTRO_CODENAME_SAFE}/automount-open
 
