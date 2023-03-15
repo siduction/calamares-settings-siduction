@@ -33,9 +33,10 @@ def run():
     # home of user on live media
     # local LIVEHOME="/home/${DEFAULT_USER}" --> /home/siducer
     liveHome = '/home/siducer'
-    homepart = subprocess.check_output(["/bin/bash", "-c", "lsblk -lf | grep /home | awk '{print $1}'"], text=True)
+    chroot = libcalamares.globalstorage.value("rootMountPoint")
+    path = chroot + instHome
 
-    if not len(str(homepart)):
+    if not os.path.isdir(path):
         # move livehome --> insthome
         libcalamares.utils.target_env_call(['/bin/mv', '%s' % (liveHome), '%s' % (instHome)])
 
