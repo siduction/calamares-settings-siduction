@@ -7,10 +7,10 @@ windowSize: 1000px,700px
 strings:
     productName:         siduction
     shortProductName:    siduction
-    version:             2022.1.2
-    shortVersion:        2022.1.2
-    versionedName:       siduction 2022.1.2 "Masters of War" Release
-    shortVersionedName:  siduction 2022.1.2
+    version:             2023.30_Years_of_Debian
+    shortVersion:        2023.30_y
+    versionedName:       siduction 2023.30_Years_of_Debain "Standing on the Shoulders of Giants" Release
+    shortVersionedName:  siduction 2023.30_y
     bootloaderEntryName: siduction
 
 images:
