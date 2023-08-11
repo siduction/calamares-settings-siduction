@@ -1,3 +1,15 @@
+calamares-branding-siduction (23.1.1) unstable; urgency=medium
+
+  * fix welcome.png
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 11 Aug 2023 12:46:36 +0200
+
+calamares-branding-siduction (23.1.0) unstable; urgency=medium
+
+  * Standing on the Shoulders of Giants release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 10 Aug 2023 13:20:01 +0200
+
 calamares-branding-siduction (22.1.2-2) unstable; urgency=medium
 
   * fix fllfixhome
