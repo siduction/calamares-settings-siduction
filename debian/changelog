@@ -1,3 +1,9 @@
+calamares-branding-siduction (23.1.2) unstable; urgency=medium
+
+  * copy Metadata.desktop do installed user autostart
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 15 Aug 2023 15:09:33 +0200
+
 calamares-branding-siduction (23.1.1) unstable; urgency=medium
 
   * fix welcome.png
