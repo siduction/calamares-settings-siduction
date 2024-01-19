@@ -11,7 +11,8 @@ Homepage: https://git.siduction.org/extra/calamares-settings-siduction.git
 Package: calamares-branding-siduction
 Architecture: any
 Depends: ${misc:Depends},
-         calamares
+         calamares,
+         kdialog
 Provides: calamares-branding
 Description: Siduction theme and settings for the Calamares Installer
  Calamares is a generic installer framework for Linux distributions.

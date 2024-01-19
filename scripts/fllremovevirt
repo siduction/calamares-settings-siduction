@@ -26,6 +26,29 @@ if [ -e /etc/skel/.config/autostart/Metadata.desktop ]; then
     cp /etc/skel/.config/autostart/Metadata.desktop /home/"$USER1"/.config/autostart/
 fi
 
+LLANG=$(cat /etc/locale.conf | awk -F\= '{print $2}' | awk -F\_ '{print $1}')
+
+case $LLANG in
+    de*)
+        export sources_txt="Wollen Sie Nicht-Freie Software erhalten? Dazu muss contrib und non-free ind die Software Sourcen eingefügt werden.\n\nWenn Sie das wünchen, dann wählen sie das hier aus."
+        export ja="Mit non-free"
+        export nein="Ohne non-free"
+        ;;
+    *)
+        export sources_txt="Do you want to receive non-free software? To do this, contrib and non-free must be added to the software sources.\n\nIf you want this, then select it here."
+        export ja="With non-free"
+        export nein="Without non-free"
+        ;;
+esac
+
+if kdialog --title "Software Sources" --warningyesno "$sources_txt" --yes-label "$ja" --no-label "$nein"; then
+    if [ $? -eq 0 ]; then
+	sed -i "s/main non-free-firmware/main contrib non-free non-free-firmware/g" /etc/apt/sources.list.d/*.list
+    fi
+else
+    echo ""
+fi
+
 purge_pkg() {
     apt purge $1 --assume-yes || true
 }

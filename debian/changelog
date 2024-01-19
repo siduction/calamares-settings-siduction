@@ -1,3 +1,15 @@
+calamares-branding-siduction (23.1.90) unstable; urgency=medium
+
+  * addapt syntax changes needed for calamares 3.3.x
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 19 Jan 2024 12:35:40 +0100
+
+calamares-branding-siduction (23.1.4) unstable; urgency=medium
+
+  * add opt in for non-free
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 04 Nov 2023 16:21:09 +0100
+
 calamares-branding-siduction (23.1.3) unstable; urgency=medium
 
   * fix typo in branding
