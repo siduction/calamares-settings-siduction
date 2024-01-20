@@ -30,7 +30,7 @@ LLANG=$(cat /etc/locale.conf | awk -F\= '{print $2}' | awk -F\_ '{print $1}')
 
 case $LLANG in
     de*)
-        export sources_txt="Wollen Sie Nicht-Freie Software erhalten? Dazu muss contrib und non-free ind die Software Sourcen eingefügt werden.\n\nWenn Sie das wünchen, dann wählen sie das hier aus."
+        export sources_txt="Wollen Sie Nicht-Freie Software erhalten? Dazu muss contrib und non-free in die Software Sourcen eingefügt werden.\n\nWenn Sie das wünschen, dann wählen sie das hier aus."
         export ja="Mit non-free"
         export nein="Ohne non-free"
         ;;
