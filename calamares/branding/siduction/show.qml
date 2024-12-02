@@ -42,7 +42,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background1.horizontalCenter
             anchors.top: background1.bottom
-            text: "Welcome to siduction.<br/>"
+            text: qsTr("Welcome to siduction.<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -61,9 +61,9 @@ Presentation
         Text {
             anchors.horizontalCenter: background2.horizontalCenter
             anchors.top: background2.bottom
-            text: "With this little slideshow we present you some old artwork of the last ten years!<br/>"+
+            text: qsTr("With this little slideshow we present you some old artwork of the last ten years!<br/>"+
                   "This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.<br/>"+
-                  "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/>"
+                  "Our logo which we still use, 'siduction - the community based OS', is made by coruja!<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -82,7 +82,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background3.horizontalCenter
             anchors.top: background3.bottom
-            text: "This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>"
+            text: qsTr("This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -101,7 +101,7 @@ Presentation
         Text {
              anchors.horizontalCenter: background4.horizontalCenter
              anchors.top: background4.bottom
-             text: "Our fourth release, Riders On The Storm, artwork by se7en with some modifications for our first christmas-release by hendrikL.<br/>"
+             text: qsTr("Our fourth release, Riders On The Storm, artwork by se7en with some modifications for our first christmas-release by hendrikL.<br/>")
              wrapMode: Text.WordWrap
              width: 800
              horizontalAlignment: Text.Center
@@ -120,8 +120,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background5.horizontalCenter
             anchors.top: background5.bottom
-            text: "This was our fifth release, Firestarter, artwork by hendrikL<br/>"+
-                  "As you may have found out, we used song names for our releases back in those days.<br/>"
+            text: qsTr("This was our fifth release, Firestarter, artwork by hendrikL<br/>"+
+                  "As you may have found out, we used song names for our releases back in those days.<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -140,8 +140,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background6.horizontalCenter
             anchors.top: background6.bottom
-            text: "This was our christmas special, steam edition, back in 2014.<br/>"+
-                  "Artwork, background by bob, which is still in use and as it was for christmas the modifications made by hendrikL.<br/>"
+            text: qsTr("This was our christmas special, steam edition, back in 2014.<br/>"+
+                  "Artwork, background by bob, which is still in use and as it was for christmas the modifications made by hendrikL.<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -160,8 +160,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
             anchors.top: background7.bottom
-            text: "Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
-                  "Have fun and <b>'apt moo'<b/>!<br/>"
+            text: qsTr("Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
+                  "Have fun and <b>'apt moo'<b/>!<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center

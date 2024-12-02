@@ -1,0 +1,5 @@
+---
+type:       "job"
+name:       "sources"
+interface:  "python"
+script:     "main.py"
