@@ -1,3 +1,15 @@
+calamares-branding-siduction (24.1.0-3) unstable; urgency=medium
+
+  * translate the slideshow
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 03 Dec 2024 14:01:25 +0100
+
+calamares-branding-siduction (24.1.0-2) unstable; urgency=medium
+
+  * fix branding.dssc
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 02 Dec 2024 23:33:54 +0100
+
 calamares-branding-siduction (24.1.0-1) unstable; urgency=medium
 
   * package all latest changes (sources, siduction-btrfs, partition module)
