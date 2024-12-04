@@ -26,7 +26,7 @@ if [ -e /etc/skel/.config/autostart/Metadata.desktop ]; then
     cp /etc/skel/.config/autostart/Metadata.desktop /home/"$USER1"/.config/autostart/
 fi
 
-if cat /etc/fstab | awk '{print $2 "  "$3}'| grep -wq '/'; then
+if cat /etc/fstab | awk '{print $2 "  "$3}'| grep btrfs | grep -wq '/'; then
     dpkg -i /usr/share/siduction/btrfs-packages/*.deb
 fi
 

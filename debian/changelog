@@ -1,3 +1,9 @@
+calamares-branding-siduction (24.1.0-4) unstable; urgency=medium
+
+  * fix the check for btrfs
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 04 Dec 2024 13:49:17 +0100
+
 calamares-branding-siduction (24.1.0-3) unstable; urgency=medium
 
   * translate the slideshow
