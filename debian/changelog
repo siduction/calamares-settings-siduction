@@ -1,3 +1,9 @@
+calamares-branding-siduction (24.1.0-5) unstable; urgency=medium
+
+  * remove kdialog from depends
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Tue, 17 Dec 2024 23:35:16 +0100
+
 calamares-branding-siduction (24.1.0-4) unstable; urgency=medium
 
   * fix the check for btrfs
