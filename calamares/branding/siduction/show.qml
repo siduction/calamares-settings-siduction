@@ -179,7 +179,7 @@ Presentation
         }
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
-            anchors.top: background7.bottom
+            anchors.top: background8.bottom
             text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
             wrapMode: Text.WordWrap
             width: 800
