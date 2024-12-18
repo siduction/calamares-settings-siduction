@@ -1,3 +1,10 @@
+calamares-branding-siduction (24.1.0-10) unstable; urgency=medium
+
+  * fix typo, add slide for giants release
+  * hopefully fix btrfs mount options
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 18 Dec 2024 19:19:42 +0100
+
 calamares-branding-siduction (24.1.0-9) unstable; urgency=medium
 
   * fixin the Songname in brandiing.desc
