@@ -1,3 +1,11 @@
+calamares-branding-siduction (24.1.0-8) unstable; urgency=medium
+
+  * add depend
+    - qml-module-qtquick2
+  * fix branding.desc
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 18 Dec 2024 15:36:03 +0100
+
 calamares-branding-siduction (24.1.0-7) unstable; urgency=medium
 
   * fix branding.desc

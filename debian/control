@@ -14,6 +14,7 @@ Depends: ${misc:Depends},
          calamares,
          qml-module-qtquick-controls2,
          qml-module-qtquick-layouts,
+         qml-module-qtquick2,
 Provides: calamares-branding
 Description: Siduction theme and settings for the Calamares Installer
  Calamares is a generic installer framework for Linux distributions.
