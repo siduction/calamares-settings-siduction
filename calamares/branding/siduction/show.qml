@@ -151,6 +151,24 @@ Presentation
     Slide {
 
         Image {
+            id: background8
+            source: "slide8.png"
+            width: 467; height: 280
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+        Text {
+            anchors.horizontalCenter: background7.horizontalCenter
+            anchors.top: background8.bottom
+            text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
+            wrapMode: Text.WordWrap
+            width: 800
+            horizontalAlignment: Text.Center
+        }
+
+    Slide {
+
+        Image {
             id: background7
             source: "slide7.png"
             width: 467; height: 280
@@ -168,22 +186,6 @@ Presentation
         }
     }
 
-    Slide {
 
-        Image {
-            id: background8
-            source: "slide8.png"
-            width: 467; height: 280
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
-        }
-        Text {
-            anchors.horizontalCenter: background7.horizontalCenter
-            anchors.top: background8.bottom
-            text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
-            wrapMode: Text.WordWrap
-            width: 800
-            horizontalAlignment: Text.Center
-        }
     }
 }
