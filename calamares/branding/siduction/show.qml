@@ -152,14 +152,14 @@ Presentation
 
         Image {
             id: background8
-            source: "slide8.png"
+            source: "slide7.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
-            anchors.top: background8.bottom
+            anchors.top: background7.bottom
             text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
             wrapMode: Text.WordWrap
             width: 800
@@ -169,15 +169,15 @@ Presentation
     Slide {
 
         Image {
-            id: background7
-            source: "slide7.png"
+            id: background8
+            source: "slide8.png"
             width: 467; height: 280
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
         Text {
-            anchors.horizontalCenter: background7.horizontalCenter
-            anchors.top: background7.bottom
+            anchors.horizontalCenter: background8.horizontalCenter
+            anchors.top: background8.bottom
             text: qsTr("Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
                   "Have fun and <b>'apt moo'<b/>!<br/>")
             wrapMode: Text.WordWrap
