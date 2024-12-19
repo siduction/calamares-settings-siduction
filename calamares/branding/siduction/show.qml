@@ -141,7 +141,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background6.horizontalCenter
             anchors.top: background6.bottom
-            text: qsTr("Nasters Of War.<br/>")
+            text: qsTr("Wintersky, by hendrikL amd towo.<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -160,7 +160,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background7.horizontalCenter
             anchors.top: background7.bottom
-            text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
+            text: qsTr("Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -179,6 +179,25 @@ Presentation
         Text {
             anchors.horizontalCenter: background8.horizontalCenter
             anchors.top: background8.bottom
+            text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
+            wrapMode: Text.WordWrap
+            width: 800
+            horizontalAlignment: Text.Center
+        }
+    }
+
+    Slide {
+
+        Image {
+            id: background9
+            source: "slide9.png"
+            width: 467; height: 280
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+        Text {
+            anchors.horizontalCenter: background9.horizontalCenter
+            anchors.top: background9.bottom
             text: qsTr("Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
                   "Have fun and <b>'apt moo'<b/>!<br/>")
             wrapMode: Text.WordWrap

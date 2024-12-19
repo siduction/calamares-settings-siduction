@@ -30,16 +30,21 @@
     </message>
     <message>
         <location filename="show.qml" line="144"/>
+        <source>Wintersky, by hendrikL amd towo. The main motiv looks like the &quot;Himmelscheibe von Nebra&quot;.</source>
+        <translation>Wintersky, von hendrikL amd towo. Das Hauptmotiv ist an die &quot;Himmelscheibe von Nebra angelehnt&quot;.</translation>
+    </message>
+    <message>
+        <location filename="show.qml" line="163"/>
         <source>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!</source>
         <translation>Masters Of War, von vinv, abgeleitet vom debian Hintergrund. Unser Statement zu Überfall Putins auf die Ukraine!</translation>
     </message>
     <message>
-        <location filename="show.qml" line="163"/>
+        <location filename="show.qml" line="182"/>
         <source>The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” &lt;br/&gt;with artwork by Ona Kristensen.</source>
         <translation>Das Release zu einem besonderen Anlass: 30 Jahre Debian &quot;We stand on the shoulders of giants&quot; &lt;br7&gt;mit Artwork von Ona Kristensen.</translation>
     </message>
     <message>
-        <location filename="siduction/show.qml" line="182"/>
+        <location filename="siduction/show.qml" line="201"/>
         <source>Also, we want to thank all the people who helped to start this project and adventure &apos;siduction&apos;!&lt;br/&gt;Have fun and &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</source>
         <translation>Außerdem möchten wir uns bei allen bedanken, die mitgeholfen haben, dieses Projekt und das Abenteuer &apos;Siduction&apos; ins Leben zu rufen!&lt;br/&gt;Habt Spaß und &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</translation>
     </message>
