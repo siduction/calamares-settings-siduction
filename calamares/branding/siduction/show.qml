@@ -165,6 +165,7 @@ Presentation
             width: 800
             horizontalAlignment: Text.Center
         }
+    }
 
     Slide {
 
@@ -184,8 +185,5 @@ Presentation
             width: 800
             horizontalAlignment: Text.Center
         }
-    }
-
-
     }
 }

@@ -1,3 +1,9 @@
+calamares-branding-siduction (24.1.0-12) unstable; urgency=medium
+
+  * fix artwok
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 19 Dec 2024 17:31:57 +0100
+
 calamares-branding-siduction (24.1.0-11) unstable; urgency=medium
 
   * fix fstab.conf
