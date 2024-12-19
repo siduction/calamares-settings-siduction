@@ -34,14 +34,14 @@
         <translation>Das war unser Weihnachtsspecial, die Steam-Edition, im Jahr 2014.&lt;br/&gt;Artwork, Hintergrund von bob, der immer noch im Einsatz ist und wie zu Weihnachten die Änderungen von hendrikL.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="siduction/show.qml" line="163"/>
-        <source>Also, we want to thank all the people who helped to start this project and adventure &apos;siduction&apos;!&lt;br/&gt;Have fun and &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</source>
-        <translation>Außerdem möchten wir uns bei allen bedanken, die mitgeholfen haben, dieses Projekt und das Abenteuer &apos;Siduction&apos; ins Leben zu rufen!&lt;br/&gt;Habt Spaß und &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</translation>
-    </message>
-    <message>
-        <location filename="show.qml" line="183"/>
+        <location filename="show.qml" line="163"/>
         <source>The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” &lt;br/&gt;with artwork by Ona Kristensen.</source>
         <translation>Das Release zu einem besonderen Anlass: 30 Jahre Debian &quot;We stand on the shoulders of giants&quot; &lt;br7&gt;mit Artwork von Ona Kristensen.</translation>
+    </message>
+    <message>
+        <location filename="siduction/show.qml" line="182"/>
+        <source>Also, we want to thank all the people who helped to start this project and adventure &apos;siduction&apos;!&lt;br/&gt;Have fun and &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</source>
+        <translation>Außerdem möchten wir uns bei allen bedanken, die mitgeholfen haben, dieses Projekt und das Abenteuer &apos;Siduction&apos; ins Leben zu rufen!&lt;br/&gt;Habt Spaß und &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</translation>
     </message>
 </context>
 </TS>
