@@ -6,7 +6,7 @@
     <message>
         <location filename="siduction/show.qml" line="45"/>
         <source>With this little slideshow we present you some old artwork of the last ten years!&lt;br/&gt;This was our first release, One Step Beyond, great artwork (maybe our best) by se7en.&lt;br/&gt;Our logo which we still use, &apos;siduction - the community based OS&apos;, is made by coruja!&lt;br/&gt;</source>
-        <translation>Mit dieser kleinen Diashow präsentieren wir euch ein paar alte Artworks aus den letzten zehn Jahren!&lt;br/&gt;Dies war unsere erste Veröffentlichung, One Step Beyond, großartiges Artwork (vielleicht unser bestes) von se7en.&lt;br/&gt;Unser Logo, das wir immer noch benutzen, &apos;siduction - the community based OS&apos;, ist von coruja!&lt;br/&gt;</translation>
+        <translation>Mit dieser kleinen Diashow präsentieren wir euch ein paar alte Artworks aus den letzten zehn Jahren!&lt;br/&gt;Dies war unsere erste Veröffentlichung, One Step Beyond, großartiges Artwork (vielleicht unser bestes) von se7en.&lt;br/&gt;Unser Logo, das wir immer noch verwenden, &apos;siduction - the community based OS&apos;, ist von coruja!&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="siduction/show.qml" line="66"/>
@@ -29,24 +29,24 @@
         <translation>Das war unser Weihnachtsspecial, die Steam-Edition, im Jahr 2014.&lt;br/&gt;Artwork, Hintergrund von bob, der immer noch im Einsatz ist und wie zu Weihnachten die Änderungen von hendrikL.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="show.qml" line="144"/>
-        <source>Wintersky, by hendrikL amd towo. The main motiv looks like the &quot;Himmelscheibe von Nebra&quot;.</source>
-        <translation>Wintersky, von hendrikL amd towo. Das Hauptmotiv ist an die &quot;Himmelscheibe von Nebra angelehnt&quot;.</translation>
+        <location filename="siduction/show.qml" line="144"/>
+        <source>Wintersky, by hendrikL amd towo.&lt;br/&gt;</source>
+        <translation>Wintersky, von hendrikL und towo.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="show.qml" line="163"/>
-        <source>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!</source>
-        <translation>Masters Of War, von vinv, abgeleitet vom debian Hintergrund. Unser Statement zu Überfall Putins auf die Ukraine!</translation>
+        <location filename="siduction/show.qml" line="163"/>
+        <source>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!&lt;br/&gt;</source>
+        <translation>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="show.qml" line="182"/>
+        <location filename="siduction/show.qml" line="182"/>
         <source>The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” &lt;br/&gt;with artwork by Ona Kristensen.</source>
-        <translation>Das Release zu einem besonderen Anlass: 30 Jahre Debian &quot;We stand on the shoulders of giants&quot; &lt;br7&gt;mit Artwork von Ona Kristensen.</translation>
+        <translation>Die Veröffentlichung zu einem besonderen Anlass: 30 Jahre Debian „We stand on the shoulders of giants“ &lt;br/&gt;mit Artwork von Ona Kristensen.</translation>
     </message>
     <message>
         <location filename="siduction/show.qml" line="201"/>
         <source>Also, we want to thank all the people who helped to start this project and adventure &apos;siduction&apos;!&lt;br/&gt;Have fun and &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</source>
-        <translation>Außerdem möchten wir uns bei allen bedanken, die mitgeholfen haben, dieses Projekt und das Abenteuer &apos;Siduction&apos; ins Leben zu rufen!&lt;br/&gt;Habt Spaß und &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</translation>
+        <translation>Außerdem, möchten wir uns bei allen bedanken, die mitgeholfen haben, dieses Projekt und das&lt;br/&gt;Abenteuer &apos;siduction&apos; zu starten! Viel Spaß und &lt;b&gt;&apos;apt moo&apos;&lt;b/!&lt;br/&gt;</translation>
     </message>
 </context>
 </TS>

@@ -72,3 +72,7 @@ def run():
     # /var/cache/gdm/*
     path = '/var/cache/gdm/*'
     libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])
+
+    # /fll
+    path = '/fll'
+    libcalamares.utils.target_env_call(['/bin/rm', '-rf', '%s' % (path)])

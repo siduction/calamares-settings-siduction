@@ -1,3 +1,11 @@
+calamares-branding-siduction (24.1.1-1) unstable; urgency=medium
+
+  * hopefully the fianal version with all changes
+    - install siduction-btrfs snapper and snapper-gui only, if btrfs is used
+    - refresh slide pictures
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 20 Dec 2024 21:48:37 +0100
+
 calamares-branding-siduction (24.1.0-12) unstable; urgency=medium
 
   * fix artwok
