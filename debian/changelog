@@ -1,3 +1,15 @@
+calamares-branding-siduction (24.1.1-3) unstable; urgency=medium
+
+  * remove the downloaded packages from install
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 22 Dec 2024 16:21:04 +0100
+
+calamares-branding-siduction (24.1.1-2) unstable; urgency=medium
+
+  * change displaymanager.conf
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 21 Dec 2024 21:17:43 +0100
+
 calamares-branding-siduction (24.1.1-1) unstable; urgency=medium
 
   * hopefully the fianal version with all changes
