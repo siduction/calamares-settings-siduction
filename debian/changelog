@@ -1,3 +1,9 @@
+calamares-branding-siduction (24.1.1-4) unstable; urgency=medium
+
+  * switch to pkexec for starting calamares
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 23 Dec 2024 16:02:42 +0100
+
 calamares-branding-siduction (24.1.1-3) unstable; urgency=medium
 
   * remove the downloaded packages from install

@@ -26,10 +26,12 @@ if [ -e /etc/skel/.config/autostart/Metadata.desktop ]; then
     cp /etc/skel/.config/autostart/Metadata.desktop /home/"$USER1"/.config/autostart/
 fi
 
+# for BTRFS
 echo "Install btrfs related packages, if needed"
 if awk '{print $2 "  "$3}' /etc/fstab | grep btrfs | grep -q '/' && dpkg -l | grep -q xorg; then
     dpkg -i /usr/share/siduction/btrfs-packages/*.deb
 fi
+
 rm -rf /usr/share/siduction/btrfs-packages
 
 grub-install
