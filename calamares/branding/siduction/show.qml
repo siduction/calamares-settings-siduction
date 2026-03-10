@@ -198,6 +198,26 @@ Presentation
         Text {
             anchors.horizontalCenter: background9.horizontalCenter
             anchors.top: background9.bottom
+            text: qsTr("Our 2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.<br/>"+
+            "We choose the song 'Shine On You Crazy Diamont' by Pink Flouyed")
+            wrapMode: Text.WordWrap
+            width: 800
+            horizontalAlignment: Text.Center
+        }
+    }
+
+    Slide {
+
+        Image {
+            id: background10
+            source: "slide10.png"
+            width: 467; height: 280
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+        Text {
+            anchors.horizontalCenter: background10.horizontalCenter
+            anchors.top: background10.bottom
             text: qsTr("Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
                   "Have fun and <b>'apt moo'<b/>!<br/>")
             wrapMode: Text.WordWrap

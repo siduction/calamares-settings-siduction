@@ -9,10 +9,10 @@ navigation: widget
 strings:
     productName:         siduction
     shortProductName:    siduction
-    version:             2024.1
-    shortVersion:        2024.1
-    versionedName:       siduction 2024.1 <br>"Shine On You Crazy Diamond"<br> Release
-    shortVersionedName:  siduction 2024.1
+    version:             2026.1
+    shortVersion:        2026.1
+    versionedName:       siduction 2026.1 <br>"Big Crime"<br> Release
+    shortVersionedName:  siduction 2026.1
     bootloaderEntryName: siduction
 
 images:
