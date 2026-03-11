@@ -198,8 +198,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background9.horizontalCenter
             anchors.top: background9.bottom
-            text: qsTr("Our 2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.<br/>"+
-            "We choose the song 'Shine On You Crazy Diamont' by Pink Flouyed")
+            text: qsTr("Our 2024/2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.<br/>We choose the song "Shine On You Crazy Diamond" by Pink Floyd")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center

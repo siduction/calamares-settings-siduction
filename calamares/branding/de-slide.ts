@@ -36,15 +36,20 @@
     <message>
         <location filename="siduction/show.qml" line="163"/>
         <source>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!&lt;br/&gt;</source>
-        <translation>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!&lt;br/&gt;</translation>
+        <translation>Masters Of War, erstellt von vinzv mit dem Debian-Hintergrundbild als Vorlage. Unsere Stellungnahme zu Putins Krieg gegen die Ukraine!&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="siduction/show.qml" line="182"/>
         <source>The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” &lt;br/&gt;with artwork by Ona Kristensen.</source>
         <translation>Die Veröffentlichung zu einem besonderen Anlass: 30 Jahre Debian „We stand on the shoulders of giants“ &lt;br/&gt;mit Artwork von Ona Kristensen.</translation>
     </message>
-    <message>
+        <message>
         <location filename="siduction/show.qml" line="201"/>
+        <source>Our 2024/2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.&lt;br/&gt;We choose the song "Shine On You Crazy Diamond" by Pink Floyd</source>
+        <translation>Unser 2024/2025 Release. Das Artwork ist eine leicht modifizierte Version des Artworks von KDE/Plasma.&lt;br/&gt;Wir hatten den Song "Shine On You Crazy Diamond" von Pink Floyd gewählt</translation>
+    </message>
+    <message>
+        <location filename="siduction/show.qml" line="221"/>
         <source>Also, we want to thank all the people who helped to start this project and adventure &apos;siduction&apos;!&lt;br/&gt;Have fun and &lt;b&gt;&apos;apt moo&apos;&lt;b/&gt;!&lt;br/&gt;</source>
         <translation>Außerdem, möchten wir uns bei allen bedanken, die mitgeholfen haben, dieses Projekt und das&lt;br/&gt;Abenteuer &apos;siduction&apos; zu starten! Viel Spaß und &lt;b&gt;&apos;apt moo&apos;&lt;b/!&lt;br/&gt;</translation>
     </message>
