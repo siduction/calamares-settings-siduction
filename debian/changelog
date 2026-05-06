@@ -1,3 +1,21 @@
+calamares-branding-siduction (26.1.0-1) unstable; urgency=medium
+
+  * Changes for new release.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 06 May 2026 13:25:36 +0200
+
+calamares-branding-siduction (25.1.1-1) unstable; urgency=medium
+
+  * don't remove kdialog in packages-module
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Mon, 24 Mar 2025 13:33:17 +0100
+
+calamares-branding-siduction (24.1.2-1) unstable; urgency=medium
+
+  * add btrfs fix
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 26 Dec 2024 16:05:07 +0100
+
 calamares-branding-siduction (24.1.1-4) unstable; urgency=medium
 
   * switch to pkexec for starting calamares

@@ -29,12 +29,14 @@ fi
 # for BTRFS
 echo "Install btrfs related packages, if needed"
 if awk '{print $2 "  "$3}' /etc/fstab | grep btrfs | grep -q '/' && dpkg -l | grep -q xorg; then
-    dpkg -i /usr/share/siduction/btrfs-packages/*.deb
+    cd /usr/share/siduction/btrfs-packages/
+    DEBIAN_FRONTEND=noninteractive apt --assume-yes install ./*.deb
 fi
 
 rm -rf /usr/share/siduction/btrfs-packages
-
-grub-install
+if [ -d /boot/efi ]; then
+    grub-install
+fi
 
 purge_pkg() {
     apt purge $1 --assume-yes || true
