@@ -179,7 +179,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background8.horizontalCenter
             anchors.top: background8.bottom
-            text: qsTr("The release for a special occasion: 30 years of Debian “We stand on the shoulders of giants” <br/>with artwork by Ona Kristensen.")
+            text: qsTr("The release for a special occasion: 30 years of Debian 'We stand on the shoulders of giants' <br/>with artwork by Ona Kristensen.")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -198,7 +198,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background9.horizontalCenter
             anchors.top: background9.bottom
-            text: qsTr("Our 2024/2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.<br/>We choose the song "Shine On You Crazy Diamond" by Pink Floyd")
+            text: qsTr("Our 2024/2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.<br/>We choose the song 'Shine On You Crazy Diamond' by Pink Floyd")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -217,8 +217,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background10.horizontalCenter
             anchors.top: background10.bottom
-            text: qsTr("Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/>"+
-                  "Have fun and <b>'apt moo'<b/>!<br/>")
+            text: qsTr("Also, we want to thank all the people who helped to start this project and adventure 'siduction'!<br/> Have fun and <b>'apt moo'<b/>!<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
