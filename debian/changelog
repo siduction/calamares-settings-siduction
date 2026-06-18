@@ -1,3 +1,15 @@
+calamares-branding-siduction (26.1.0-5) unstable; urgency=medium
+
+  * fix sources-module
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 18 Jun 2026 22:59:20 +0200
+
+calamares-branding-siduction (26.1.0-4) unstable; urgency=medium
+
+  * disable apt-update on module packages
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Wed, 17 Jun 2026 17:12:19 +0200
+
 calamares-branding-siduction (26.1.0-3) unstable; urgency=medium
 
   * remove autodefrag from btrfs options

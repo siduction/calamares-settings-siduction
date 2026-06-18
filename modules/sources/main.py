@@ -23,7 +23,8 @@ import re
 import libcalamares
 
 def run():
-    """ Configure Software Sources """
+    """ Configure Software Sources for DEB822 (.sources) """
+    print(' Configure Software Sources ')
     install_path = libcalamares.globalstorage.value("rootMountPoint")
     sources = libcalamares.globalstorage.value("packagechooser_sources")
 
@@ -33,26 +34,62 @@ def run():
     elif sources == 'non-free':
         print('non-free selected')
         sources_dir = os.path.join(install_path, "etc/apt/sources.list.d/")
-        replacement_text = "main contrib non-free non-free-firmware"
-        pattern = re.compile(r'\bmain non-free-firmware\b')
+        
+        # Regex sucht nach einer Zeile, die mit 'Components:' beginnt.
+        # Es fängt den Rest der Zeile ein, um zu prüfen, was schon da ist.
+        components_pattern = re.compile(r'^(Components:\s*)(.*)$', re.MULTILINE)
 
         if os.path.exists(sources_dir):
             for filename in os.listdir(sources_dir):
-                if filename.endswith(".list"):
+                # Jetzt filtern wir gezielt nach .sources Dateien
+                if filename.endswith(".sources"):
                     file_path = os.path.join(sources_dir, filename)
 
                     with open(file_path, 'r') as file:
                         content = file.read()
 
-                    # Add the replacement text if it's not already there
-                    if replacement_text not in content:
-                        new_content = pattern.sub(replacement_text, content)
-
-                        with open(file_path, 'w') as file:
-                            file.write(new_content)
-                        print(f"Updated {filename}")
+                    # Wir suchen nach der Components-Zeile
+                    match = components_pattern.search(content)
+                    
+                    if match:
+                        prefix = match.group(1)  # Das ist "Components: "
+                        current_components = match.group(2)  # z.B. "main non-free-firmware"
+                        
+                        # Wir wandeln die aktuellen Komponenten in eine Liste um
+                        comp_list = current_components.split()
+                        
+                        # Die gewünschten neuen Komponenten
+                        targets = ["contrib", "non-free"]
+                        
+                        # Prüfen, ob noch etwas hinzugefügt werden muss
+                        needed = [t for t in targets if t not in comp_list]
+                        
+                        if needed:
+                            # Wir fügen die fehlenden Komponenten hinzu. 
+                            # Falls 'non-free-firmware' am Ende steht, fügen wir contrib/non-free idealerweise davor ein,
+                            # oder einfach ans Ende der Liste. Für APT ist die Reihenfolge egal.
+                            for t in targets:
+                                if t not in comp_list:
+                                    # Fügt es vor 'non-free-firmware' ein, falls vorhanden, sonst ans Ende
+                                    if "non-free-firmware" in comp_list:
+                                        idx = comp_list.index("non-free-firmware")
+                                        comp_list.insert(idx, t)
+                                    else:
+                                        comp_list.append(t)
+                            
+                            # Die neue Zeile zusammenbauen
+                            new_components_line = prefix + " ".join(comp_list)
+                            
+                            # Den alten Block durch den neuen ersetzen
+                            new_content = components_pattern.sub(new_components_line, content)
+                            
+                            with open(file_path, 'w') as file:
+                                file.write(new_content)
+                            print(f"Updated {filename} to non-free components")
+                        else:
+                            print(f"No changes needed in {filename} (already contains contrib/non-free)")
                     else:
-                        print(f"No changes in {filename}")
+                        print(f"Could not find 'Components:' line in {filename}")
         else:
             print(f"{sources_dir} does not exist.")
 
