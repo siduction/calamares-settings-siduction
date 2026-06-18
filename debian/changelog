@@ -1,3 +1,9 @@
+calamares-branding-siduction (26.1.0-6) unstable; urgency=medium
+
+  * insert workaround for damaged kernel on btrfs
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 18 Jun 2026 23:07:01 +0200
+
 calamares-branding-siduction (26.1.0-5) unstable; urgency=medium
 
   * fix sources-module

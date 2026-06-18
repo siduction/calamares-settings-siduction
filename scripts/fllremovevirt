@@ -31,6 +31,7 @@ echo "Install btrfs related packages, if needed"
 if awk '{print $2 "  "$3}' /etc/fstab | grep btrfs | grep -q '/' && dpkg -l | grep -q xorg; then
     cd /usr/share/siduction/btrfs-packages/
     DEBIAN_FRONTEND=noninteractive apt --assume-yes install ./*.deb
+    dpkg -i /usr/share/siduction/kernel/Linux*.deb
 fi
 
 rm -rf /usr/share/siduction/btrfs-packages
