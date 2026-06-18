@@ -1,3 +1,9 @@
+calamares-branding-siduction (26.1.0-7) unstable; urgency=medium
+
+  * fix typo
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 19 Jun 2026 00:04:38 +0200
+
 calamares-branding-siduction (26.1.0-6) unstable; urgency=medium
 
   * insert workaround for damaged kernel on btrfs
