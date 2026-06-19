@@ -1,3 +1,9 @@
+calamares-branding-siduction (26.1.0-8) unstable; urgency=medium
+
+  * Enable full disk encryption with Luks2
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 19 Jun 2026 12:05:57 +0200
+
 calamares-branding-siduction (26.1.0-7) unstable; urgency=medium
 
   * fix typo
