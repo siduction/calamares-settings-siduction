@@ -35,10 +35,9 @@ if awk '{print $2 "  "$3}' /etc/fstab | grep btrfs | grep -q '/'; then
     fi
 fi
 
-rm -rf /usr/share/siduction/btrfs-packages
-if [ -d /boot/efi ]; then
-    grub-install
-fi
+#if [ -d /boot/efi ]; then
+#    grub-install
+#fi
 
 systemctl enable getty@
 
