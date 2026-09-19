@@ -45,7 +45,7 @@
     </message>
         <message>
         <location filename="siduction/show.qml" line="201"/>
-        <source>Our 2024/2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.&lt;br/&gt;We choose the song "Shine On You Crazy Diamond" by Pink Floyd</source>
+        <source>Our 2024/2025 Release. The wallpaper is a modified version of a KDE/Plasma Wallpaper.&lt;br/&gt;We choose the song "Shine On You Crazy Diamond" by Pink Floyd</source>
         <translation>Unser 2024/2025 Release. Das Artwork ist eine leicht modifizierte Version des Artworks von KDE/Plasma.&lt;br/&gt;Wir hatten den Song "Shine On You Crazy Diamond" von Pink Floyd gewählt</translation>
     </message>
     <message>

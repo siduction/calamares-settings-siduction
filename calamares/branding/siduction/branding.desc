@@ -11,7 +11,7 @@ strings:
     shortProductName:    siduction
     version:             2026.1
     shortVersion:        2026.1
-    versionedName:       siduction 2026.1 <br>"Big Crime"<br> Release
+    versionedName:       siduction 2026.1 <br>"Big Crime"
     shortVersionedName:  siduction 2026.1
     bootloaderEntryName: siduction
 
