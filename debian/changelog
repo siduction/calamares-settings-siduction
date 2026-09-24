@@ -1,9 +1,10 @@
-calamares-branding-siduction (26.1.0-11.1) UNRELEASED; urgency=medium
+calamares-branding-siduction (26.1.0-12) unstable; urgency=medium
 
+  [ Hendrik Lehmbruch ]
   * Non-maintainer upload.
   * Fixed a typo, removed the word Release
 
- -- Hendrik Lehmbruch <hendrikL@siduction.org>  Sat, 19 Sep 2026 14:40:47 +0200
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 24 Sep 2026 14:33:45 +0200
 
 calamares-branding-siduction (26.1.0-11) unstable; urgency=medium
 
