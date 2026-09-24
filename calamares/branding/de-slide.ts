@@ -10,8 +10,8 @@
     </message>
     <message>
         <location filename="siduction/show.qml" line="66"/>
-        <source>This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.&lt;br/&gt;</source>
-        <translation>Dies ist unsere zweite Veröffentlichung, Desperado, mit dem Spagetti-Western-Theme von hendrikL und dem Splash-Screen von se7en.&lt;br/&gt;</translation>
+        <source>This is our second release, Desperado, with the spaghetti-western theme by hendrikL and the splash screen by se7en.&lt;br/&gt;</source>
+        <translation>Dies ist unsere zweite Veröffentlichung, Desperado, mit dem Spaghetti-Western-Theme von hendrikL und dem Splash-Screen von se7en.&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="siduction/show.qml" line="85"/>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <location filename="siduction/show.qml" line="163"/>
-        <source>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against the Ukraine!&lt;br/&gt;</source>
+        <source>Masters Of War, made by vinzv with the debian wallpaper in mind. Our statement about Putins war against Ukraine!&lt;br/&gt;</source>
         <translation>Masters Of War, erstellt von vinzv mit dem Debian-Hintergrundbild als Vorlage. Unsere Stellungnahme zu Putins Krieg gegen die Ukraine!&lt;br/&gt;</translation>
     </message>
     <message>
@@ -45,7 +45,7 @@
     </message>
         <message>
         <location filename="siduction/show.qml" line="201"/>
-        <source>Our 2024/2025 Release. The wallpaper is a modified version of a KDE/Plasma Wallpaper.&lt;br/&gt;We choose the song "Shine On You Crazy Diamond" by Pink Floyd</source>
+        <source>Our 2024/2025 Release. The Wallpaper is a modified version of a KDE/Plasma Wallpaper.&lt;br/&gt;We choose the song "Shine On You Crazy Diamond" by Pink Floyd</source>
         <translation>Unser 2024/2025 Release. Das Artwork ist eine leicht modifizierte Version des Artworks von KDE/Plasma.&lt;br/&gt;Wir hatten den Song "Shine On You Crazy Diamond" von Pink Floyd gewählt</translation>
     </message>
     <message>
