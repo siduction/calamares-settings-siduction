@@ -63,7 +63,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background2.horizontalCenter
             anchors.top: background2.bottom
-            text: qsTr("This is our second release, Desperado, with the spagetti-western theme by hendrikL and the splash screen by se7en.<br/>")
+            text: qsTr("This is our second release, Desperado, with the spaghetti-western theme by hendrikL and the splash screen by se7en.<br/>")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
@@ -198,7 +198,7 @@ Presentation
         Text {
             anchors.horizontalCenter: background9.horizontalCenter
             anchors.top: background9.bottom
-            text: qsTr("Our 2024/2025 Release. The wallpaer is a modified version of a KDE/Plasma Wallpaper.<br/>We choose the song 'Shine On You Crazy Diamond' by Pink Floyd")
+            text: qsTr("Our 2024/2025 Release. The wallpaper is a modified version of a KDE/Plasma Wallpaper.<br/>We choose the song 'Shine On You Crazy Diamond' by Pink Floyd")
             wrapMode: Text.WordWrap
             width: 800
             horizontalAlignment: Text.Center
