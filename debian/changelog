@@ -1,3 +1,9 @@
+calamares-branding-siduction (26.1.0-14) unstable; urgency=medium
+
+  * Fix typos.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 26 Sep 2026 12:53:24 +0200
+
 calamares-branding-siduction (26.1.0-13) unstable; urgency=medium
 
   [ Hendrik Lehmbruch ]
